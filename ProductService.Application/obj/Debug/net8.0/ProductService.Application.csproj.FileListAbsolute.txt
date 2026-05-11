@@ -1,0 +1,5 @@
+D:\NexoraCommerce\ProductService.Application\obj\Debug\net8.0\ProductService.Application.csproj.AssemblyReference.cache
+D:\NexoraCommerce\ProductService.Application\obj\Debug\net8.0\ProductService.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\NexoraCommerce\ProductService.Application\obj\Debug\net8.0\ProductService.Application.AssemblyInfoInputs.cache
+D:\NexoraCommerce\ProductService.Application\obj\Debug\net8.0\ProductService.Application.AssemblyInfo.cs
+D:\NexoraCommerce\ProductService.Application\obj\Debug\net8.0\ProductService.Application.csproj.CoreCompileInputs.cache

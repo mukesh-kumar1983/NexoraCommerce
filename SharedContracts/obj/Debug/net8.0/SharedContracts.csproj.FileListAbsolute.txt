@@ -1,0 +1,11 @@
+D:\NexoraCommerce\SharedContracts\bin\Debug\net8.0\SharedContracts.deps.json
+D:\NexoraCommerce\SharedContracts\bin\Debug\net8.0\SharedContracts.dll
+D:\NexoraCommerce\SharedContracts\bin\Debug\net8.0\SharedContracts.pdb
+D:\NexoraCommerce\SharedContracts\obj\Debug\net8.0\SharedContracts.GeneratedMSBuildEditorConfig.editorconfig
+D:\NexoraCommerce\SharedContracts\obj\Debug\net8.0\SharedContracts.AssemblyInfoInputs.cache
+D:\NexoraCommerce\SharedContracts\obj\Debug\net8.0\SharedContracts.AssemblyInfo.cs
+D:\NexoraCommerce\SharedContracts\obj\Debug\net8.0\SharedContracts.csproj.CoreCompileInputs.cache
+D:\NexoraCommerce\SharedContracts\obj\Debug\net8.0\SharedContracts.dll
+D:\NexoraCommerce\SharedContracts\obj\Debug\net8.0\refint\SharedContracts.dll
+D:\NexoraCommerce\SharedContracts\obj\Debug\net8.0\SharedContracts.pdb
+D:\NexoraCommerce\SharedContracts\obj\Debug\net8.0\ref\SharedContracts.dll

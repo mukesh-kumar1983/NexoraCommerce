@@ -1,0 +1,11 @@
+D:\NexoraCommerce\ProductService.Domain\bin\Debug\net8.0\ProductService.Domain.deps.json
+D:\NexoraCommerce\ProductService.Domain\bin\Debug\net8.0\ProductService.Domain.dll
+D:\NexoraCommerce\ProductService.Domain\bin\Debug\net8.0\ProductService.Domain.pdb
+D:\NexoraCommerce\ProductService.Domain\obj\Debug\net8.0\ProductService.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\NexoraCommerce\ProductService.Domain\obj\Debug\net8.0\ProductService.Domain.AssemblyInfoInputs.cache
+D:\NexoraCommerce\ProductService.Domain\obj\Debug\net8.0\ProductService.Domain.AssemblyInfo.cs
+D:\NexoraCommerce\ProductService.Domain\obj\Debug\net8.0\ProductService.Domain.csproj.CoreCompileInputs.cache
+D:\NexoraCommerce\ProductService.Domain\obj\Debug\net8.0\ProductService.Domain.dll
+D:\NexoraCommerce\ProductService.Domain\obj\Debug\net8.0\refint\ProductService.Domain.dll
+D:\NexoraCommerce\ProductService.Domain\obj\Debug\net8.0\ProductService.Domain.pdb
+D:\NexoraCommerce\ProductService.Domain\obj\Debug\net8.0\ref\ProductService.Domain.dll

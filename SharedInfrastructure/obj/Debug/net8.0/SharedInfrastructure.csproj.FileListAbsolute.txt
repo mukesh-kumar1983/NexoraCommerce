@@ -1,0 +1,12 @@
+D:\NexoraCommerce\SharedInfrastructure\bin\Debug\net8.0\SharedInfrastructure.deps.json
+D:\NexoraCommerce\SharedInfrastructure\bin\Debug\net8.0\SharedInfrastructure.dll
+D:\NexoraCommerce\SharedInfrastructure\bin\Debug\net8.0\SharedInfrastructure.pdb
+D:\NexoraCommerce\SharedInfrastructure\obj\Debug\net8.0\SharedInfrastructure.csproj.AssemblyReference.cache
+D:\NexoraCommerce\SharedInfrastructure\obj\Debug\net8.0\SharedInfrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\NexoraCommerce\SharedInfrastructure\obj\Debug\net8.0\SharedInfrastructure.AssemblyInfoInputs.cache
+D:\NexoraCommerce\SharedInfrastructure\obj\Debug\net8.0\SharedInfrastructure.AssemblyInfo.cs
+D:\NexoraCommerce\SharedInfrastructure\obj\Debug\net8.0\SharedInfrastructure.csproj.CoreCompileInputs.cache
+D:\NexoraCommerce\SharedInfrastructure\obj\Debug\net8.0\SharedInfrastructure.dll
+D:\NexoraCommerce\SharedInfrastructure\obj\Debug\net8.0\refint\SharedInfrastructure.dll
+D:\NexoraCommerce\SharedInfrastructure\obj\Debug\net8.0\SharedInfrastructure.pdb
+D:\NexoraCommerce\SharedInfrastructure\obj\Debug\net8.0\ref\SharedInfrastructure.dll

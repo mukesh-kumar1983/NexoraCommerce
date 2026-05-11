@@ -1,0 +1,31 @@
+<Solution>
+  <Folder Name="/BuildingBlocks/">
+    <Project Path="SharedContracts/SharedContracts.csproj" Id="98d7c6ff-0883-4167-9a85-0c2cca8d9c00" />
+    <Project Path="SharedInfrastructure/SharedInfrastructure.csproj" Id="8cebc210-968e-41f0-a076-1667ad9d23ce" />
+    <Project Path="SharedKernel/SharedKernel.csproj" Id="1cde2a26-4a47-49be-a362-494bb0f34a4f" />
+  </Folder>
+  <Folder Name="/Frontend/">
+    <Project Path="nexora-web/nexora-web.esproj">
+      <Build />
+      <Deploy />
+    </Project>
+  </Folder>
+  <Folder Name="/Gateway/">
+    <Project Path="NexoraGateway/NexoraGateway.csproj" />
+  </Folder>
+  <Folder Name="/Services/" />
+  <Folder Name="/Services/AuthService/">
+    <Project Path="AuthService.API/AuthService.API.csproj" Id="57251532-e78a-4c81-a813-44bb2fe52bff" />
+    <Project Path="AuthService.Application/AuthService.Application.csproj" Id="2da90790-bba3-4086-b6b1-88cd75b2c051" />
+    <Project Path="AuthService.Domain/AuthService.Domain.csproj" Id="468cea34-013e-42a7-a3a3-0d476b889209" />
+    <Project Path="AuthService.Infrastructure/AuthService.Infrastructure.csproj" Id="749d30d5-f5c7-40d2-9f98-dff3e9e68683" />
+  </Folder>
+  <Folder Name="/Services/OrderService/" />
+  <Folder Name="/Services/PaymentService/" />
+  <Folder Name="/Services/ProductService/">
+    <Project Path="ProductService.API/ProductService.API.csproj" />
+    <Project Path="ProductService.Application/ProductService.Application.csproj" />
+    <Project Path="ProductService.Domain/ProductService.Domain.csproj" />
+    <Project Path="ProductService.Infrastructure/ProductService.Infrastructure.csproj" />
+  </Folder>
+</Solution>

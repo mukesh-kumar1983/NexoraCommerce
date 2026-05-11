@@ -1,0 +1,18 @@
+2026-05-11 13:55:40.178 +05:00 [INF] HTTP GET /api/auth/login responded 405 in 3540.9686ms
+2026-05-11 14:20:52.892 +05:00 [INF] HTTP GET /api/auth/login responded 405 in 129.8661ms
+2026-05-11 14:24:20.459 +05:00 [INF] HTTP POST /api/auth/login
+ responded 404 in 6.9830ms
+2026-05-11 14:26:23.059 +05:00 [INF] HTTP POST /api/auth/login
+ responded 404 in 2.0545ms
+2026-05-11 14:26:55.907 +05:00 [INF] HTTP POST /api/auth/login
+ responded 404 in 0.3072ms
+2026-05-11 14:27:41.117 +05:00 [INF] HTTP POST /api/auth/login
+ responded 404 in 2.6006ms
+2026-05-11 14:27:46.390 +05:00 [INF] HTTP POST /api/auth/login
+ responded 404 in 0.2060ms
+2026-05-11 14:28:45.287 +05:00 [INF] HTTP POST /api/auth/login
+ responded 404 in 2.1133ms
+2026-05-11 16:28:31.013 +05:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-05-11 16:28:31.340 +05:00 [INF] HTTP POST /api/auth/login responded 200 in 1405.8854ms
+2026-05-11 16:29:52.308 +05:00 [INF] HTTP POST /api/auth/login responded 200 in 385.2034ms
+2026-05-11 16:30:04.779 +05:00 [INF] HTTP POST /api/auth/login responded 200 in 422.8265ms

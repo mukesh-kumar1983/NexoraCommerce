@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "NexoraGateway\\NexoraGateway.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "AuthService.API\\AuthService.API.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

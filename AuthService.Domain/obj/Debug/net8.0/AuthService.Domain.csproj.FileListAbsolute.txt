@@ -1,0 +1,15 @@
+D:\NexoraCommerce\AuthService.Domain\bin\Debug\net8.0\AuthService.Domain.deps.json
+D:\NexoraCommerce\AuthService.Domain\bin\Debug\net8.0\AuthService.Domain.dll
+D:\NexoraCommerce\AuthService.Domain\bin\Debug\net8.0\AuthService.Domain.pdb
+D:\NexoraCommerce\AuthService.Domain\bin\Debug\net8.0\SharedKernel.dll
+D:\NexoraCommerce\AuthService.Domain\bin\Debug\net8.0\SharedKernel.pdb
+D:\NexoraCommerce\AuthService.Domain\obj\Debug\net8.0\AuthService.Domain.csproj.AssemblyReference.cache
+D:\NexoraCommerce\AuthService.Domain\obj\Debug\net8.0\AuthService.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\NexoraCommerce\AuthService.Domain\obj\Debug\net8.0\AuthService.Domain.AssemblyInfoInputs.cache
+D:\NexoraCommerce\AuthService.Domain\obj\Debug\net8.0\AuthService.Domain.AssemblyInfo.cs
+D:\NexoraCommerce\AuthService.Domain\obj\Debug\net8.0\AuthService.Domain.csproj.CoreCompileInputs.cache
+D:\NexoraCommerce\AuthService.Domain\obj\Debug\net8.0\AuthServ.85EED38A.Up2Date
+D:\NexoraCommerce\AuthService.Domain\obj\Debug\net8.0\AuthService.Domain.dll
+D:\NexoraCommerce\AuthService.Domain\obj\Debug\net8.0\refint\AuthService.Domain.dll
+D:\NexoraCommerce\AuthService.Domain\obj\Debug\net8.0\AuthService.Domain.pdb
+D:\NexoraCommerce\AuthService.Domain\obj\Debug\net8.0\ref\AuthService.Domain.dll

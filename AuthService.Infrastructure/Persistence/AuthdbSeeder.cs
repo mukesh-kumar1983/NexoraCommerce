@@ -81,11 +81,13 @@ public static class AuthDbSeeder
             var adminUser = await context.Users
                 .FirstOrDefaultAsync(u => u.Email == "mk_soni@hotmail.com");
 
+            Guid g= Guid.NewGuid();
+
             if (adminUser == null)
             {
                 adminUser = new AppUser
                 {
-                    Id = Guid.NewGuid(),
+                    Id = g,
                     Email = "mk_soni@hotmail.com",
                     FirstName = "System",
                     LastName = "Admin",
@@ -96,6 +98,24 @@ public static class AuthDbSeeder
                 };
 
                 context.Users.Add(adminUser);
+
+                var userProfile = new UserProfile
+                {
+                    Id = adminUser.Id,
+                    FirstName = adminUser.FirstName,
+                    LastName = adminUser.LastName,
+                    PhoneNumber = null,
+                    Address = null,
+                    City = null,
+                    Country = null,
+                    Gender = Gender.Male,
+                    DepartmentId = null,
+                    JobTitleId = null,
+                    ProfileImageUrl = null
+                };
+
+                context.UserProfile.Add(userProfile);
+               
             }
 
             #endregion
@@ -119,6 +139,52 @@ public static class AuthDbSeeder
                     TenantId = tenant.Id
                 });
             }
+
+            #region Department Seed
+
+            // =========================
+            // 5. Department
+            // =========================
+            var dept = await context.Department
+                .FirstOrDefaultAsync(t => t.Title == "Development");
+
+            if (dept == null)
+            {
+                dept = new Department
+                {
+                    Id = Guid.NewGuid(),
+                    Title = "Development",
+                    TenantId = tenant.Id
+                };
+
+                context.Department.Add(dept);
+            }
+
+            #endregion
+
+            #region JobTitle Seed
+
+            // =========================
+            // 6 JobTitle
+            // =========================
+            var jt = await context.JobTitle
+                .FirstOrDefaultAsync(t => t.Title == "Developer");
+
+            if (jt == null)
+            {
+                jt = new JobTitle
+                {
+                    Id = Guid.NewGuid(),
+                    Title = "Developer",
+                    TenantId = tenant.Id
+                };
+                
+
+                context.JobTitle.Add(jt);
+            }
+
+            #endregion
+
 
             #endregion
 

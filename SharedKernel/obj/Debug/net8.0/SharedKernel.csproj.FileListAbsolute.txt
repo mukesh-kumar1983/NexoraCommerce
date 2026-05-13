@@ -1,10 +1,11 @@
-D:\NexoraCommerce\SharedKernel\bin\Debug\net8.0\SharedKernel.deps.json
-D:\NexoraCommerce\SharedKernel\bin\Debug\net8.0\SharedKernel.dll
-D:\NexoraCommerce\SharedKernel\bin\Debug\net8.0\SharedKernel.pdb
 D:\NexoraCommerce\SharedKernel\obj\Debug\net8.0\SharedKernel.GeneratedMSBuildEditorConfig.editorconfig
 D:\NexoraCommerce\SharedKernel\obj\Debug\net8.0\SharedKernel.AssemblyInfoInputs.cache
 D:\NexoraCommerce\SharedKernel\obj\Debug\net8.0\SharedKernel.AssemblyInfo.cs
 D:\NexoraCommerce\SharedKernel\obj\Debug\net8.0\SharedKernel.csproj.CoreCompileInputs.cache
+D:\NexoraCommerce\SharedKernel\obj\Debug\net8.0\SharedKernel.sourcelink.json
+D:\NexoraCommerce\SharedKernel\bin\Debug\net8.0\SharedKernel.deps.json
+D:\NexoraCommerce\SharedKernel\bin\Debug\net8.0\SharedKernel.dll
+D:\NexoraCommerce\SharedKernel\bin\Debug\net8.0\SharedKernel.pdb
 D:\NexoraCommerce\SharedKernel\obj\Debug\net8.0\SharedKernel.dll
 D:\NexoraCommerce\SharedKernel\obj\Debug\net8.0\refint\SharedKernel.dll
 D:\NexoraCommerce\SharedKernel\obj\Debug\net8.0\SharedKernel.pdb

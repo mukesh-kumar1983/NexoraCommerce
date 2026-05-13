@@ -18,6 +18,12 @@ public class AuthDbContext : DbContext, IAuthDbContext
     // ✅ FIX HERE
     public DbSet<UserRole> UserRole { get; set; }
 
+    public DbSet<UserProfile> UserProfile { get; set; }
+
+    public DbSet<Department> Department { get; set; }
+
+    public DbSet<JobTitle> JobTitle { get; set; }
+
     public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
     {
         return base.SaveChangesAsync(cancellationToken);

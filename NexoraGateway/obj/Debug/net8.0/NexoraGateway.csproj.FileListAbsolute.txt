@@ -58,6 +58,7 @@ D:\NexoraCommerce\NexoraGateway\obj\Debug\net8.0\NexoraGateway.AssemblyInfo.cs
 D:\NexoraCommerce\NexoraGateway\obj\Debug\net8.0\NexoraGateway.csproj.CoreCompileInputs.cache
 D:\NexoraCommerce\NexoraGateway\obj\Debug\net8.0\NexoraGateway.MvcApplicationPartsAssemblyInfo.cs
 D:\NexoraCommerce\NexoraGateway\obj\Debug\net8.0\NexoraGateway.MvcApplicationPartsAssemblyInfo.cache
+D:\NexoraCommerce\NexoraGateway\obj\Debug\net8.0\NexoraGateway.sourcelink.json
 D:\NexoraCommerce\NexoraGateway\obj\Debug\net8.0\rjimswa.dswa.cache.json
 D:\NexoraCommerce\NexoraGateway\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
 D:\NexoraCommerce\NexoraGateway\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json

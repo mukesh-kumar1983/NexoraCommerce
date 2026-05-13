@@ -13,7 +13,7 @@ builder.Host.UseSerilogLogging();
 builder.Services.AddApplicationServices();
 builder.Services.AddInfrastructureServices(builder.Configuration);
 builder.Services.AddAuthenticationServices(builder.Configuration);
-//builder.Services.AddCorsPolicy();
+builder.Services.AddCorsPolicy();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -32,7 +32,7 @@ if (app.Environment.IsDevelopment())
 
 #region Middleware Pipeline
 app.UseApplicationPipeline(app.Environment);
-//app.UseCors("DefaultCors");
+app.UseCors("DefaultCors");
 app.UseAuthentication();
 app.UseAuthorization();
 #endregion

@@ -1,3 +1,11 @@
+D:\NexoraCommerce\AuthService.API\obj\Debug\net8.0\AuthService.API.csproj.AssemblyReference.cache
+D:\NexoraCommerce\AuthService.API\obj\Debug\net8.0\rpswa.dswa.cache.json
+D:\NexoraCommerce\AuthService.API\obj\Debug\net8.0\AuthService.API.GeneratedMSBuildEditorConfig.editorconfig
+D:\NexoraCommerce\AuthService.API\obj\Debug\net8.0\AuthService.API.AssemblyInfoInputs.cache
+D:\NexoraCommerce\AuthService.API\obj\Debug\net8.0\AuthService.API.AssemblyInfo.cs
+D:\NexoraCommerce\AuthService.API\obj\Debug\net8.0\AuthService.API.csproj.CoreCompileInputs.cache
+D:\NexoraCommerce\AuthService.API\obj\Debug\net8.0\AuthService.API.MvcApplicationPartsAssemblyInfo.cache
+D:\NexoraCommerce\AuthService.API\obj\Debug\net8.0\AuthService.API.sourcelink.json
 D:\NexoraCommerce\AuthService.API\bin\Debug\net8.0\appsettings.Development.json
 D:\NexoraCommerce\AuthService.API\bin\Debug\net8.0\appsettings.json
 D:\NexoraCommerce\AuthService.API\bin\Debug\net8.0\AuthService.API.staticwebassets.endpoints.json
@@ -164,14 +172,7 @@ D:\NexoraCommerce\AuthService.API\bin\Debug\net8.0\SharedContracts.pdb
 D:\NexoraCommerce\AuthService.API\bin\Debug\net8.0\SharedInfrastructure.pdb
 D:\NexoraCommerce\AuthService.API\bin\Debug\net8.0\SharedKernel.pdb
 D:\NexoraCommerce\AuthService.API\bin\Debug\net8.0\AuthService.Domain.pdb
-D:\NexoraCommerce\AuthService.API\obj\Debug\net8.0\AuthService.API.csproj.AssemblyReference.cache
-D:\NexoraCommerce\AuthService.API\obj\Debug\net8.0\rpswa.dswa.cache.json
-D:\NexoraCommerce\AuthService.API\obj\Debug\net8.0\AuthService.API.GeneratedMSBuildEditorConfig.editorconfig
-D:\NexoraCommerce\AuthService.API\obj\Debug\net8.0\AuthService.API.AssemblyInfoInputs.cache
-D:\NexoraCommerce\AuthService.API\obj\Debug\net8.0\AuthService.API.AssemblyInfo.cs
-D:\NexoraCommerce\AuthService.API\obj\Debug\net8.0\AuthService.API.csproj.CoreCompileInputs.cache
 D:\NexoraCommerce\AuthService.API\obj\Debug\net8.0\AuthService.API.MvcApplicationPartsAssemblyInfo.cs
-D:\NexoraCommerce\AuthService.API\obj\Debug\net8.0\AuthService.API.MvcApplicationPartsAssemblyInfo.cache
 D:\NexoraCommerce\AuthService.API\obj\Debug\net8.0\rjimswa.dswa.cache.json
 D:\NexoraCommerce\AuthService.API\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
 D:\NexoraCommerce\AuthService.API\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json

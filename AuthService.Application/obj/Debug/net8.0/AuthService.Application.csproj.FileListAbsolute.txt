@@ -1,3 +1,9 @@
+D:\NexoraCommerce\AuthService.Application\obj\Debug\net8.0\AuthService.Application.csproj.AssemblyReference.cache
+D:\NexoraCommerce\AuthService.Application\obj\Debug\net8.0\AuthService.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\NexoraCommerce\AuthService.Application\obj\Debug\net8.0\AuthService.Application.AssemblyInfoInputs.cache
+D:\NexoraCommerce\AuthService.Application\obj\Debug\net8.0\AuthService.Application.AssemblyInfo.cs
+D:\NexoraCommerce\AuthService.Application\obj\Debug\net8.0\AuthService.Application.csproj.CoreCompileInputs.cache
+D:\NexoraCommerce\AuthService.Application\obj\Debug\net8.0\AuthService.Application.sourcelink.json
 D:\NexoraCommerce\AuthService.Application\bin\Debug\net8.0\AuthService.Application.deps.json
 D:\NexoraCommerce\AuthService.Application\bin\Debug\net8.0\AuthService.Application.dll
 D:\NexoraCommerce\AuthService.Application\bin\Debug\net8.0\AuthService.Application.pdb
@@ -5,11 +11,6 @@ D:\NexoraCommerce\AuthService.Application\bin\Debug\net8.0\AuthService.Domain.dl
 D:\NexoraCommerce\AuthService.Application\bin\Debug\net8.0\SharedKernel.dll
 D:\NexoraCommerce\AuthService.Application\bin\Debug\net8.0\AuthService.Domain.pdb
 D:\NexoraCommerce\AuthService.Application\bin\Debug\net8.0\SharedKernel.pdb
-D:\NexoraCommerce\AuthService.Application\obj\Debug\net8.0\AuthService.Application.csproj.AssemblyReference.cache
-D:\NexoraCommerce\AuthService.Application\obj\Debug\net8.0\AuthService.Application.GeneratedMSBuildEditorConfig.editorconfig
-D:\NexoraCommerce\AuthService.Application\obj\Debug\net8.0\AuthService.Application.AssemblyInfoInputs.cache
-D:\NexoraCommerce\AuthService.Application\obj\Debug\net8.0\AuthService.Application.AssemblyInfo.cs
-D:\NexoraCommerce\AuthService.Application\obj\Debug\net8.0\AuthService.Application.csproj.CoreCompileInputs.cache
 D:\NexoraCommerce\AuthService.Application\obj\Debug\net8.0\AuthServ.67992DEE.Up2Date
 D:\NexoraCommerce\AuthService.Application\obj\Debug\net8.0\AuthService.Application.dll
 D:\NexoraCommerce\AuthService.Application\obj\Debug\net8.0\refint\AuthService.Application.dll

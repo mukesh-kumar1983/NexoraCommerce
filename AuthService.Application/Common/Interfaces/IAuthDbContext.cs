@@ -12,6 +12,12 @@ public interface IAuthDbContext
 
     DbSet<Role> Role { get; }
 
+    DbSet<UserProfile> UserProfile { get; }
+
+    DbSet<JobTitle> JobTitle { get; }
+
+    DbSet<Department> Department { get; }
+
 
     Task<int> SaveChangesAsync(CancellationToken cancellationToken);
 }

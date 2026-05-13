@@ -1,0 +1,37 @@
+<aside class="sidebar" [class.collapsed]="isCollapsed">
+
+ 
+
+    <button class="toggle-btn" (click)="toggleSidebar()">
+      <span *ngIf="isCollapsed">›</span>
+      <span *ngIf="!isCollapsed">‹</span>
+    </button>
+
+  
+
+  <ul class="menu">
+
+      <li *ngFor="let item of menuItems"
+          [routerLink]="item.route"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }">
+
+          <span class="icon">
+              <lucide-icon [img]="item.icon"></lucide-icon>
+          </span>
+
+          <span class="label" *ngIf="!isCollapsed">
+              {{ item.label }}
+          </span>
+
+          <!-- Tooltip ONLY when collapsed -->
+          <span class="tooltip" *ngIf="isCollapsed">
+              {{ item.label }}
+          </span>
+
+
+      </li>
+
+  </ul>
+
+</aside>

@@ -1,7 +1,52 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\NexoraCommerce\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3CAF0397-5ECE-6F5B-72E3-D471A8B056E5}|NexoraGateway\\NexoraGateway.csproj|d:\\nexoracommerce\\nexoragateway\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CAF0397-5ECE-6F5B-72E3-D471A8B056E5}|NexoraGateway\\NexoraGateway.csproj|solutionrelative:nexoragateway\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57251532-E78A-4C81-A813-44BB2FE52BFF}|AuthService.API\\AuthService.API.csproj|d:\\nexoracommerce\\authservice.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57251532-E78A-4C81-A813-44BB2FE52BFF}|AuthService.API\\AuthService.API.csproj|solutionrelative:authservice.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57251532-E78A-4C81-A813-44BB2FE52BFF}|AuthService.API\\AuthService.API.csproj|d:\\nexoracommerce\\authservice.api\\extentions\\corsserviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57251532-E78A-4C81-A813-44BB2FE52BFF}|AuthService.API\\AuthService.API.csproj|solutionrelative:authservice.api\\extentions\\corsserviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D603C297-555E-DC37-C362-09E7EBAE1826}|nexora-web\\nexora-web.esproj|d:\\nexoracommerce\\nexora-web\\src\\app\\features\\landing\\pages\\landing\\landing.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{D603C297-555E-DC37-C362-09E7EBAE1826}|nexora-web\\nexora-web.esproj|solutionrelative:nexora-web\\src\\app\\features\\landing\\pages\\landing\\landing.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57251532-E78A-4C81-A813-44BB2FE52BFF}|AuthService.API\\AuthService.API.csproj|d:\\nexoracommerce\\authservice.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57251532-E78A-4C81-A813-44BB2FE52BFF}|AuthService.API\\AuthService.API.csproj|solutionrelative:authservice.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D603C297-555E-DC37-C362-09E7EBAE1826}|nexora-web\\nexora-web.esproj|d:\\nexoracommerce\\nexora-web\\src\\app\\features\\landing\\pages\\landing\\landing.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D603C297-555E-DC37-C362-09E7EBAE1826}|nexora-web\\nexora-web.esproj|solutionrelative:nexora-web\\src\\app\\features\\landing\\pages\\landing\\landing.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D603C297-555E-DC37-C362-09E7EBAE1826}|nexora-web\\nexora-web.esproj|d:\\nexoracommerce\\nexora-web\\src\\app\\features\\auth\\services\\auth.service.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{D603C297-555E-DC37-C362-09E7EBAE1826}|nexora-web\\nexora-web.esproj|solutionrelative:nexora-web\\src\\app\\features\\auth\\services\\auth.service.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D603C297-555E-DC37-C362-09E7EBAE1826}|nexora-web\\nexora-web.esproj|d:\\nexoracommerce\\nexora-web\\src\\app\\app.config.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{D603C297-555E-DC37-C362-09E7EBAE1826}|nexora-web\\nexora-web.esproj|solutionrelative:nexora-web\\src\\app\\app.config.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D603C297-555E-DC37-C362-09E7EBAE1826}|nexora-web\\nexora-web.esproj|d:\\nexoracommerce\\nexora-web\\src\\main.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{D603C297-555E-DC37-C362-09E7EBAE1826}|nexora-web\\nexora-web.esproj|solutionrelative:nexora-web\\src\\main.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CAF0397-5ECE-6F5B-72E3-D471A8B056E5}|NexoraGateway\\NexoraGateway.csproj|d:\\nexoracommerce\\nexoragateway\\ocelot.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3CAF0397-5ECE-6F5B-72E3-D471A8B056E5}|NexoraGateway\\NexoraGateway.csproj|solutionrelative:nexoragateway\\ocelot.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D603C297-555E-DC37-C362-09E7EBAE1826}|nexora-web\\nexora-web.esproj|d:\\nexoracommerce\\nexora-web\\src\\app\\features\\landing\\pages\\landing\\landing.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{D603C297-555E-DC37-C362-09E7EBAE1826}|nexora-web\\nexora-web.esproj|solutionrelative:nexora-web\\src\\app\\features\\landing\\pages\\landing\\landing.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,6 +75,161 @@
             {
               "$type": "Bookmark",
               "Name": "ST:137:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\NexoraCommerce\\NexoraGateway\\Program.cs",
+              "RelativeDocumentMoniker": "NexoraGateway\\Program.cs",
+              "ToolTip": "D:\\NexoraCommerce\\NexoraGateway\\Program.cs",
+              "RelativeToolTip": "NexoraGateway\\Program.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowDAAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T07:22:50.3Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CorsServiceExtensions.cs",
+              "DocumentMoniker": "D:\\NexoraCommerce\\AuthService.API\\Extentions\\CorsServiceExtensions.cs",
+              "RelativeDocumentMoniker": "AuthService.API\\Extentions\\CorsServiceExtensions.cs",
+              "ToolTip": "D:\\NexoraCommerce\\AuthService.API\\Extentions\\CorsServiceExtensions.cs",
+              "RelativeToolTip": "AuthService.API\\Extentions\\CorsServiceExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T07:21:49.713Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\NexoraCommerce\\AuthService.API\\Program.cs",
+              "RelativeDocumentMoniker": "AuthService.API\\Program.cs",
+              "ToolTip": "D:\\NexoraCommerce\\AuthService.API\\Program.cs",
+              "RelativeToolTip": "AuthService.API\\Program.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T07:04:51.569Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\NexoraCommerce\\AuthService.API\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "AuthService.API\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\NexoraCommerce\\AuthService.API\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "AuthService.API\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAqwC8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T06:34:17.51Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "app.config.ts",
+              "DocumentMoniker": "D:\\NexoraCommerce\\nexora-web\\src\\app\\app.config.ts",
+              "RelativeDocumentMoniker": "nexora-web\\src\\app\\app.config.ts",
+              "ToolTip": "D:\\NexoraCommerce\\nexora-web\\src\\app\\app.config.ts",
+              "RelativeToolTip": "nexora-web\\src\\app\\app.config.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-05-13T06:42:43.583Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "main.ts",
+              "DocumentMoniker": "D:\\NexoraCommerce\\nexora-web\\src\\main.ts",
+              "RelativeDocumentMoniker": "nexora-web\\src\\main.ts",
+              "ToolTip": "D:\\NexoraCommerce\\nexora-web\\src\\main.ts",
+              "RelativeToolTip": "nexora-web\\src\\main.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-05-13T06:41:39.616Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ocelot.json",
+              "DocumentMoniker": "D:\\NexoraCommerce\\NexoraGateway\\ocelot.json",
+              "RelativeDocumentMoniker": "NexoraGateway\\ocelot.json",
+              "ToolTip": "D:\\NexoraCommerce\\NexoraGateway\\ocelot.json",
+              "RelativeToolTip": "NexoraGateway\\ocelot.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-12T15:09:55.344Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "auth.service.service.ts",
+              "DocumentMoniker": "D:\\NexoraCommerce\\nexora-web\\src\\app\\features\\auth\\services\\auth.service.service.ts",
+              "RelativeDocumentMoniker": "nexora-web\\src\\app\\features\\auth\\services\\auth.service.service.ts",
+              "ToolTip": "D:\\NexoraCommerce\\nexora-web\\src\\app\\features\\auth\\services\\auth.service.service.ts",
+              "RelativeToolTip": "nexora-web\\src\\app\\features\\auth\\services\\auth.service.service.ts",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAkwA8AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-05-12T15:05:49.984Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "landing.component.css",
+              "DocumentMoniker": "D:\\NexoraCommerce\\nexora-web\\src\\app\\features\\landing\\pages\\landing\\landing.component.css",
+              "RelativeDocumentMoniker": "nexora-web\\src\\app\\features\\landing\\pages\\landing\\landing.component.css",
+              "ToolTip": "D:\\NexoraCommerce\\nexora-web\\src\\app\\features\\landing\\pages\\landing\\landing.component.css",
+              "RelativeToolTip": "nexora-web\\src\\app\\features\\landing\\pages\\landing\\landing.component.css",
+              "ViewState": "AgIAAKEAAAAAAAAAAAAcwLcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-05-12T14:41:45.551Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "landing.component.ts",
+              "DocumentMoniker": "D:\\NexoraCommerce\\nexora-web\\src\\app\\features\\landing\\pages\\landing\\landing.component.ts",
+              "RelativeDocumentMoniker": "nexora-web\\src\\app\\features\\landing\\pages\\landing\\landing.component.ts",
+              "ToolTip": "D:\\NexoraCommerce\\nexora-web\\src\\app\\features\\landing\\pages\\landing\\landing.component.ts",
+              "RelativeToolTip": "nexora-web\\src\\app\\features\\landing\\pages\\landing\\landing.component.ts",
+              "ViewState": "AgIAABoAAAAAAAAAAAAAACAAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-05-12T14:30:11.182Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "landing.component.html",
+              "DocumentMoniker": "D:\\NexoraCommerce\\nexora-web\\src\\app\\features\\landing\\pages\\landing\\landing.component.html",
+              "RelativeDocumentMoniker": "nexora-web\\src\\app\\features\\landing\\pages\\landing\\landing.component.html",
+              "ToolTip": "D:\\NexoraCommerce\\nexora-web\\src\\app\\features\\landing\\pages\\landing\\landing.component.html",
+              "RelativeToolTip": "nexora-web\\src\\app\\features\\landing\\pages\\landing\\landing.component.html",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADAAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-05-12T14:29:47.297Z",
+              "EditorCaption": ""
             }
           ]
         }

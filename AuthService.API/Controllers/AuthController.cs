@@ -1,5 +1,6 @@
 ﻿using AuthService.API.DTOs.Authentication;
 using AuthService.Application.Features.Commands;
+using AuthService.Domain.Entities;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using SharedKernel.Common;
@@ -26,12 +27,16 @@ public class AuthController : ControllerBase
             LastName = dto.LastName,
             Email = dto.Email,
             Password = dto.Password
-        };
+        }; 
 
         var result = await _mediator.Send(command);
 
+        
+
         return Ok(result);
     }
+
+    
 
     #endregion
 

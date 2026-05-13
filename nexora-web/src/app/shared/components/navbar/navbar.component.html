@@ -1,0 +1,13 @@
+<header class="navbar">
+
+  <div class="left">
+    <h2>eCommerce App</h2>
+  </div>
+
+  <div class="right">
+    <div *ngIf="authService.isLoggedIn$ | async ">
+      <app-user-menu></app-user-menu>
+    </div>
+  </div>
+
+</header>

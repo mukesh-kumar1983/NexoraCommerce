@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  standalone: true,
+  imports: [RouterOutlet],
+  templateUrl: './app.component.html'
 })
-export class AppComponent {
-  title = 'nexora-web';
-}
+export class AppComponent { }

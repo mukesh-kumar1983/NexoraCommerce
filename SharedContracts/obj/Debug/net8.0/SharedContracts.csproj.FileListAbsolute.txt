@@ -5,6 +5,7 @@ D:\NexoraCommerce\SharedContracts\obj\Debug\net8.0\SharedContracts.GeneratedMSBu
 D:\NexoraCommerce\SharedContracts\obj\Debug\net8.0\SharedContracts.AssemblyInfoInputs.cache
 D:\NexoraCommerce\SharedContracts\obj\Debug\net8.0\SharedContracts.AssemblyInfo.cs
 D:\NexoraCommerce\SharedContracts\obj\Debug\net8.0\SharedContracts.csproj.CoreCompileInputs.cache
+D:\NexoraCommerce\SharedContracts\obj\Debug\net8.0\SharedContracts.sourcelink.json
 D:\NexoraCommerce\SharedContracts\obj\Debug\net8.0\SharedContracts.dll
 D:\NexoraCommerce\SharedContracts\obj\Debug\net8.0\refint\SharedContracts.dll
 D:\NexoraCommerce\SharedContracts\obj\Debug\net8.0\SharedContracts.pdb

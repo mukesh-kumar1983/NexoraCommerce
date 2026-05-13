@@ -20,7 +20,9 @@
     <PackageJsonDependenciesAngularPlatformBrowserDynamic Condition="$(PackageJsonDependenciesAngularPlatformBrowserDynamic) == ''">^17.3.0</PackageJsonDependenciesAngularPlatformBrowserDynamic>
     <PackageJsonDependenciesAngularRouter Condition="$(PackageJsonDependenciesAngularRouter) == ''">^17.3.0</PackageJsonDependenciesAngularRouter>
     <PackageJsonDependenciesBootstrap Condition="$(PackageJsonDependenciesBootstrap) == ''">^5.3.8</PackageJsonDependenciesBootstrap>
+    <PackageJsonDependenciesBootstrapIcons Condition="$(PackageJsonDependenciesBootstrapIcons) == ''">^1.13.1</PackageJsonDependenciesBootstrapIcons>
     <PackageJsonDependenciesJestEditorSupport Condition="$(PackageJsonDependenciesJestEditorSupport) == ''">*</PackageJsonDependenciesJestEditorSupport>
+    <PackageJsonDependenciesLucideAngular Condition="$(PackageJsonDependenciesLucideAngular) == ''">^1.0.0</PackageJsonDependenciesLucideAngular>
     <PackageJsonDependenciesRxjs Condition="$(PackageJsonDependenciesRxjs) == ''">~7.8.0</PackageJsonDependenciesRxjs>
     <PackageJsonDependenciesTslib Condition="$(PackageJsonDependenciesTslib) == ''">^2.3.0</PackageJsonDependenciesTslib>
     <PackageJsonDependenciesZoneJs Condition="$(PackageJsonDependenciesZoneJs) == ''">~0.14.3</PackageJsonDependenciesZoneJs>

@@ -36,9 +36,10 @@ public class RegisterUserCommandHandler
             ?? throw new Exception("Role 'User' does not exist or is not active");
 
         // 4. Create User
+        var userId = Guid.NewGuid();
         var user = new AppUser
         {
-            Id = Guid.NewGuid(),
+            Id = userId,
             Email = request.Email,
             FirstName = request.FirstName,
             LastName = request.LastName,
@@ -48,6 +49,14 @@ public class RegisterUserCommandHandler
             IsLocked = false,
             CreatedBy = "System",
             ModifiedBy = "System"
+        };
+
+        var profile = new UserProfile
+        {
+            Id = userId, // Shared PK
+            FirstName = request.FirstName,
+            LastName = request.LastName,
+            Gender = Gender.Male
         };
 
         // 5. UserRole mapping
@@ -64,7 +73,9 @@ public class RegisterUserCommandHandler
             await _unitOfWork.BeginTransactionAsync(cancellationToken);
 
             await _context.Users.AddAsync(user, cancellationToken);
-            await _context.UserRole.AddAsync(userRole, cancellationToken);
+            await _context.UserProfile.AddAsync(profile, cancellationToken);
+
+            //await _context.UserProfile.Add(profile);
 
             await _unitOfWork.SaveChangesAsync(cancellationToken);
             await _unitOfWork.CommitAsync(cancellationToken);

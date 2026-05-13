@@ -1,0 +1,11 @@
+footer {
+  background: #0f172a;
+  color: #ffffff;
+  padding: 10px 12px;
+  text-align: center;
+}
+
+:host {
+  background: red;
+  display: block;
+}

@@ -17,6 +17,7 @@
           "Microsoft.EntityFrameworkCore": "8.0.26",
           "Microsoft.EntityFrameworkCore.Design": "8.0.26",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.26",
+          "RabbitMQ.Client": "6.8.1",
           "Serilog.AspNetCore": "10.0.0",
           "Serilog.Enrichers.Environment": "3.0.1",
           "Serilog.Enrichers.Process": "3.0.0",
@@ -785,7 +786,15 @@
           }
         }
       },
-      "Serilog/4.3.0": {
+      "RabbitMQ.Client/6.8.1": {
+        "runtime": {
+          "lib/netstandard2.0/RabbitMQ.Client.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.8.1.0"
+          }
+        }
+      },
+      "Serilog/4.3.1": {
         "runtime": {
           "lib/net8.0/Serilog.dll": {
             "assemblyVersion": "4.3.0.0",
@@ -795,7 +804,7 @@
       },
       "Serilog.AspNetCore/10.0.0": {
         "dependencies": {
-          "Serilog": "4.3.0",
+          "Serilog": "4.3.1",
           "Serilog.Extensions.Hosting": "10.0.0",
           "Serilog.Formatting.Compact": "3.0.0",
           "Serilog.Settings.Configuration": "10.0.0",
@@ -812,7 +821,7 @@
       },
       "Serilog.Enrichers.Environment/3.0.1": {
         "dependencies": {
-          "Serilog": "4.3.0"
+          "Serilog": "4.3.1"
         },
         "runtime": {
           "lib/net8.0/Serilog.Enrichers.Environment.dll": {
@@ -823,7 +832,7 @@
       },
       "Serilog.Enrichers.Process/3.0.0": {
         "dependencies": {
-          "Serilog": "4.3.0"
+          "Serilog": "4.3.1"
         },
         "runtime": {
           "lib/net8.0/Serilog.Enrichers.Process.dll": {
@@ -834,7 +843,7 @@
       },
       "Serilog.Enrichers.Thread/4.0.0": {
         "dependencies": {
-          "Serilog": "4.3.0"
+          "Serilog": "4.3.1"
         },
         "runtime": {
           "lib/net8.0/Serilog.Enrichers.Thread.dll": {
@@ -848,7 +857,7 @@
           "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.0",
           "Microsoft.Extensions.Hosting.Abstractions": "10.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "10.0.0",
-          "Serilog": "4.3.0",
+          "Serilog": "4.3.1",
           "Serilog.Extensions.Logging": "10.0.0"
         },
         "runtime": {
@@ -861,7 +870,7 @@
       "Serilog.Extensions.Logging/10.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Logging": "10.0.0",
-          "Serilog": "4.3.0"
+          "Serilog": "4.3.1"
         },
         "runtime": {
           "lib/net8.0/Serilog.Extensions.Logging.dll": {
@@ -872,7 +881,7 @@
       },
       "Serilog.Formatting.Compact/3.0.0": {
         "dependencies": {
-          "Serilog": "4.3.0"
+          "Serilog": "4.3.1"
         },
         "runtime": {
           "lib/net8.0/Serilog.Formatting.Compact.dll": {
@@ -885,7 +894,7 @@
         "dependencies": {
           "Microsoft.Extensions.Configuration.Binder": "10.0.0",
           "Microsoft.Extensions.DependencyModel": "10.0.0",
-          "Serilog": "4.3.0"
+          "Serilog": "4.3.1"
         },
         "runtime": {
           "lib/net8.0/Serilog.Settings.Configuration.dll": {
@@ -896,7 +905,7 @@
       },
       "Serilog.Sinks.Console/6.1.1": {
         "dependencies": {
-          "Serilog": "4.3.0"
+          "Serilog": "4.3.1"
         },
         "runtime": {
           "lib/net8.0/Serilog.Sinks.Console.dll": {
@@ -907,7 +916,7 @@
       },
       "Serilog.Sinks.Debug/3.0.0": {
         "dependencies": {
-          "Serilog": "4.3.0"
+          "Serilog": "4.3.1"
         },
         "runtime": {
           "lib/net8.0/Serilog.Sinks.Debug.dll": {
@@ -918,7 +927,7 @@
       },
       "Serilog.Sinks.File/7.0.0": {
         "dependencies": {
-          "Serilog": "4.3.0"
+          "Serilog": "4.3.1"
         },
         "runtime": {
           "lib/net8.0/Serilog.Sinks.File.dll": {
@@ -1221,7 +1230,8 @@
           "FluentValidation": "12.1.1",
           "FluentValidation.DependencyInjectionExtensions": "12.1.1",
           "MediatR": "14.1.0",
-          "Microsoft.EntityFrameworkCore": "8.0.26"
+          "Microsoft.EntityFrameworkCore": "8.0.26",
+          "SharedContracts": "1.0.0"
         },
         "runtime": {
           "AuthService.Application.dll": {
@@ -1250,6 +1260,9 @@
           "Microsoft.Extensions.Configuration": "10.0.0",
           "Microsoft.Extensions.Configuration.Abstractions": "10.0.0",
           "Microsoft.Extensions.Configuration.FileExtensions": "8.0.1",
+          "RabbitMQ.Client": "6.8.1",
+          "Serilog": "4.3.1",
+          "Serilog.Sinks.Console": "6.1.1",
           "System.IdentityModel.Tokens.Jwt": "8.18.0"
         },
         "runtime": {
@@ -1630,12 +1643,19 @@
       "path": "mono.texttemplating/2.2.1",
       "hashPath": "mono.texttemplating.2.2.1.nupkg.sha512"
     },
-    "Serilog/4.3.0": {
+    "RabbitMQ.Client/6.8.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-+cDryFR0GRhsGOnZSKwaDzRRl4MupvJ42FhCE4zhQRVanX0Jpg6WuCBk59OVhVDPmab1bB+nRykAnykYELA9qQ==",
-      "path": "serilog/4.3.0",
-      "hashPath": "serilog.4.3.0.nupkg.sha512"
+      "sha512": "sha512-jNsmGgmCNw2S/NzskeN2ijtGywtH4Sk/G6jWUTD5sY9SrC27Xz6BsLIiB8hdsfjeyWCa4j4GvCIGkpE8wrjU1Q==",
+      "path": "rabbitmq.client/6.8.1",
+      "hashPath": "rabbitmq.client.6.8.1.nupkg.sha512"
+    },
+    "Serilog/4.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-savYe7h5yRlkqBVOwP8cIRDOdqKiPmYCU4W87JH38sBmcKD5EBoXvQIw6bNEvZ/pTe1gsiye3VFCzBsoppGkXQ==",
+      "path": "serilog/4.3.1",
+      "hashPath": "serilog.4.3.1.nupkg.sha512"
     },
     "Serilog.AspNetCore/10.0.0": {
       "type": "package",

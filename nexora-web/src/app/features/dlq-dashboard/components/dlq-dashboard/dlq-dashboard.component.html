@@ -1,0 +1,37 @@
+<div class="container mt-4">
+
+  <h2>Dead Letter Queue Dashboard</h2>
+
+  <table class="table table-bordered table-striped mt-3">
+    <thead>
+      <tr>
+        <th>Delivery Tag</th>
+        <th>Payload</th>
+        <th>Retrieved At</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let message of messages">
+        <td>{{ message.deliveryTag }}</td>
+
+        <td>
+          <pre>{{ message.payload }}</pre>
+        </td>
+
+        <td>{{ message.retrievedAt }}</td>
+
+        <td>
+          <button class="btn btn-success btn-sm me-2"
+                  (click)="replay(message)">
+            Replay
+          </button>
+          <button class="btn btn-danger btn-sm"
+                  (click)="delete(message)">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

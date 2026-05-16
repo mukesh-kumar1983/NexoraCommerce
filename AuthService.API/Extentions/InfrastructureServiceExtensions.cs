@@ -1,5 +1,6 @@
 ﻿using AuthService.Application.Common.Interfaces;
 using AuthService.Infrastruc.Features.Repositories;
+using AuthService.Infrastructure.Messaging;
 using AuthService.Infrastructure.Persistence;
 using AuthService.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -24,6 +25,7 @@ public static class InfrastructureServiceExtensions
         services.AddScoped<IJwtTokenService, JwtTokenService>();
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IUnitOfWork, UnitOfWork>();
+        services.AddSingleton<IMessagePublisher, RabbitMqPublisher>();
 
         return services;
     }

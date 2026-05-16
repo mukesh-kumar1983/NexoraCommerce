@@ -172,7 +172,6 @@ D:\NexoraCommerce\AuthService.API\bin\Debug\net8.0\SharedContracts.pdb
 D:\NexoraCommerce\AuthService.API\bin\Debug\net8.0\SharedInfrastructure.pdb
 D:\NexoraCommerce\AuthService.API\bin\Debug\net8.0\SharedKernel.pdb
 D:\NexoraCommerce\AuthService.API\bin\Debug\net8.0\AuthService.Domain.pdb
-D:\NexoraCommerce\AuthService.API\obj\Debug\net8.0\AuthService.API.MvcApplicationPartsAssemblyInfo.cs
 D:\NexoraCommerce\AuthService.API\obj\Debug\net8.0\rjimswa.dswa.cache.json
 D:\NexoraCommerce\AuthService.API\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
 D:\NexoraCommerce\AuthService.API\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
@@ -189,3 +188,5 @@ D:\NexoraCommerce\AuthService.API\obj\Debug\net8.0\refint\AuthService.API.dll
 D:\NexoraCommerce\AuthService.API\obj\Debug\net8.0\AuthService.API.pdb
 D:\NexoraCommerce\AuthService.API\obj\Debug\net8.0\AuthService.API.genruntimeconfig.cache
 D:\NexoraCommerce\AuthService.API\obj\Debug\net8.0\ref\AuthService.API.dll
+D:\NexoraCommerce\AuthService.API\bin\Debug\net8.0\RabbitMQ.Client.dll
+D:\NexoraCommerce\AuthService.API\obj\Debug\net8.0\AuthService.API.MvcApplicationPartsAssemblyInfo.cs

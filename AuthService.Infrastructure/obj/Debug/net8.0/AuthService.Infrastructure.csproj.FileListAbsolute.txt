@@ -20,3 +20,5 @@ D:\NexoraCommerce\AuthService.Infrastructure\obj\Debug\net8.0\refint\AuthService
 D:\NexoraCommerce\AuthService.Infrastructure\obj\Debug\net8.0\AuthService.Infrastructure.pdb
 D:\NexoraCommerce\AuthService.Infrastructure\obj\Debug\net8.0\AuthService.Infrastructure.genruntimeconfig.cache
 D:\NexoraCommerce\AuthService.Infrastructure\obj\Debug\net8.0\ref\AuthService.Infrastructure.dll
+D:\NexoraCommerce\AuthService.Infrastructure\bin\Debug\net8.0\SharedContracts.dll
+D:\NexoraCommerce\AuthService.Infrastructure\bin\Debug\net8.0\SharedContracts.pdb

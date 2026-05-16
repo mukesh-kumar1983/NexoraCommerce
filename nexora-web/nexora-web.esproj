@@ -16,6 +16,9 @@
     <Folder Include="src\app\features\auth\components\" />
     <Folder Include="src\app\features\auth\services\" />
     <Folder Include="src\app\features\auth\pages\" />
+    <Folder Include="src\app\features\dlq-dashboard\components\" />
+    <Folder Include="src\app\features\dlq-dashboard\services\" />
+    <Folder Include="src\app\features\dlq-dashboard\pages\" />
     <Folder Include="src\app\features\profile\" />
     <Folder Include="src\app\features\settings\" />
     <Folder Include="src\app\features\users\" />

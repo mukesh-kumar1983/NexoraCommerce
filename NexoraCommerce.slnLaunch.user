@@ -9,6 +9,10 @@
       {
         "Path": "AuthService.API\\AuthService.API.csproj",
         "Action": "Start"
+      },
+      {
+        "Path": "EmailService.Worker\\EmailService.Worker.csproj",
+        "Action": "Start"
       }
     ]
   }

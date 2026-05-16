@@ -20,6 +20,13 @@
     <Project Path="AuthService.Domain/AuthService.Domain.csproj" Id="468cea34-013e-42a7-a3a3-0d476b889209" />
     <Project Path="AuthService.Infrastructure/AuthService.Infrastructure.csproj" Id="749d30d5-f5c7-40d2-9f98-dff3e9e68683" />
   </Folder>
+  <Folder Name="/Services/EmailService/">
+    <Project Path="EmailService.API/EmailService.API.csproj" Id="9844199c-53bc-4ee5-a119-8f73b0b3304c" />
+    <Project Path="EmailService.Application/EmailService.Application.csproj" Id="620e59cf-2c30-4447-98c7-b1d2647ad10e" />
+    <Project Path="EmailService.Domain/EmailService.Domain.csproj" Id="040e3a43-89f7-48e8-9dae-312adc3fc98a" />
+    <Project Path="EmailService.Infrastructure/EmailService.Infrastructure.csproj" Id="5f1239ac-cb3c-4d0f-8b72-db6ffe78640a" />
+    <Project Path="EmailService.Worker/EmailService.Worker.csproj" Id="dd29da54-5113-4f3c-90a7-e43c36401e19" />
+  </Folder>
   <Folder Name="/Services/OrderService/" />
   <Folder Name="/Services/PaymentService/" />
   <Folder Name="/Services/ProductService/">
@@ -28,4 +35,6 @@
     <Project Path="ProductService.Domain/ProductService.Domain.csproj" />
     <Project Path="ProductService.Infrastructure/ProductService.Infrastructure.csproj" />
   </Folder>
+  <Project Path="DLQ.Replayer/DLQ.Replayer.csproj" Id="b1a56158-6d87-4d7b-8b0f-232655d29f0f" />
+  <Project Path="DLQService.API/DLQService.API.csproj" Id="2eeffcf2-a522-4777-b5dd-4faa58de2756" />
 </Solution>

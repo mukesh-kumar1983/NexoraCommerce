@@ -3,40 +3,72 @@
   "WorkspaceRootPath": "D:\\NexoraCommerce\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{57251532-E78A-4C81-A813-44BB2FE52BFF}|AuthService.API\\AuthService.API.csproj|d:\\nexoracommerce\\authservice.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57251532-E78A-4C81-A813-44BB2FE52BFF}|AuthService.API\\AuthService.API.csproj|solutionrelative:authservice.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DD29DA54-5113-4F3C-90A7-E43C36401E19}|EmailService.Worker\\EmailService.Worker.csproj|d:\\nexoracommerce\\emailservice.worker\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD29DA54-5113-4F3C-90A7-E43C36401E19}|EmailService.Worker\\EmailService.Worker.csproj|solutionrelative:emailservice.worker\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{57251532-E78A-4C81-A813-44BB2FE52BFF}|AuthService.API\\AuthService.API.csproj|d:\\nexoracommerce\\authservice.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57251532-E78A-4C81-A813-44BB2FE52BFF}|AuthService.API\\AuthService.API.csproj|solutionrelative:authservice.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DD29DA54-5113-4F3C-90A7-E43C36401E19}|EmailService.Worker\\EmailService.Worker.csproj|d:\\nexoracommerce\\emailservice.worker\\processors\\emailretryprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD29DA54-5113-4F3C-90A7-E43C36401E19}|EmailService.Worker\\EmailService.Worker.csproj|solutionrelative:emailservice.worker\\processors\\emailretryprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D603C297-555E-DC37-C362-09E7EBAE1826}|nexora-web\\nexora-web.esproj|d:\\nexoracommerce\\nexora-web\\src\\app\\features\\landing\\pages\\landing\\landing.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D603C297-555E-DC37-C362-09E7EBAE1826}|nexora-web\\nexora-web.esproj|solutionrelative:nexora-web\\src\\app\\features\\landing\\pages\\landing\\landing.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{040E3A43-89F7-48E8-9DAE-312ADC3FC98A}|EmailService.Domain\\EmailService.Domain.csproj|d:\\nexoracommerce\\emailservice.domain\\entities\\failedemailmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{040E3A43-89F7-48E8-9DAE-312ADC3FC98A}|EmailService.Domain\\EmailService.Domain.csproj|solutionrelative:emailservice.domain\\entities\\failedemailmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D603C297-555E-DC37-C362-09E7EBAE1826}|nexora-web\\nexora-web.esproj|d:\\nexoracommerce\\nexora-web\\src\\app\\features\\auth\\services\\auth.service.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{D603C297-555E-DC37-C362-09E7EBAE1826}|nexora-web\\nexora-web.esproj|solutionrelative:nexora-web\\src\\app\\features\\auth\\services\\auth.service.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{DD29DA54-5113-4F3C-90A7-E43C36401E19}|EmailService.Worker\\EmailService.Worker.csproj|d:\\nexoracommerce\\emailservice.worker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD29DA54-5113-4F3C-90A7-E43C36401E19}|EmailService.Worker\\EmailService.Worker.csproj|solutionrelative:emailservice.worker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{620E59CF-2C30-4447-98C7-B1D2647AD10E}|EmailService.Application\\EmailService.Application.csproj|d:\\nexoracommerce\\emailservice.application\\common\\settings\\emailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{620E59CF-2C30-4447-98C7-B1D2647AD10E}|EmailService.Application\\EmailService.Application.csproj|solutionrelative:emailservice.application\\common\\settings\\emailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{620E59CF-2C30-4447-98C7-B1D2647AD10E}|EmailService.Application\\EmailService.Application.csproj|d:\\nexoracommerce\\emailservice.application\\common\\settings\\retrysettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{620E59CF-2C30-4447-98C7-B1D2647AD10E}|EmailService.Application\\EmailService.Application.csproj|solutionrelative:emailservice.application\\common\\settings\\retrysettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD29DA54-5113-4F3C-90A7-E43C36401E19}|EmailService.Worker\\EmailService.Worker.csproj|d:\\nexoracommerce\\emailservice.worker\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DD29DA54-5113-4F3C-90A7-E43C36401E19}|EmailService.Worker\\EmailService.Worker.csproj|solutionrelative:emailservice.worker\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD29DA54-5113-4F3C-90A7-E43C36401E19}|EmailService.Worker\\EmailService.Worker.csproj|d:\\nexoracommerce\\emailservice.worker\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD29DA54-5113-4F3C-90A7-E43C36401E19}|EmailService.Worker\\EmailService.Worker.csproj|solutionrelative:emailservice.worker\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57251532-E78A-4C81-A813-44BB2FE52BFF}|AuthService.API\\AuthService.API.csproj|d:\\nexoracommerce\\authservice.api\\logs\\log-20260515.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{57251532-E78A-4C81-A813-44BB2FE52BFF}|AuthService.API\\AuthService.API.csproj|solutionrelative:authservice.api\\logs\\log-20260515.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57251532-E78A-4C81-A813-44BB2FE52BFF}|AuthService.API\\AuthService.API.csproj|d:\\nexoracommerce\\authservice.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{57251532-E78A-4C81-A813-44BB2FE52BFF}|AuthService.API\\AuthService.API.csproj|solutionrelative:authservice.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DA90790-BBA3-4086-B6B1-88CD75B2C051}|AuthService.Application\\AuthService.Application.csproj|d:\\nexoracommerce\\authservice.application\\features\\authentication\\handlers\\registerusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DA90790-BBA3-4086-B6B1-88CD75B2C051}|AuthService.Application\\AuthService.Application.csproj|solutionrelative:authservice.application\\features\\authentication\\handlers\\registerusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D603C297-555E-DC37-C362-09E7EBAE1826}|nexora-web\\nexora-web.esproj|d:\\nexoracommerce\\nexora-web\\src\\app\\features\\landing\\pages\\landing\\landing.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{D603C297-555E-DC37-C362-09E7EBAE1826}|nexora-web\\nexora-web.esproj|solutionrelative:nexora-web\\src\\app\\features\\landing\\pages\\landing\\landing.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D603C297-555E-DC37-C362-09E7EBAE1826}|nexora-web\\nexora-web.esproj|d:\\nexoracommerce\\nexora-web\\src\\app\\app.config.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{D603C297-555E-DC37-C362-09E7EBAE1826}|nexora-web\\nexora-web.esproj|solutionrelative:nexora-web\\src\\app\\app.config.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{749D30D5-F5C7-40D2-9F98-DFF3E9E68683}|AuthService.Infrastructure\\AuthService.Infrastructure.csproj|d:\\nexoracommerce\\authservice.infrastructure\\persistence\\authdbseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{749D30D5-F5C7-40D2-9F98-DFF3E9E68683}|AuthService.Infrastructure\\AuthService.Infrastructure.csproj|solutionrelative:authservice.infrastructure\\persistence\\authdbseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D603C297-555E-DC37-C362-09E7EBAE1826}|nexora-web\\nexora-web.esproj|d:\\nexoracommerce\\nexora-web\\src\\main.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{D603C297-555E-DC37-C362-09E7EBAE1826}|nexora-web\\nexora-web.esproj|solutionrelative:nexora-web\\src\\main.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{9844199C-53BC-4EE5-A119-8F73B0B3304C}|EmailService.API\\EmailService.API.csproj|d:\\nexoracommerce\\emailservice.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9844199C-53BC-4EE5-A119-8F73B0B3304C}|EmailService.API\\EmailService.API.csproj|solutionrelative:emailservice.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3CAF0397-5ECE-6F5B-72E3-D471A8B056E5}|NexoraGateway\\NexoraGateway.csproj|d:\\nexoracommerce\\nexoragateway\\ocelot.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{3CAF0397-5ECE-6F5B-72E3-D471A8B056E5}|NexoraGateway\\NexoraGateway.csproj|solutionrelative:nexoragateway\\ocelot.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{620E59CF-2C30-4447-98C7-B1D2647AD10E}|EmailService.Application\\EmailService.Application.csproj|d:\\nexoracommerce\\emailservice.application\\common\\settings\\rabbitmqsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{620E59CF-2C30-4447-98C7-B1D2647AD10E}|EmailService.Application\\EmailService.Application.csproj|solutionrelative:emailservice.application\\common\\settings\\rabbitmqsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D603C297-555E-DC37-C362-09E7EBAE1826}|nexora-web\\nexora-web.esproj|d:\\nexoracommerce\\nexora-web\\src\\app\\features\\landing\\pages\\landing\\landing.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{D603C297-555E-DC37-C362-09E7EBAE1826}|nexora-web\\nexora-web.esproj|solutionrelative:nexora-web\\src\\app\\features\\landing\\pages\\landing\\landing.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{749D30D5-F5C7-40D2-9F98-DFF3E9E68683}|AuthService.Infrastructure\\AuthService.Infrastructure.csproj|d:\\nexoracommerce\\authservice.infrastructure\\messaging\\rabbitmqpublisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{749D30D5-F5C7-40D2-9F98-DFF3E9E68683}|AuthService.Infrastructure\\AuthService.Infrastructure.csproj|solutionrelative:authservice.infrastructure\\messaging\\rabbitmqpublisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57251532-E78A-4C81-A813-44BB2FE52BFF}|AuthService.API\\AuthService.API.csproj|d:\\nexoracommerce\\authservice.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57251532-E78A-4C81-A813-44BB2FE52BFF}|AuthService.API\\AuthService.API.csproj|solutionrelative:authservice.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +78,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -82,119 +114,223 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\NexoraCommerce\\AuthService.API\\Program.cs",
-              "RelativeDocumentMoniker": "AuthService.API\\Program.cs",
-              "ToolTip": "D:\\NexoraCommerce\\AuthService.API\\Program.cs*",
-              "RelativeToolTip": "AuthService.API\\Program.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-13T07:04:51.569Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\NexoraCommerce\\AuthService.API\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "AuthService.API\\Controllers\\AuthController.cs",
-              "ToolTip": "D:\\NexoraCommerce\\AuthService.API\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "AuthService.API\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAqwC8AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-13T06:34:17.51Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "app.config.ts",
-              "DocumentMoniker": "D:\\NexoraCommerce\\nexora-web\\src\\app\\app.config.ts",
-              "RelativeDocumentMoniker": "nexora-web\\src\\app\\app.config.ts",
-              "ToolTip": "D:\\NexoraCommerce\\nexora-web\\src\\app\\app.config.ts",
-              "RelativeToolTip": "nexora-web\\src\\app\\app.config.ts",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-05-13T06:42:43.583Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "main.ts",
-              "DocumentMoniker": "D:\\NexoraCommerce\\nexora-web\\src\\main.ts",
-              "RelativeDocumentMoniker": "nexora-web\\src\\main.ts",
-              "ToolTip": "D:\\NexoraCommerce\\nexora-web\\src\\main.ts",
-              "RelativeToolTip": "nexora-web\\src\\main.ts",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-05-13T06:41:39.616Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ocelot.json",
-              "DocumentMoniker": "D:\\NexoraCommerce\\NexoraGateway\\ocelot.json",
-              "RelativeDocumentMoniker": "NexoraGateway\\ocelot.json",
-              "ToolTip": "D:\\NexoraCommerce\\NexoraGateway\\ocelot.json",
-              "RelativeToolTip": "NexoraGateway\\ocelot.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-05-12T15:09:55.344Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "auth.service.service.ts",
-              "DocumentMoniker": "D:\\NexoraCommerce\\nexora-web\\src\\app\\features\\auth\\services\\auth.service.service.ts",
-              "RelativeDocumentMoniker": "nexora-web\\src\\app\\features\\auth\\services\\auth.service.service.ts",
-              "ToolTip": "D:\\NexoraCommerce\\nexora-web\\src\\app\\features\\auth\\services\\auth.service.service.ts",
-              "RelativeToolTip": "nexora-web\\src\\app\\features\\auth\\services\\auth.service.service.ts",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAkwA8AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-05-12T15:05:49.984Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "landing.component.css",
-              "DocumentMoniker": "D:\\NexoraCommerce\\nexora-web\\src\\app\\features\\landing\\pages\\landing\\landing.component.css",
-              "RelativeDocumentMoniker": "nexora-web\\src\\app\\features\\landing\\pages\\landing\\landing.component.css",
-              "ToolTip": "D:\\NexoraCommerce\\nexora-web\\src\\app\\features\\landing\\pages\\landing\\landing.component.css",
-              "RelativeToolTip": "nexora-web\\src\\app\\features\\landing\\pages\\landing\\landing.component.css",
-              "ViewState": "AgIAAKEAAAAAAAAAAAAcwLcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-05-12T14:41:45.551Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "landing.component.ts",
-              "DocumentMoniker": "D:\\NexoraCommerce\\nexora-web\\src\\app\\features\\landing\\pages\\landing\\landing.component.ts",
-              "RelativeDocumentMoniker": "nexora-web\\src\\app\\features\\landing\\pages\\landing\\landing.component.ts",
-              "ToolTip": "D:\\NexoraCommerce\\nexora-web\\src\\app\\features\\landing\\pages\\landing\\landing.component.ts",
-              "RelativeToolTip": "nexora-web\\src\\app\\features\\landing\\pages\\landing\\landing.component.ts",
-              "ViewState": "AgIAADIAAAAAAAAAAAAAAEIAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-05-12T14:30:11.182Z",
+              "Title": "RetrySettings.cs",
+              "DocumentMoniker": "D:\\NexoraCommerce\\EmailService.Application\\Common\\Settings\\RetrySettings.cs",
+              "RelativeDocumentMoniker": "EmailService.Application\\Common\\Settings\\RetrySettings.cs",
+              "ToolTip": "D:\\NexoraCommerce\\EmailService.Application\\Common\\Settings\\RetrySettings.cs",
+              "RelativeToolTip": "EmailService.Application\\Common\\Settings\\RetrySettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T17:05:17.502Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "landing.component.html",
-              "DocumentMoniker": "D:\\NexoraCommerce\\nexora-web\\src\\app\\features\\landing\\pages\\landing\\landing.component.html",
-              "RelativeDocumentMoniker": "nexora-web\\src\\app\\features\\landing\\pages\\landing\\landing.component.html",
-              "ToolTip": "D:\\NexoraCommerce\\nexora-web\\src\\app\\features\\landing\\pages\\landing\\landing.component.html",
-              "RelativeToolTip": "nexora-web\\src\\app\\features\\landing\\pages\\landing\\landing.component.html",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAADAAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-05-12T14:29:47.297Z",
+              "Title": "FailedEmailMessage.cs",
+              "DocumentMoniker": "D:\\NexoraCommerce\\EmailService.Domain\\Entities\\FailedEmailMessage.cs",
+              "RelativeDocumentMoniker": "EmailService.Domain\\Entities\\FailedEmailMessage.cs",
+              "ToolTip": "D:\\NexoraCommerce\\EmailService.Domain\\Entities\\FailedEmailMessage.cs",
+              "RelativeToolTip": "EmailService.Domain\\Entities\\FailedEmailMessage.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAAADYAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T16:44:19.433Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Worker.cs",
+              "DocumentMoniker": "D:\\NexoraCommerce\\EmailService.Worker\\Worker.cs",
+              "RelativeDocumentMoniker": "EmailService.Worker\\Worker.cs",
+              "ToolTip": "D:\\NexoraCommerce\\EmailService.Worker\\Worker.cs",
+              "RelativeToolTip": "EmailService.Worker\\Worker.cs",
+              "ViewState": "AgIAANIAAAAAAAAAAAAAAOEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T11:39:59.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EmailSettings.cs",
+              "DocumentMoniker": "D:\\NexoraCommerce\\EmailService.Application\\Common\\Settings\\EmailSettings.cs",
+              "RelativeDocumentMoniker": "EmailService.Application\\Common\\Settings\\EmailSettings.cs",
+              "ToolTip": "D:\\NexoraCommerce\\EmailService.Application\\Common\\Settings\\EmailSettings.cs",
+              "RelativeToolTip": "EmailService.Application\\Common\\Settings\\EmailSettings.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAABUAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T11:16:34.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\NexoraCommerce\\EmailService.Worker\\Program.cs",
+              "RelativeDocumentMoniker": "EmailService.Worker\\Program.cs",
+              "ToolTip": "D:\\NexoraCommerce\\EmailService.Worker\\Program.cs",
+              "RelativeToolTip": "EmailService.Worker\\Program.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB8AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T13:50:05.466Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EmailRetryProcessor.cs",
+              "DocumentMoniker": "D:\\NexoraCommerce\\EmailService.Worker\\Processors\\EmailRetryProcessor.cs",
+              "RelativeDocumentMoniker": "EmailService.Worker\\Processors\\EmailRetryProcessor.cs",
+              "ToolTip": "D:\\NexoraCommerce\\EmailService.Worker\\Processors\\EmailRetryProcessor.cs",
+              "RelativeToolTip": "EmailService.Worker\\Processors\\EmailRetryProcessor.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAABAAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T16:31:22.211Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\NexoraCommerce\\EmailService.Worker\\appsettings.json",
+              "RelativeDocumentMoniker": "EmailService.Worker\\appsettings.json",
+              "ToolTip": "D:\\NexoraCommerce\\EmailService.Worker\\appsettings.json",
+              "RelativeToolTip": "EmailService.Worker\\appsettings.json",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAABkAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-15T11:17:37.086Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "RegisterUserCommandHandler.cs",
+              "DocumentMoniker": "D:\\NexoraCommerce\\AuthService.Application\\Features\\Authentication\\Handlers\\RegisterUserCommandHandler.cs",
+              "RelativeDocumentMoniker": "AuthService.Application\\Features\\Authentication\\Handlers\\RegisterUserCommandHandler.cs",
+              "ToolTip": "D:\\NexoraCommerce\\AuthService.Application\\Features\\Authentication\\Handlers\\RegisterUserCommandHandler.cs",
+              "RelativeToolTip": "AuthService.Application\\Features\\Authentication\\Handlers\\RegisterUserCommandHandler.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAAwCUAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T13:43:27.704Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "log-20260515.txt",
+              "DocumentMoniker": "D:\\NexoraCommerce\\AuthService.API\\Logs\\log-20260515.txt",
+              "RelativeDocumentMoniker": "AuthService.API\\Logs\\log-20260515.txt",
+              "ToolTip": "D:\\NexoraCommerce\\AuthService.API\\Logs\\log-20260515.txt",
+              "RelativeToolTip": "AuthService.API\\Logs\\log-20260515.txt",
+              "ViewState": "AgIAAC0BAAAAAAAAAAAswEkBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-05-15T15:31:14.821Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "D:\\NexoraCommerce\\EmailService.Worker\\Services\\EmailService.cs",
+              "RelativeDocumentMoniker": "EmailService.Worker\\Services\\EmailService.cs",
+              "ToolTip": "D:\\NexoraCommerce\\EmailService.Worker\\Services\\EmailService.cs",
+              "RelativeToolTip": "EmailService.Worker\\Services\\EmailService.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAArwBgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T13:44:34.727Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "landing.component.ts",
+              "DocumentMoniker": "D:\\NexoraCommerce\\nexora-web\\src\\app\\features\\landing\\pages\\landing\\landing.component.ts",
+              "RelativeDocumentMoniker": "nexora-web\\src\\app\\features\\landing\\pages\\landing\\landing.component.ts",
+              "ToolTip": "D:\\NexoraCommerce\\nexora-web\\src\\app\\features\\landing\\pages\\landing\\landing.component.ts",
+              "RelativeToolTip": "nexora-web\\src\\app\\features\\landing\\pages\\landing\\landing.component.ts",
+              "ViewState": "AgIAADQAAAAAAAAAAAAAwD8AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-05-15T13:54:44.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\NexoraCommerce\\AuthService.API\\appsettings.json",
+              "RelativeDocumentMoniker": "AuthService.API\\appsettings.json",
+              "ToolTip": "D:\\NexoraCommerce\\AuthService.API\\appsettings.json",
+              "RelativeToolTip": "AuthService.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-15T15:13:38.499Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AuthdbSeeder.cs",
+              "DocumentMoniker": "D:\\NexoraCommerce\\AuthService.Infrastructure\\Persistence\\AuthdbSeeder.cs",
+              "RelativeDocumentMoniker": "AuthService.Infrastructure\\Persistence\\AuthdbSeeder.cs",
+              "ToolTip": "D:\\NexoraCommerce\\AuthService.Infrastructure\\Persistence\\AuthdbSeeder.cs",
+              "RelativeToolTip": "AuthService.Infrastructure\\Persistence\\AuthdbSeeder.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAFoAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T13:54:34.619Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\NexoraCommerce\\EmailService.API\\Program.cs",
+              "RelativeDocumentMoniker": "EmailService.API\\Program.cs",
+              "ToolTip": "D:\\NexoraCommerce\\EmailService.API\\Program.cs",
+              "RelativeToolTip": "EmailService.API\\Program.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAADwAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T11:54:45.209Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "RabbitMqSettings.cs",
+              "DocumentMoniker": "D:\\NexoraCommerce\\EmailService.Application\\Common\\Settings\\RabbitMqSettings.cs",
+              "RelativeDocumentMoniker": "EmailService.Application\\Common\\Settings\\RabbitMqSettings.cs",
+              "ToolTip": "D:\\NexoraCommerce\\EmailService.Application\\Common\\Settings\\RabbitMqSettings.cs",
+              "RelativeToolTip": "EmailService.Application\\Common\\Settings\\RabbitMqSettings.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T11:15:39.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "RabbitMqPublisher.cs",
+              "DocumentMoniker": "D:\\NexoraCommerce\\AuthService.Infrastructure\\Messaging\\RabbitMqPublisher.cs",
+              "RelativeDocumentMoniker": "AuthService.Infrastructure\\Messaging\\RabbitMqPublisher.cs",
+              "ToolTip": "D:\\NexoraCommerce\\AuthService.Infrastructure\\Messaging\\RabbitMqPublisher.cs",
+              "RelativeToolTip": "AuthService.Infrastructure\\Messaging\\RabbitMqPublisher.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAAAF8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T10:17:39.322Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\NexoraCommerce\\AuthService.API\\Program.cs",
+              "RelativeDocumentMoniker": "AuthService.API\\Program.cs",
+              "ToolTip": "D:\\NexoraCommerce\\AuthService.API\\Program.cs",
+              "RelativeToolTip": "AuthService.API\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T10:17:03.311Z",
               "EditorCaption": ""
             }
           ]

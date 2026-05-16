@@ -16,3 +16,5 @@ D:\NexoraCommerce\AuthService.Application\obj\Debug\net8.0\AuthService.Applicati
 D:\NexoraCommerce\AuthService.Application\obj\Debug\net8.0\refint\AuthService.Application.dll
 D:\NexoraCommerce\AuthService.Application\obj\Debug\net8.0\AuthService.Application.pdb
 D:\NexoraCommerce\AuthService.Application\obj\Debug\net8.0\ref\AuthService.Application.dll
+D:\NexoraCommerce\AuthService.Application\bin\Debug\net8.0\SharedContracts.dll
+D:\NexoraCommerce\AuthService.Application\bin\Debug\net8.0\SharedContracts.pdb

@@ -48,3 +48,10 @@ Thumbs.db
 # Publish outputs
 ############################################
 publish/
+
+
+*.nupkg
+coverage/
+TestResults/
+
+appsettings.Development.json

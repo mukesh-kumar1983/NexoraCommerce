@@ -1,4 +1,9 @@
 ############################################
+# Nexora Enterprise Solution (.NET + Angular)
+# Microservices + Clean Architecture Setup
+############################################
+
+############################################
 # Visual Studio
 ############################################
 .vs/
@@ -6,6 +11,7 @@
 *.suo
 *.cache
 *.dbmdl
+*.sln.docstates
 
 ############################################
 # Build outputs (.NET)
@@ -13,6 +19,16 @@
 bin/
 obj/
 out/
+*.dll
+*.exe
+*.pdb
+
+############################################
+# ASP.NET Core / Configuration
+############################################
+appsettings.Development.json
+appsettings.*.json
+!appsettings.json
 
 ############################################
 # Angular / Node
@@ -20,17 +36,22 @@ out/
 node_modules/
 dist/
 .angular/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
 ############################################
 # Logs
 ############################################
 *.log
+logs/
 
 ############################################
-# Environment files
+# Environment files (Secrets)
 ############################################
 .env
 .env.*
+!.env.example
 
 ############################################
 # OS files
@@ -39,12 +60,38 @@ dist/
 Thumbs.db
 
 ############################################
-# Rider / VS Code
+# IDEs (Rider / VS Code / JetBrains)
 ############################################
 .idea/
 .vscode/
+*.sln.iml
+.ipr
 
 ############################################
-# Publish outputs
+# Test / Coverage
+############################################
+TestResults/
+coverage/
+
+############################################
+# NuGet / Packages
+############################################
+*.nupkg
+*.snupkg
+
+############################################
+# Publish / Deployment
 ############################################
 publish/
+wwwroot/
+
+############################################
+# Docker (optional future-proofing)
+############################################
+**/docker-compose.override.yml
+
+############################################
+# RabbitMQ / Worker runtime artifacts
+############################################
+*.pid
+*.lock

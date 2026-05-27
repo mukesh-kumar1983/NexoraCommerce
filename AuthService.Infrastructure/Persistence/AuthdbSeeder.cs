@@ -14,188 +14,15 @@ public static class AuthDbSeeder
 
         try
         {
-            #region Tenant Seed
+            var tenant = await SeedTenant(context);
+            var roles = await SeedRoles(context, tenant);
+            var adminUser = await SeedAdminUser(context, tenant);
+            await SeedUserRole(context, tenant, adminUser, roles.adminRole);
 
-            // =========================
-            // 1. Tenant
-            // =========================
-            var tenant = await context.Tenant
-                .FirstOrDefaultAsync(t => t.Subdomain == "default");
+            await SeedDepartments(context, tenant);
+            await SeedJobTitles(context, tenant);
 
-            if (tenant == null)
-            {
-                tenant = new Tenant
-                {
-                    Id = Guid.NewGuid(),
-                    Name = "Default Tenant",
-                    Subdomain = "default"
-                };
-
-                context.Tenant.Add(tenant);
-            }
-
-            #endregion
-
-            #region Roles Seed
-
-            // =========================
-            // 2. Roles
-            // =========================
-            var adminRole = await context.Role
-                .FirstOrDefaultAsync(r => r.Name == "Admin");
-
-            if (adminRole == null)
-            {
-                adminRole = new Role
-                {
-                    Id = Guid.NewGuid(),
-                    Name = "Admin",
-                    TenantId = tenant.Id
-                };
-
-                context.Role.Add(adminRole);
-            }
-
-            var userRole = await context.Role
-                .FirstOrDefaultAsync(r => r.Name == "User");
-
-            if (userRole == null)
-            {
-                userRole = new Role
-                {
-                    Id = Guid.NewGuid(),
-                    Name = "User",
-                    TenantId = tenant.Id
-                };
-
-                context.Role.Add(userRole);
-            }
-
-            #endregion
-
-            #region Admin User Seed
-
-            // =========================
-            // 3. Admin User
-            // =========================
-            var adminUser = await context.Users
-                .FirstOrDefaultAsync(u => u.Email == "mk_soni@hotmail.com");
-
-            Guid g= Guid.NewGuid();
-
-            if (adminUser == null)
-            {
-                adminUser = new AppUser
-                {
-                    Id = g,
-                    Email = "mk_soni@hotmail.com",
-                    FirstName = "System",
-                    LastName = "Admin",
-                    PasswordHash = BCrypt.Net.BCrypt.HashPassword("Admin"),
-                    TenantId = tenant.Id,
-                    CreatedBy = "System",
-                    ModifiedBy = "System"
-                };
-
-                context.Users.Add(adminUser);
-
-                var userProfile = new UserProfile
-                {
-                    Id = adminUser.Id,
-                    FirstName = adminUser.FirstName,
-                    LastName = adminUser.LastName,
-                    PhoneNumber = null,
-                    Address = null,
-                    City = null,
-                    Country = null,
-                    Gender = Gender.Male,
-                    DepartmentId = null,
-                    JobTitleId = null,
-                    ProfileImageUrl = null
-                };
-
-                context.UserProfile.Add(userProfile);
-               
-            }
-
-            #endregion
-
-            #region User Role Mapping Seed
-
-            // =========================
-            // 4. User Role Mapping
-            // =========================
-            var alreadyAssigned = await context.UserRole
-                .AnyAsync(ur =>
-                    ur.UserId == adminUser.Id &&
-                    ur.RoleId == adminRole.Id);
-
-            if (!alreadyAssigned)
-            {
-                context.UserRole.Add(new UserRole
-                {
-                    UserId = adminUser.Id,
-                    RoleId = adminRole.Id,
-                    TenantId = tenant.Id
-                });
-            }
-
-            #region Department Seed
-
-            // =========================
-            // 5. Department
-            // =========================
-            var dept = await context.Department
-                .FirstOrDefaultAsync(t => t.Title == "Development");
-
-            if (dept == null)
-            {
-                dept = new Department
-                {
-                    Id = Guid.NewGuid(),
-                    Title = "Development",
-                    TenantId = tenant.Id
-                };
-
-                context.Department.Add(dept);
-            }
-
-            #endregion
-
-            #region JobTitle Seed
-
-            // =========================
-            // 6 JobTitle
-            // =========================
-            var jt = await context.JobTitle
-                .FirstOrDefaultAsync(t => t.Title == "Developer");
-
-            if (jt == null)
-            {
-                jt = new JobTitle
-                {
-                    Id = Guid.NewGuid(),
-                    Title = "Developer",
-                    TenantId = tenant.Id
-                };
-                
-
-                context.JobTitle.Add(jt);
-            }
-
-            #endregion
-
-
-            #endregion
-
-            // =========================
-            // Save All Changes
-            // =========================
             await context.SaveChangesAsync();
-
-            // =========================
-            // Commit Transaction
-            // =========================
             await transaction.CommitAsync();
         }
         catch
@@ -204,4 +31,152 @@ public static class AuthDbSeeder
             throw;
         }
     }
+
+    #region Tenant
+
+    private static async Task<Tenant> SeedTenant(AuthDbContext context)
+    {
+        var tenant = await context.Tenant
+            .FirstOrDefaultAsync(x => x.Subdomain == "default");
+
+        if (tenant != null)
+            return tenant;
+
+        tenant = new Tenant
+        {
+            Id = Guid.NewGuid(),
+            Name = "Default Tenant",
+            Subdomain = "default"
+        };
+
+        context.Tenant.Add(tenant);
+        return tenant;
+    }
+
+    #endregion
+
+    #region Roles
+
+    private static async Task<(Role adminRole, Role userRole)> SeedRoles(AuthDbContext context, Tenant tenant)
+    {
+        var adminRole = await context.Role.FirstOrDefaultAsync(x => x.Name == "Admin" && x.TenantId == tenant.Id);
+        var userRole = await context.Role.FirstOrDefaultAsync(x => x.Name == "User" && x.TenantId == tenant.Id);
+
+        if (adminRole == null)
+        {
+            adminRole = new Role
+            {
+                Id = Guid.NewGuid(),
+                Name = "Admin",
+                TenantId = tenant.Id
+            };
+            context.Role.Add(adminRole);
+        }
+
+        if (userRole == null)
+        {
+            userRole = new Role
+            {
+                Id = Guid.NewGuid(),
+                Name = "User",
+                TenantId = tenant.Id
+            };
+            context.Role.Add(userRole);
+        }
+
+        return (adminRole, userRole);
+    }
+
+    #endregion
+
+    #region Admin User
+
+    private static async Task<AppUser> SeedAdminUser(AuthDbContext context, Tenant tenant)
+    {
+        var adminUser = await context.Users
+            .FirstOrDefaultAsync(x => x.Email == "admin@system.com");
+
+        if (adminUser != null)
+            return adminUser;
+
+        adminUser = new AppUser
+        {
+            Id = Guid.NewGuid(),
+            Email = "admin@system.com",
+            FirstName = "System",
+            LastName = "Admin",
+            PasswordHash = BCrypt.Net.BCrypt.HashPassword("Admin@123"),
+            TenantId = tenant.Id,
+            CreatedBy = "SYSTEM",
+            ModifiedBy = "SYSTEM"
+        };
+
+        context.Users.Add(adminUser);
+
+        context.UserProfile.Add(new UserProfile
+        {
+            Id = adminUser.Id,
+            FirstName = adminUser.FirstName,
+            LastName = adminUser.LastName,
+            Gender = Gender.Male,
+            DepartmentId = null,
+            JobTitleId = null
+        });
+
+        return adminUser;
+    }
+
+    #endregion
+
+    #region UserRole Mapping
+
+    private static async Task SeedUserRole(AuthDbContext context, Tenant tenant, AppUser user, Role adminRole)
+    {
+        var exists = await context.UserRole
+            .AnyAsync(x => x.UserId == user.Id && x.RoleId == adminRole.Id);
+
+        if (!exists)
+        {
+            context.UserRole.Add(new UserRole
+            {
+                UserId = user.Id,
+                RoleId = adminRole.Id,
+                TenantId = tenant.Id
+            });
+        }
+    }
+
+    #endregion
+
+    #region Departments
+
+    private static async Task SeedDepartments(AuthDbContext context, Tenant tenant)
+    {
+        var exists = await context.Department.AnyAsync(x => x.TenantId == tenant.Id);
+        if (exists) return;
+
+        context.Department.AddRange(
+            new Department { Id = Guid.NewGuid(), Title = "Development", TenantId = tenant.Id },
+            new Department { Id = Guid.NewGuid(), Title = "HR", TenantId = tenant.Id },
+            new Department { Id = Guid.NewGuid(), Title = "Finance", TenantId = tenant.Id }
+        );
+    }
+
+    #endregion
+
+    #region JobTitles
+
+    private static async Task SeedJobTitles(AuthDbContext context, Tenant tenant)
+    {
+        var exists = await context.JobTitle.AnyAsync(x => x.TenantId == tenant.Id);
+        if (exists) return;
+
+        context.JobTitle.AddRange(
+            new JobTitle { Id = Guid.NewGuid(), Title = "Developer", TenantId = tenant.Id },
+            new JobTitle { Id = Guid.NewGuid(), Title = "Senior Developer", TenantId = tenant.Id },
+            new JobTitle { Id = Guid.NewGuid(), Title = "Manager", TenantId = tenant.Id }
+        );
+    }
+
+    #endregion
 }

@@ -83,6 +83,13 @@ coverage/
 # Publish / Deployment
 ############################################
 publish/
+
+
+*.nupkg
+coverage/
+TestResults/
+
+appsettings.Development.json
 wwwroot/
 
 ############################################

@@ -24,6 +24,20 @@ builder.Services.AddControllers();
 
 var app = builder.Build();
 
+if (builder.Environment.IsDevelopment())
+{
+    builder.Configuration.AddJsonFile("appsettings.Development.json", optional: true);
+}
+else if (builder.Environment.IsStaging())
+{
+    builder.Configuration.AddJsonFile("appsettings.Staging.json", optional: true);
+}
+else
+{
+    builder.Configuration.AddJsonFile("appsettings.Production.json", optional: true);
+}
+
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

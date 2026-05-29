@@ -1,50 +1,61 @@
 ﻿using AuthService.Application.Common.Interfaces;
-using AuthService.Application.Features.Users.Commands.UpdateUserProfile;
+using AuthService.Domain.Entities;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-
-
-public class UpdateUserProfileCommandHandler : IRequestHandler<UpdateUserProfileCommand, bool>
+public class UpdateMyProfileCommandHandler : IRequestHandler<UpdateMyProfileCommand, bool>
 {
     private readonly IAuthDbContext _context;
     private readonly ICurrentTenantService _tenant;
+    private readonly ICurrentUserService _currentUser;
 
-    public UpdateUserProfileCommandHandler(
+    public UpdateMyProfileCommandHandler(
         IAuthDbContext context,
-        ICurrentTenantService tenant)
+        ICurrentTenantService tenant,
+        ICurrentUserService currentUser)
     {
         _context = context;
         _tenant = tenant;
+        _currentUser = currentUser;
     }
 
-    public async Task<bool> Handle([FromBody] UpdateUserProfileCommand request, CancellationToken cancellationToken)
+    public async Task<bool> Handle([FromBody] UpdateMyProfileCommand request, CancellationToken cancellationToken)
     {
         var tenantId = _tenant.TenantId;
 
-        // 1. Get User (tenant safe)
+       // 1.Get User(tenant safe)
         var user = await _context.Users
             .FirstOrDefaultAsync(
-                x => x.Id == request.UserId && x.TenantId == tenantId,
+                x => x.Id == _currentUser.UserId && x.TenantId == tenantId,
                 cancellationToken);
 
         if (user == null)
             return false;
 
-        // 2. Get Profile (add tenant safety if column exists)
+        // 2. Get Profile (FIXED RELATION)
         var profile = await _context.UserProfile
             .FirstOrDefaultAsync(
-                x => x.Id == request.UserId,
+                x => x.Id == _currentUser.UserId,
                 cancellationToken);
 
         if (profile == null)
-            return false;
+        {
+            // optional: auto-create profile (recommended in real systems)
+            profile = new UserProfile
+            {
+                Id = _currentUser.UserId
+            };
 
-        // 3. Update User (auth-level info)
+            _context.UserProfile.Add(profile);
+        }
+
+        
+
+        // 3. Update USER (identity-level)
         user.FirstName = request.FirstName;
         user.LastName = request.LastName;
 
-        // 4. Update Profile (extended info)
+        // 4. Update PROFILE (business-level)
         profile.FirstName = request.FirstName;
         profile.LastName = request.LastName;
 
@@ -56,7 +67,7 @@ public class UpdateUserProfileCommandHandler : IRequestHandler<UpdateUserProfile
         profile.Country = request.Country;
         profile.Gender = request.Gender;
 
-        // 5. Profile image update (safe overwrite)
+        // 5. Image update (safe overwrite)
         if (!string.IsNullOrWhiteSpace(request.ProfileImageUrl))
         {
             profile.ProfileImageUrl = request.ProfileImageUrl;

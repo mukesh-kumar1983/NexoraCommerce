@@ -15,7 +15,7 @@ public class CurrentTenantService : ICurrentTenantService
         get
         {
             var claim = _httpContextAccessor.HttpContext?
-                .User.FindFirst("tenantId")?.Value;
+                .User.FindFirst("tenant_id")?.Value;
 
             return Guid.TryParse(claim, out var id)
                 ? id

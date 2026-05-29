@@ -31,14 +31,16 @@ public class JwtTokenService : IJwtTokenService
         var claims = new List<Claim>
         {
             new(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
-            new(JwtRegisteredClaimNames.Email, user.Email!),
-            new(ClaimTypes.Name, user.FullName!),
-            new(ClaimTypes.NameIdentifier, user.Id.ToString())
+            new(JwtRegisteredClaimNames.Email, user.Email ?? string.Empty),
+            new(ClaimTypes.Name, user.FullName ?? string.Empty),
+            new(ClaimTypes.NameIdentifier, user.Id.ToString()),
+            new Claim("tenant_id", user.TenantId.ToString())
         };
 
         // Add roles
         claims.AddRange(
-            roles.Select(role => new Claim(ClaimTypes.Role, role)));
+        (roles ?? new List<string>())
+            .Select(role => new Claim(ClaimTypes.Role, role)));
 
         var token = new JwtSecurityToken(
             issuer: jwtSettings["Issuer"],

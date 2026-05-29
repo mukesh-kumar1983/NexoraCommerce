@@ -15,9 +15,6 @@ builder.Host.UseSerilogLogging();
 
 #region Services Registration
 
-builder.Services.Configure<AzureBlobSettings>(
-    builder.Configuration.GetSection("AzureBlobStorage"));
-
 builder.Services.AddApplicationServices();
 builder.Services.AddInfrastructureServices(builder.Configuration);
 builder.Services.AddAuthenticationServices(builder.Configuration);
@@ -26,7 +23,12 @@ builder.Services.AddCorsPolicy();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<ICurrentTenantService, CurrentTenantService>();
 builder.Services.AddScoped<ICurrentUserService, CurrentUserService>();
+
+builder.Services.Configure<AzureBlobSettings>(
+    builder.Configuration.GetSection("AzureBlobSettings"));
+
 builder.Services.AddScoped<IAzureBlobService, AzureBlobService>();
+builder.Services.AddScoped<IUserService, UserService>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

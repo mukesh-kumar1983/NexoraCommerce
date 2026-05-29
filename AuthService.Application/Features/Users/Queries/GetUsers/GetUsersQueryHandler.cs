@@ -23,6 +23,8 @@ public class GetUsersQueryHandler : IRequestHandler<GetUsersQuery, List<UserDto>
         return await (
             from u in _context.Users
             join p in _context.UserProfile on u.Id equals p.Id
+            join d in _context.Department on p.DepartmentId equals d.Id
+            join j in _context.JobTitle on p.JobTitleId equals j.Id
             where u.TenantId == tenantId
             select new UserDto
             {
@@ -33,6 +35,9 @@ public class GetUsersQueryHandler : IRequestHandler<GetUsersQuery, List<UserDto>
                 LastName = p.LastName ?? string.Empty,
 
                 DepartmentId = p.DepartmentId,
+                Department = d.Title,
+
+                JobTitle = j.Title,
                 JobTitleId = p.JobTitleId,
 
                 PhoneNumber = p.PhoneNumber,

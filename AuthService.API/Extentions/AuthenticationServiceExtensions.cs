@@ -2,6 +2,8 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 using System.Text;
 
 namespace AuthService.API.Extensions;
@@ -52,7 +54,10 @@ public static class AuthenticationServiceExtensions
                     ValidAudience = audience,
                     IssuerSigningKey = signingKey,
 
-                    ClockSkew = TimeSpan.Zero // important: removes 5 min default delay
+                    RoleClaimType = ClaimTypes.Role,
+                    NameClaimType = JwtRegisteredClaimNames.Email,
+
+                    ClockSkew = TimeSpan.Zero
                 };
             });
 

@@ -1,27 +1,38 @@
-# ======================
+# =========================
 # .NET CORE
-# ======================
+# =========================
 **/bin/
 **/obj/
-
-# Logs
-**/Logs/
+*.user
+*.suo
+*.cache
+*.dll
+*.pdb
 *.log
-*.txt
+AuthService.API/Logs/
 
-# User secrets (DO NOT TRACK)
-**/appsettings.Development.json
-**/appsettings.Staging.json
-
-# ======================
+# =========================
 # ANGULAR
-# ======================
+# =========================
 node_modules/
 dist/
 .angular/
 
-# ======================
+# =========================
+# ENV / SECRETS
+# =========================
+appsettings.Development.json
+appsettings.Staging.json
+secrets.json
+
+# =========================
 # IDE
-# ======================
+# =========================
 .vs/
 .vscode/
+
+# =========================
+# AZURE / BUILD OUTPUT
+# =========================
+publish/
+wwwroot/

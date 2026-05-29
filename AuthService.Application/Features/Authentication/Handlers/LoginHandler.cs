@@ -75,7 +75,8 @@ public class LoginCommandHandler
             Token = token,
             Email = user.Email!,
             FirstName = user.FirstName,
-            LastName = user.LastName
+            LastName = user.LastName,
+            Roles = roles
         };
 
         return ApiResponse<AuthResponseDto>

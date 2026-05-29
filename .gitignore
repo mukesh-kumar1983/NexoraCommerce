@@ -1,104 +1,20 @@
-############################################
-# Nexora Enterprise Solution (.NET + Angular)
-# Microservices + Clean Architecture Setup
-############################################
-
-############################################
-# Visual Studio
-############################################
-.vs/
+# .NET
+**/bin/
+**/obj/
 *.user
 *.suo
 *.cache
-*.dbmdl
-*.sln.docstates
-
-############################################
-# Build outputs (.NET)
-############################################
-bin/
-obj/
-out/
 *.dll
-*.exe
 *.pdb
 
-############################################
-# ASP.NET Core / Configuration
-############################################
-appsettings.Development.json
-appsettings.*.json
-!appsettings.json
+# logs
+*.log
 
-############################################
-# Angular / Node
-############################################
+# Angular
 node_modules/
 dist/
 .angular/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
 
-############################################
-# Logs
-############################################
-*.log
-logs/
-
-############################################
-# Environment files (Secrets)
-############################################
-.env
-.env.*
-!.env.example
-
-############################################
-# OS files
-############################################
-.DS_Store
-Thumbs.db
-
-############################################
-# IDEs (Rider / VS Code / JetBrains)
-############################################
-.idea/
+# IDE
+.vs/
 .vscode/
-*.sln.iml
-.ipr
-
-############################################
-# Test / Coverage
-############################################
-TestResults/
-coverage/
-
-############################################
-# NuGet / Packages
-############################################
-*.nupkg
-*.snupkg
-
-############################################
-# Publish / Deployment
-############################################
-publish/
-
-
-*.nupkg
-coverage/
-TestResults/
-
-appsettings.Development.json
-wwwroot/
-
-############################################
-# Docker (optional future-proofing)
-############################################
-**/docker-compose.override.yml
-
-############################################
-# RabbitMQ / Worker runtime artifacts
-############################################
-*.pid
-*.lock

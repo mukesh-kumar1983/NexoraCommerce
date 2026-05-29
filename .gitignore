@@ -9,6 +9,7 @@
 *.dll
 *.pdb
 *.log
+AuthService.API/Logs/
 
 # =========================
 # ANGULAR

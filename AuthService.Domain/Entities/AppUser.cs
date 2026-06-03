@@ -1,41 +1,18 @@
-﻿using SharedKernel;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using AuthService.Domain.Entities;
+using SharedKernel;
 
-namespace AuthService.Domain.Entities
+public class AppUser : BaseEntity
 {
-    public class AppUser : BaseEntity
-    {
-       
-        public string Email { get; set; } = default!;
+    public string Email { get; set; } = default!;
+    public string PasswordHash { get; set; } = default!;
+    public bool IsLocked { get; set; } = false;
 
-        public string FirstName { get; set; }
+    public string? RefreshToken { get; set; }
+    public DateTime? RefreshTokenExpiryTime { get; set; }
 
-        public string LastName { get; set; }
+    public Guid TenantId { get; set; }
 
-        [NotMapped]
-        public string FullName
-        {
-            get
-            {
-                return $"{FirstName} {LastName}";
-            }
-        }
+    public UserProfile? UserProfile { get; set; }
 
-        public string PasswordHash { get; set; } = default!;
-
-        
-        public bool IsLocked { get; set; } = false;
-
-        public string? RefreshToken { get; set; }
-
-        public DateTime? RefreshTokenExpiryTime { get; set; }
-
-        
-
-        public Guid TenantId { get; set; }
-
-        
-
-        public ICollection<UserRole> UserRoles { get; set; } = new List<UserRole>();
-    }
+    public ICollection<UserRole> UserRoles { get; set; } = new List<UserRole>();
 }

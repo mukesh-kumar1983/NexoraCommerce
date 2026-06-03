@@ -1,6 +1,13 @@
-﻿namespace AuthService.Application.Features.Users.DTOs
+﻿using MediatR;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace AuthService.Application.Features.Users.Commands.UpdateEmployeeCommand
 {
-    public class EmployeeDto
+    public class UpdateEmployeeCommand : IRequest<bool>
     {
         public Guid Id { get; set; }
 
@@ -14,18 +21,9 @@
         public string? Country { get; set; }
         public string? Gender { get; set; }
 
-        // ✅ UI-friendly (IMPORTANT for Angular)
-        public string DepartmentName { get; set; } = default!;
-        public string JobTitleName { get; set; } = default!;
-
-        // ✅ Internal reference IDs (for edit/update)
-        public Guid? DepartmentId { get; set; }
-        public Guid? JobTitleId { get; set; }
+        public Guid DepartmentId { get; set; }
+        public Guid JobTitleId { get; set; }
 
         public string? ProfileImageUrl { get; set; }
-
-        public string FullName => $"{FirstName} {LastName}";
     }
-
 }
-

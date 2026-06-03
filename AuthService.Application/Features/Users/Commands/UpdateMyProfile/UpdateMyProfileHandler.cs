@@ -51,9 +51,9 @@ public class UpdateMyProfileCommandHandler : IRequestHandler<UpdateMyProfileComm
 
         
 
-        // 3. Update USER (identity-level)
-        user.FirstName = request.FirstName;
-        user.LastName = request.LastName;
+        //// 3. Update USER (identity-level)
+        //user.FirstName = request.FirstName;
+        //user.LastName = request.LastName;
 
         // 4. Update PROFILE (business-level)
         profile.FirstName = request.FirstName;

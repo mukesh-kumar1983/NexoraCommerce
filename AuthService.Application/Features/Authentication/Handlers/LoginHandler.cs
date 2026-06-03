@@ -27,11 +27,15 @@ public class LoginCommandHandler
         // 1. Fetch user from DB
         var user = await _userRepository.GetByEmailAsync(request.Email);
 
+       
+
         if (user == null)
         {
             return ApiResponse<AuthResponseDto>
                 .FailureResponse(new[] { "Invalid credentials" });
         }
+
+        var userProfile = await _userRepository.GetProfileByIdAsync(user.Id);
 
         if (!user.IsActive)
         {
@@ -67,15 +71,16 @@ public class LoginCommandHandler
                     ?? new List<string> { "User" };
 
         // 4. Generate JWT using REAL user
-        var token = _jwt.GenerateToken(user, roles);
+        var token = _jwt.GenerateToken(user, userProfile!, roles);
 
         // 5. Build response
         var response = new AuthResponseDto
         {
             Token = token,
             Email = user.Email!,
-            FirstName = user.FirstName,
-            LastName = user.LastName,
+            FirstName = userProfile.FirstName,
+            LastName = userProfile.LastName,
+            
             Roles = roles
         };
 

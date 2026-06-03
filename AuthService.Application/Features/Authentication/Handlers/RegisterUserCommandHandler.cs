@@ -95,8 +95,8 @@ public class RegisterUserCommandHandler
         {
             Id = userId,
             Email = request.Email,
-            FirstName = request.FirstName,
-            LastName = request.LastName,
+            //FirstName = request.FirstName,
+            //LastName = request.LastName,
             PasswordHash = BCrypt.Net.BCrypt.HashPassword(request.Password),
             TenantId = tenant.Id,
             IsActive = true,
@@ -141,7 +141,7 @@ public class RegisterUserCommandHandler
             {
                 UserId = userId.ToString(),
                 Email = user.Email,
-                FullName = $"{user.FirstName} {user.LastName}",
+                FullName = $"{profile.FirstName} {profile.LastName}",
                 CreatedAt = DateTime.UtcNow
             };
 

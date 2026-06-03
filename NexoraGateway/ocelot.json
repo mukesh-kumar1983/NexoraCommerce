@@ -22,7 +22,7 @@
         }
       ],
       "UpstreamPathTemplate": "/employees",
-      "UpstreamHttpMethod": ["GET"]
+      "UpstreamHttpMethod": ["GET", "POST"]
     },
     {
       "DownstreamPathTemplate": "/api/users/{id}",

@@ -10,7 +10,7 @@ namespace AuthService.Infrastructure.Persistence;
             var optionsBuilder = new DbContextOptionsBuilder<AuthDbContext>();
 
             optionsBuilder.UseSqlServer(
-                "Server=.\\SQLEXPRESS;Database=AuthServiceDb;Trusted_Connection=True;TrustServerCertificate=True");
+                "Server=.\\SQLEXPRESS;Database=AuthDb;Trusted_Connection=True;TrustServerCertificate=True");
 
             return new AuthDbContext(optionsBuilder.Options);
         }

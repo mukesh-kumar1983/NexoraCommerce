@@ -22,6 +22,12 @@ public class UserRepository : IUserRepository
             .FirstOrDefaultAsync(u => u.Id == id, ct);
     }
 
+    public async Task<UserProfile?> GetProfileByIdAsync(Guid id, CancellationToken ct = default)
+    {
+        return await _context.UserProfile
+            .FirstOrDefaultAsync(u => u.Id == id, ct);
+    }
+
     public async Task<AppUser?> GetByEmailAsync(string email, CancellationToken ct = default)
     {
         return await _context.Users

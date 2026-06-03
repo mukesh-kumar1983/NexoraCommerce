@@ -6,6 +6,8 @@ public interface IUserRepository
 {
     // Retrieval
     Task<AppUser?> GetByIdAsync(Guid id, CancellationToken ct = default);
+
+    Task<UserProfile?> GetProfileByIdAsync(Guid id, CancellationToken ct = default);
     Task<AppUser?> GetByEmailAsync(string email, CancellationToken ct = default);
     Task<IEnumerable<AppUser>> GetAllAsync(CancellationToken ct = default);
 

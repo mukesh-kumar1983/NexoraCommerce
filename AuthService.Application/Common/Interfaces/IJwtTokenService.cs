@@ -7,6 +7,6 @@ namespace AuthService.Application.Common.Interfaces
     /// </summary>
     public interface IJwtTokenService
     {
-        string GenerateToken(AppUser user, List<string> roles);
+        string GenerateToken(AppUser user, UserProfile profile, List<string> roles);
     }
 }

@@ -9,7 +9,12 @@ namespace AuthService.Application.Features.Authentication.DTOs
         public string FirstName { get; set; } = default!;
         public string LastName { get; set; } = default!;
 
-        public string FullName => $"{FirstName} {LastName}";
+        /// <summary>
+        /// Gets or sets the user profile.
+        /// </summary>
+        //public UserProfile UserProfile { get; set; }
+
+        //public string FullName => $"{FirstName} {LastName}";
 
         public List<string> Roles { get; set; } = new();
 

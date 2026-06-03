@@ -5,18 +5,18 @@ using AuthService.Application.Features.Users.DTOs;
 
 namespace AuthService.Application.Features.Users.Queries.GetUsers;
 
-public class GetUsersQueryHandler : IRequestHandler<GetUsersQuery, List<UserDto>>
+public class GetEmployeesQueryHandler : IRequestHandler<GetEmployeesQuery, List<EmployeeDto>>
 {
     private readonly IAuthDbContext _context;
     private readonly ICurrentTenantService _tenant;
 
-    public GetUsersQueryHandler(IAuthDbContext context, ICurrentTenantService tenant)
+    public GetEmployeesQueryHandler(IAuthDbContext context, ICurrentTenantService tenant)
     {
         _context = context;
         _tenant = tenant;
     }
 
-    public async Task<List<UserDto>> Handle(GetUsersQuery request, CancellationToken cancellationToken)
+    public async Task<List<EmployeeDto>> Handle(GetEmployeesQuery request, CancellationToken cancellationToken)
     {
         var tenantId = _tenant.TenantId;
 
@@ -25,8 +25,8 @@ public class GetUsersQueryHandler : IRequestHandler<GetUsersQuery, List<UserDto>
             join p in _context.UserProfile on u.Id equals p.Id
             join d in _context.Department on p.DepartmentId equals d.Id
             join j in _context.JobTitle on p.JobTitleId equals j.Id
-            where u.TenantId == tenantId
-            select new UserDto
+            where u.TenantId == tenantId && u.IsDeleted == false
+            select new EmployeeDto
             {
                 Id = u.Id,
                 Email = u.Email,
@@ -34,11 +34,11 @@ public class GetUsersQueryHandler : IRequestHandler<GetUsersQuery, List<UserDto>
                 FirstName = p.FirstName ?? string.Empty,
                 LastName = p.LastName ?? string.Empty,
 
-                DepartmentId = p.DepartmentId,
-                Department = d.Title,
+                DepartmentId = Guid.Parse(p.DepartmentId.ToString()),
+                DepartmentName = d.Title,
 
-                JobTitle = j.Title,
-                JobTitleId = p.JobTitleId,
+                JobTitleName = j.Title,
+                JobTitleId = Guid.Parse(p.JobTitleId.ToString()),
 
                 PhoneNumber = p.PhoneNumber,
                 Address = p.Address,
@@ -48,6 +48,7 @@ public class GetUsersQueryHandler : IRequestHandler<GetUsersQuery, List<UserDto>
 
                 ProfileImageUrl = p.ProfileImageUrl
             }
-        ).ToListAsync(cancellationToken);
+                ).OrderBy(x => x.FirstName)
+        .           ThenBy(x => x.LastName).ToListAsync(cancellationToken);
     }
 }

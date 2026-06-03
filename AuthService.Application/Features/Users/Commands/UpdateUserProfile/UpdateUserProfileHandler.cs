@@ -41,8 +41,8 @@ public class UpdateUserProfileCommandHandler : IRequestHandler<UpdateUserProfile
             return false;
 
         // 3. Update User (auth-level info)
-        user.FirstName = request.FirstName;
-        user.LastName = request.LastName;
+        //user.FirstName = request.FirstName;
+        //user.LastName = request.LastName;
 
         // 4. Update Profile (extended info)
         profile.FirstName = request.FirstName;
@@ -55,6 +55,7 @@ public class UpdateUserProfileCommandHandler : IRequestHandler<UpdateUserProfile
         profile.City = request.City;
         profile.Country = request.Country;
         profile.Gender = request.Gender;
+        profile.TenantId = tenantId;
 
         // 5. Profile image update (safe overwrite)
         if (!string.IsNullOrWhiteSpace(request.ProfileImageUrl))

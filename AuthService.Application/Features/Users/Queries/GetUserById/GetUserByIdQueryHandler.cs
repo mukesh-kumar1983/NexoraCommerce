@@ -5,29 +5,29 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AuthService.Application.Features.Users.Queries.GetUserById;
 
-public class GetUserByIdQueryHandler : IRequestHandler<GetUserByIdQuery, UserDto>
+public class GetUEmployeeByIdQueryHandler : IRequestHandler<GetUserByIdQuery, EmployeeDto>
 {
     private readonly IAuthDbContext _context;
 
-    public GetUserByIdQueryHandler(IAuthDbContext context)
+    public GetUEmployeeByIdQueryHandler(IAuthDbContext context)
     {
         _context = context;
     }
 
-    public async Task<UserDto> Handle(GetUserByIdQuery request, CancellationToken cancellationToken)
+    public async Task<EmployeeDto> Handle(GetUserByIdQuery request, CancellationToken cancellationToken)
     {
         var result = await (
             from u in _context.Users
             join p in _context.UserProfile on u.Id equals p.Id
             where u.Id == request.Id
-            select new UserDto
+            select new EmployeeDto
             {
                 Id = u.Id,
                 Email = u.Email,
                 FirstName = p.FirstName!,
                 LastName = p.LastName!,
-                DepartmentId = p.DepartmentId,
-                JobTitleId = p.JobTitleId,
+                DepartmentId = Guid.Parse(p.DepartmentId.ToString()),
+                JobTitleId = Guid.Parse(p.JobTitleId.ToString()),
                 PhoneNumber = p.PhoneNumber,
                 Address = p.Address,
                 City = p.City,

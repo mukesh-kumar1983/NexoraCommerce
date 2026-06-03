@@ -103,8 +103,8 @@ public static class AuthDbSeeder
         {
             Id = Guid.NewGuid(),
             Email = "admin@system.com",
-            FirstName = "System",
-            LastName = "Admin",
+            //FirstName = "System",
+            //LastName = "Admin",
             PasswordHash = BCrypt.Net.BCrypt.HashPassword("Admin@123"),
             TenantId = tenant.Id,
             CreatedBy = "SYSTEM",
@@ -116,11 +116,13 @@ public static class AuthDbSeeder
         context.UserProfile.Add(new UserProfile
         {
             Id = adminUser.Id,
-            FirstName = adminUser.FirstName,
-            LastName = adminUser.LastName,
+            FirstName = "SYSTEM",
+            LastName = "ADMIN",
             Gender = Gender.Male,
             DepartmentId = null,
-            JobTitleId = null
+            JobTitleId = null,
+            TenantId = tenant.Id,
+
         });
 
         return adminUser;

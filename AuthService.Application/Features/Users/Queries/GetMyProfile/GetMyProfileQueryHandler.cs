@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AuthService.Application.Features.Users.Queries.GetMyProfile;
 
-public class GetMyProfileQueryHandler : IRequestHandler<GetMyProfileQuery, UserDto>
+public class GetMyProfileQueryHandler : IRequestHandler<GetMyProfileQuery, EmployeeDto>
 {
     private readonly IAuthDbContext _context;
     private readonly ICurrentUserService _currentUser;
@@ -18,7 +18,7 @@ public class GetMyProfileQueryHandler : IRequestHandler<GetMyProfileQuery, UserD
         _currentUser = currentUser;
     }
 
-    public async Task<UserDto> Handle(GetMyProfileQuery request, CancellationToken cancellationToken)
+    public async Task<EmployeeDto> Handle(GetMyProfileQuery request, CancellationToken cancellationToken)
     {
         var userId = _currentUser.UserId;
 
@@ -26,14 +26,14 @@ public class GetMyProfileQueryHandler : IRequestHandler<GetMyProfileQuery, UserD
             from u in _context.Users
             join p in _context.UserProfile on u.Id equals p.Id
             where u.Id == userId
-            select new UserDto
+            select new EmployeeDto
             {
                 Id = u.Id,
                 Email = u.Email,
                 FirstName = p.FirstName!,
                 LastName = p.LastName!,
-                DepartmentId = p.DepartmentId,
-                JobTitleId = p.JobTitleId,
+                DepartmentId = Guid.Parse(p.DepartmentId.ToString()),
+                JobTitleId = Guid.Parse(p.JobTitleId.ToString()),
                 PhoneNumber = p.PhoneNumber,
                 Address = p.Address,
                 City = p.City,

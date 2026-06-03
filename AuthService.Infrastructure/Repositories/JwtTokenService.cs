@@ -17,7 +17,7 @@ public class JwtTokenService : IJwtTokenService
         _configuration = configuration;
     }
 
-    public string GenerateToken(AppUser user, List<string> roles)
+    public string GenerateToken(AppUser user, UserProfile profile, List<string> roles)
     {
         var jwtSettings = _configuration.GetSection("Jwt");
 
@@ -32,7 +32,7 @@ public class JwtTokenService : IJwtTokenService
         {
             new(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
             new(JwtRegisteredClaimNames.Email, user.Email ?? string.Empty),
-            new(ClaimTypes.Name, user.FullName ?? string.Empty),
+            new(ClaimTypes.Name, profile.FullName ?? string.Empty),
             new(ClaimTypes.NameIdentifier, user.Id.ToString()),
             new Claim("tenant_id", user.TenantId.ToString())
         };

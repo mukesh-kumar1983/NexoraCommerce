@@ -1,4 +1,7 @@
 ﻿using AuthService.Application.Common.Interfaces;
+using AuthService.Application.Features.Users.Commands.CreateEmployeeCommand;
+using AuthService.Application.Features.Users.Commands.DeleteEmployee;
+using AuthService.Application.Features.Users.Commands.UpdateEmployeeCommand;
 using AuthService.Application.Features.Users.Commands.UpdateUserProfile;
 using AuthService.Application.Features.Users.Commands.UploadProfileImage;
 using AuthService.Application.Features.Users.Queries.GetUsers;
@@ -67,7 +70,7 @@ namespace AuthService.API.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var employees = await _mediator.Send(new GetUsersQuery());
+            var employees = await _mediator.Send(new GetEmployeesQuery());
             return Ok(employees);
         }
 
@@ -90,7 +93,7 @@ namespace AuthService.API.Controllers
         }
 
         [HttpGet("{id:guid}")]
-        public async Task<IActionResult> GetUserById(Guid id)
+        public async Task<IActionResult> GetById(Guid id)
         {
             var result = await _mediator.Send(new GetUserByIdQuery { Id = id });
 
@@ -98,6 +101,26 @@ namespace AuthService.API.Controllers
                 return NotFound("User not found");
 
             return Ok(result);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Create([FromBody] UpsertEmployeeCommand command)
+        {
+            return Ok(await _mediator.Send(command));
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(Guid id, [FromBody]  UpsertEmployeeCommand command)
+        {
+            command.Id = id;
+            //return Ok(await _mediator.Send(command));
+            return Ok(new { message = "Employee updated successfully" });
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            return Ok(await _mediator.Send(new DeleteEmployeeCommand { Id = id }));
         }
     }
 }

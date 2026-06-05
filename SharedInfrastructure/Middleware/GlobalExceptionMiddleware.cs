@@ -22,7 +22,7 @@ public class GlobalExceptionMiddleware
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "Unhandled exception");
+            _logger.LogError(ex, "STACK TRACE : " + ex.StackTrace);
 
             context.Response.ContentType = "application/json";
             context.Response.StatusCode = 500;
@@ -30,7 +30,7 @@ public class GlobalExceptionMiddleware
             var response = new
             {
                 success = false,
-                message = ex.Message,
+                message = $"Unhandled Exception with {ex.Source }",
                 traceId = context.TraceIdentifier
             };
 

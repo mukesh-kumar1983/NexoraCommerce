@@ -1,6 +1,7 @@
 ﻿using AuthService.Application.Common.Interfaces;
 using AuthService.Application.Features.Users.Commands.CreateEmployeeCommand;
 using AuthService.Application.Features.Users.Commands.DeleteEmployee;
+using AuthService.Application.Features.Users.Commands.ExportEmployees;
 using AuthService.Application.Features.Users.Commands.UpdateEmployeeCommand;
 using AuthService.Application.Features.Users.Commands.UpdateUserProfile;
 using AuthService.Application.Features.Users.Commands.UploadProfileImage;
@@ -67,11 +68,18 @@ namespace AuthService.API.Controllers
             return Ok("Profile updated successfully");
         }
 
+        //[HttpGet]
+        //public async Task<IActionResult> GetAll()
+        //{
+        //    var employees = await _mediator.Send(new GetEmployeesQuery());
+        //    return Ok(employees);
+        //}
+
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetEmployees([FromQuery] GetEmployeesPagedQuery query)
         {
-            var employees = await _mediator.Send(new GetEmployeesQuery());
-            return Ok(employees);
+            var result = await _mediator.Send(query);
+            return Ok(result);
         }
 
         [HttpGet("me")]
@@ -121,6 +129,18 @@ namespace AuthService.API.Controllers
         public async Task<IActionResult> Delete(Guid id)
         {
             return Ok(await _mediator.Send(new DeleteEmployeeCommand { Id = id }));
+        }
+
+        [HttpPost("export")]
+        public async Task<IActionResult> Export([FromBody] ExportEmployeesCommand command)
+        {
+            var result = await _mediator.Send(command);
+
+            return File(
+                result.FileContent,
+                result.ContentType,
+                result.FileName
+            );
         }
     }
 }

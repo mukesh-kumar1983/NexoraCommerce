@@ -1,5 +1,5 @@
 ﻿using AuthService.Domain.Entities;
-using SharedKernel;
+using SharedKernel.Common.Models;
 using System.Text.Json.Serialization;
 
 public class UserProfile : BaseEntity

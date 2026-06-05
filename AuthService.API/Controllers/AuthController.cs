@@ -3,7 +3,7 @@ using AuthService.Application.Features.Commands;
 using AuthService.Domain.Entities;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using SharedKernel.Common;
+using SharedKernel.Common.Models;
 
 [ApiController]
 [Route("api/[controller]")]

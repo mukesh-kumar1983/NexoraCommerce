@@ -1,5 +1,4 @@
-﻿
-using SharedKernel;
+﻿using SharedKernel.Common.Models;
 using System.ComponentModel.DataAnnotations;
 
 namespace AuthService.Domain.Entities;

@@ -1,17 +1,13 @@
-﻿using MediatR;
-using SharedKernel.Common.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AuthService.Application.Features.Users.Commands.CreateEmployeeCommand
+namespace AuthService.Application.Features.Users.DTOs
 {
-    public class UpsertEmployeeCommand : IRequest<ApiResponse<Guid>>
+    public class EmployeeReportDto
     {
-        public Guid? Id { get; set; } // null = create, not null = update
-
         public string FirstName { get; set; } = default!;
         public string LastName { get; set; } = default!;
         public string Email { get; set; } = default!;
@@ -22,11 +18,8 @@ namespace AuthService.Application.Features.Users.Commands.CreateEmployeeCommand
         public string? Country { get; set; }
         public string? Gender { get; set; }
 
-        public Guid DepartmentId { get; set; }
-        public Guid JobTitleId { get; set; }
-
-        public string? ProfileImageUrl { get; set; }
-
-        //public Guid TenantId { get; set; }
+        // ✅ UI-friendly (IMPORTANT for Angular)
+        public string DepartmentName { get; set; } = default!;
+        public string JobTitleName { get; set; } = default!;
     }
 }

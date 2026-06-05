@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SharedKernel
+namespace SharedKernel.Common.Models
 {
     public abstract class BaseEntity
     {

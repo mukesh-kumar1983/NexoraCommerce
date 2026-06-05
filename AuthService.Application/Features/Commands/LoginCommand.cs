@@ -1,6 +1,6 @@
 ﻿using AuthService.Application.Features.Authentication.DTOs;
 using MediatR;
-using SharedKernel.Common;
+using SharedKernel.Common.Models;
 
 namespace AuthService.Application.Features.Commands
 {

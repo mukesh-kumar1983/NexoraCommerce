@@ -1,5 +1,6 @@
 ﻿using AuthService.Application.Common.Interfaces;
 using AuthService.Infrastruc.Features.Repositories;
+
 using AuthService.Infrastructure.Messaging;
 using AuthService.Infrastructure.Persistence;
 using AuthService.Infrastructure.Repositories;
@@ -26,6 +27,7 @@ public static class InfrastructureServiceExtensions
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IUnitOfWork, UnitOfWork>();
         services.AddSingleton<IMessagePublisher, RabbitMqPublisher>();
+        services.AddScoped<IExportService, ExportService>();
 
         return services;
     }

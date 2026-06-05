@@ -2,7 +2,7 @@
 using AuthService.Application.Features.Authentication.DTOs;
 using AuthService.Application.Features.Commands;
 using MediatR;
-using SharedKernel.Common;
+using SharedKernel.Common.Models;
 
 namespace AuthService.Application.Features.Authentication.Commands.Login;
 

@@ -1,29 +1,29 @@
-﻿using MediatR;
+﻿using AuthService.Application.Common.Interfaces;
+using AuthService.Application.Features.Users.Commands.CreateEmployeeCommand;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
-using AuthService.Domain.Entities;
-using AuthService.Application.Common.Interfaces;
-
-namespace AuthService.Application.Features.Users.Commands.CreateEmployeeCommand;
+using SharedKernel.Common.Models;
 
 public class UpsertEmployeeCommandHandler
-    : IRequestHandler<UpsertEmployeeCommand, Guid>
+    : IRequestHandler<UpsertEmployeeCommand, ApiResponse<Guid>>
 {
     private readonly IAuthDbContext _context;
     private readonly ICurrentTenantService _tenant;
 
-    public UpsertEmployeeCommandHandler(IAuthDbContext context, ICurrentTenantService tenant)
+    public UpsertEmployeeCommandHandler(
+        IAuthDbContext context,
+        ICurrentTenantService tenant)
     {
         _context = context;
         _tenant = tenant;
     }
 
-    public async Task<Guid> Handle(
+    public async Task<ApiResponse<Guid>> Handle(
         UpsertEmployeeCommand request,
         CancellationToken cancellationToken)
     {
         if (request.Id.HasValue)
         {
-            // UPDATE
             var employee = await _context.UserProfile
                 .FirstOrDefaultAsync(
                     x => x.Id == request.Id.Value,
@@ -34,7 +34,6 @@ public class UpsertEmployeeCommandHandler
 
             employee.FirstName = request.FirstName;
             employee.LastName = request.LastName;
-            //employee.Email = request.Email;
             employee.PhoneNumber = request.PhoneNumber;
             employee.Address = request.Address;
             employee.City = request.City;
@@ -42,32 +41,28 @@ public class UpsertEmployeeCommandHandler
             employee.Gender = request.Gender;
             employee.DepartmentId = request.DepartmentId;
             employee.JobTitleId = request.JobTitleId;
-            employee.TenantId = _tenant.TenantId; // Keep the existing TenantId
-            //employee.ProfileImageUrl = request.ProfileImageUrl;
 
             await _context.SaveChangesAsync(cancellationToken);
 
-            return employee.Id;
+            return ApiResponse<Guid>.SuccessResponse(
+                employee.Id,
+                "Employee updated successfully");
         }
 
-        // CREATE
-
-        var emp = new AppUser
+        var user = new AppUser
         {
             Id = Guid.NewGuid(),
             Email = request.Email,
-            CreatedAt = DateTime.UtcNow,
             PasswordHash = BCrypt.Net.BCrypt.HashPassword("User@123"),
+            CreatedAt = DateTime.UtcNow,
             TenantId = _tenant.TenantId
-
         };
 
-        var newEmployee = new UserProfile
+        var profile = new UserProfile
         {
-            Id = emp.Id,
+            Id = user.Id,
             FirstName = request.FirstName,
             LastName = request.LastName,
-            //Email = request.Email,
             PhoneNumber = request.PhoneNumber,
             Address = request.Address,
             City = request.City,
@@ -76,14 +71,16 @@ public class UpsertEmployeeCommandHandler
             DepartmentId = request.DepartmentId,
             JobTitleId = request.JobTitleId,
             ProfileImageUrl = request.ProfileImageUrl,
-            TenantId = emp.TenantId
+            TenantId = user.TenantId
         };
 
-        _context.Users.Add(emp);
-        _context.UserProfile.Add(newEmployee);
+        _context.Users.Add(user);
+        _context.UserProfile.Add(profile);
 
         await _context.SaveChangesAsync(cancellationToken);
 
-        return newEmployee.Id;
+        return ApiResponse<Guid>.SuccessResponse(
+            profile.Id,
+            "Employee created successfully");
     }
 }

@@ -1,5 +1,5 @@
 ﻿using AuthService.Domain.Entities;
-using SharedKernel;
+using SharedKernel.Common.Models;
 
 public class AppUser : BaseEntity
 {

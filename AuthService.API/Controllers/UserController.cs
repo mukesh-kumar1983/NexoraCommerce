@@ -13,7 +13,7 @@ using System.Security.Claims;
 
 namespace AuthService.API.Controllers
 {
-    [Authorize]
+    [Authorize(Roles="Admin")  ]
     [Route("api/users")]
     public class UserController : ControllerBase
     {

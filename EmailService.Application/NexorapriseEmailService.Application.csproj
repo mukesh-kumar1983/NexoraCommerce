@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EmailService.Domain\EmailService.Domain.csproj" />
+    <ProjectReference Include="..\EmailService.Domain\NexoraPrise.EmailService.Domain.csproj" />
   </ItemGroup>
 
 </Project>

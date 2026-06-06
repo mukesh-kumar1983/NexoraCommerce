@@ -10,7 +10,7 @@ public static class ApplicationServiceExtensions
     public static IServiceCollection AddApplicationServices(
         this IServiceCollection services)
     {
-        var assembly = Assembly.Load("AuthService.Application");
+        var assembly = Assembly.Load("NexoraEnterprise.AuthService.Application");
 
         services.AddMediatR(cfg =>
             cfg.RegisterServicesFromAssembly(assembly));

@@ -10,6 +10,8 @@ using QuestPDF.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
+Console.WriteLine("Build Started");
+
 #region Serilog
 builder.Host.UseSerilogLogging();
 #endregion
@@ -74,3 +76,5 @@ await app.MigrateAndSeedDatabaseAsync();
 #endregion
 
 app.Run();
+
+Console.WriteLine("App Started");

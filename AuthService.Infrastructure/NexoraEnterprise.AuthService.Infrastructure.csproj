@@ -37,9 +37,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AuthService.Application\AuthService.Application.csproj" />
-    <ProjectReference Include="..\AuthService.Domain\AuthService.Domain.csproj" />
-    <ProjectReference Include="..\SharedKernel\SharedKernel.csproj" />
+    <ProjectReference Include="..\AuthService.Application\NexoraEnterprise.AuthService.Application.csproj" />
+    <ProjectReference Include="..\AuthService.Domain\NexoraEnterprise.AuthService.Domain.csproj" />
+    <ProjectReference Include="..\SharedKernel\NexoraEnterprise.SharedKernel.csproj" />
   </ItemGroup>
 
   <ItemGroup>

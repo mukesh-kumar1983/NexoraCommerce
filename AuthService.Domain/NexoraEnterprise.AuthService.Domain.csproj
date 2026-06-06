@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SharedKernel\SharedKernel.csproj" />
+    <ProjectReference Include="..\SharedKernel\NexoraEnterprise.SharedKernel.csproj" />
   </ItemGroup>
 
 </Project>

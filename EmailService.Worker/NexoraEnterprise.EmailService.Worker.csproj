@@ -17,8 +17,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EmailService.Application\EmailService.Application.csproj" />
-    <ProjectReference Include="..\EmailService.Infrastructure\EmailService.Infrastructure.csproj" />
-    <ProjectReference Include="..\SharedContracts\SharedContracts.csproj" />
+    <ProjectReference Include="..\EmailService.Application\NexorapriseEmailService.Application.csproj" />
+    <ProjectReference Include="..\EmailService.Infrastructure\Nexoraprise.EmailService.Infrastructure.csproj" />
+    <ProjectReference Include="..\SharedContracts\NexoraEnterprise.SharedContracts.csproj" />
   </ItemGroup>
 </Project>

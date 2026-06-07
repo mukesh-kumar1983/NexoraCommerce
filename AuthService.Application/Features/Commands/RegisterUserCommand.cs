@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace AuthService.Application.Features.Commands;
+namespace NexoraEnterprise.AuthService.Application.Features.Commands;
 public class RegisterUserCommand : IRequest<Guid>
 {
     public string Email { get; set; } = default!;

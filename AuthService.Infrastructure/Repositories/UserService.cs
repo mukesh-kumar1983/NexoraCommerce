@@ -2,6 +2,8 @@
 using AuthService.Infrastructure.Persistence;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
+using NexoraEnterprise.AuthService.Application.Common.Interfaces;
+using NexoraEnterprise.AuthService.Infrastructure.Persistence;
 using System;
 using System.Collections.Generic;
 using System.Linq;

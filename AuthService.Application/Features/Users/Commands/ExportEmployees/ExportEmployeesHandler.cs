@@ -1,10 +1,10 @@
-﻿using AuthService.Application.Common.Interfaces;
-using AuthService.Application.Features.Users.DTOs;
-using MediatR;
+﻿using MediatR;
 using Microsoft.EntityFrameworkCore;
-using SharedKernel.Common.Exports;
+using NexoraEnterprise.AuthService.Application.Common.Interfaces;
+using NexoraEnterprise.AuthService.Application.Features.Users.DTOs;
+using NexoraEnterprise.SharedKernel.Common.Exports;
 
-namespace AuthService.Application.Features.Users.Commands.ExportEmployees
+namespace NexoraEnterprise.AuthService.Application.Features.Users.Commands.ExportEmployees
 {
     public class ExportEmployeesHandler
         : IRequestHandler<ExportEmployeesCommand, ExportFileResult>

@@ -1,6 +1,8 @@
-﻿using AuthService.Domain.Entities;
-using SharedKernel.Common.Models;
+﻿using NexoraEnterprise.AuthService.Domain.Entities;
+using NexoraEnterprise.SharedKernel.Common.Models;
 using System.Text.Json.Serialization;
+
+namespace NexoraEnterprise.AuthService.Domain;
 
 public class UserProfile : BaseEntity
 {

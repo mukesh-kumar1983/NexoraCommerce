@@ -1,5 +1,6 @@
 ﻿using MediatR;
 
+namespace NexoraEnterprise.AuthService.Application;
 public class UpdateMyProfileCommand : IRequest<bool>
 {
     //public Guid UserId { get; set; }   // 🔥 REQUIRED (for handler)

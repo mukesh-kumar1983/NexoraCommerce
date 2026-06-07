@@ -1,9 +1,9 @@
-﻿using AuthService.Application.Common.Interfaces;
-using AuthService.Application.Features.Users.DTOs;
-using MediatR;
+﻿using MediatR;
 using Microsoft.EntityFrameworkCore;
+using NexoraEnterprise.AuthService.Application.Common.Interfaces;
+using NexoraEnterprise.AuthService.Application.Features.Users.DTOs;
 
-namespace AuthService.Application.Features.Users.Queries.GetUserById;
+namespace NexoraEnterprise.AuthService.Application.Features.Users.Queries.GetUserById;
 
 public class GetUEmployeeByIdQueryHandler : IRequestHandler<GetUserByIdQuery, EmployeeDto>
 {

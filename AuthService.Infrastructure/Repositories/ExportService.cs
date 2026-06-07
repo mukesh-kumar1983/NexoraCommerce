@@ -1,13 +1,10 @@
 ﻿using AuthService.Application.Common.Interfaces;
 using ClosedXML.Excel;
+using NexoraEnterprise.AuthService.Application.Common.Interfaces;
+using NexoraEnterprise.SharedKernel.Common.Enums;
+using NexoraEnterprise.SharedKernel.Common.Exports;
 using QuestPDF.Fluent;
-using QuestPDF.Helpers;
-using QuestPDF.Infrastructure;
-using SharedKernel.Common.Enums;
-using SharedKernel.Common.Exports;
-using SharedKernel.Common;
 using System.Reflection;
-using System.Reflection.Metadata;
 
 namespace AuthService.Infrastructure.Repositories;
 

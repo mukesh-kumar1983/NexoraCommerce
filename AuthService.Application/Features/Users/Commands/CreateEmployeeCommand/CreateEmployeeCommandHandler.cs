@@ -1,8 +1,10 @@
-﻿using AuthService.Application.Common.Interfaces;
-using AuthService.Application.Features.Users.Commands.CreateEmployeeCommand;
-using MediatR;
+﻿using MediatR;
 using Microsoft.EntityFrameworkCore;
-using SharedKernel.Common.Models;
+using NexoraEnterprise.AuthService.Application.Common.Interfaces;
+using NexoraEnterprise.AuthService.Domain;
+using NexoraEnterprise.SharedKernel.Common.Models;
+
+namespace NexoraEnterprise.AuthService.Application.Features.Users.Commands;
 
 public class UpsertEmployeeCommandHandler
     : IRequestHandler<UpsertEmployeeCommand, ApiResponse<Guid>>

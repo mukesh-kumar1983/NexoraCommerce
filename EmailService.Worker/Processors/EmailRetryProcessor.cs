@@ -1,9 +1,7 @@
 ﻿using EmailService.Application.Interfaces;
-using EmailService.Domain.Entities;
 using EmailService.Worker.Services;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
-using SharedContracts.Events;
+using NexoraEnterprise.SharedContracts.Events;
 using System.Text.Json;
 
 namespace EmailService.Worker.Processors;

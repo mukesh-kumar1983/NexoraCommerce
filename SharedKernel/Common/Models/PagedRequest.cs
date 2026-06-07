@@ -1,4 +1,9 @@
-﻿public class PagedRequest
+﻿
+namespace NexoraEnterprise.SharedKernel.Models
+{
+
+}
+public class PagedRequest
 {
     public int Page { get; set; } = 1;
 

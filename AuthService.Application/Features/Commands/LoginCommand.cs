@@ -1,8 +1,8 @@
-﻿using AuthService.Application.Features.Authentication.DTOs;
-using MediatR;
-using SharedKernel.Common.Models;
+﻿using MediatR;
+using NexoraEnterprise.AuthService.Application.Features.Authentication.DTOs;
+using NexoraEnterprise.SharedKernel.Common.Models;
 
-namespace AuthService.Application.Features.Commands
+namespace NexoraEnterprise.AuthService.Application.Features.Commands
 {
     /// <summary>
     /// CQRS command for user login

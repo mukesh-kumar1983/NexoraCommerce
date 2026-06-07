@@ -1,4 +1,5 @@
-﻿using SharedKernel.Common.Models;
+﻿using NexoraEnterprise.SharedKernel.Common.Models;
+using SharedKernel.Common.Models;
 
 namespace AuthService.Application.Common.Querying;
 

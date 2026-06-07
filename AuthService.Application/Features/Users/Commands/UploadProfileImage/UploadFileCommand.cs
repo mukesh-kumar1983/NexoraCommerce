@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Http;
 
-namespace AuthService.Application.Features.Users.Commands.UploadProfileImage;
+namespace NexoraEnterprise.AuthService.Application.Features.Users.Commands.UploadProfileImage;
 
 public class UploadFileCommand : IRequest<string>
 {

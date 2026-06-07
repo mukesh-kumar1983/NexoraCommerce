@@ -1,4 +1,4 @@
-﻿namespace AuthService.Application.Common.Interfaces
+﻿namespace NexoraEnterprise.AuthService.Application.Common.Interfaces
 {
     public interface ICurrentUserService
     {

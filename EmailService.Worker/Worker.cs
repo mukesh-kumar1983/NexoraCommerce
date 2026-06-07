@@ -4,12 +4,12 @@ using EmailService.Domain.Entities;
 using EmailService.Worker.Processors;
 using EmailService.Worker.Services;
 using Microsoft.Extensions.Options;
+using NexoraEnterprise.SharedContracts.Events;
 using Polly;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using Serilog;
 using Serilog.Context;
-using SharedContracts.Events;
 using System.Text;
 using System.Text.Json;
 

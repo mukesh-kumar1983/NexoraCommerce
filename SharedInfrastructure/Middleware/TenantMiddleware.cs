@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SharedInfrastructure.Middleware
+namespace NexoraEnterprise.SharedInfrastructure.Middleware
 {
     internal class TenantMiddleware
     {

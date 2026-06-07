@@ -1,8 +1,10 @@
 ﻿using AuthService.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
+using NexoraEnterprise.AuthService.Infrastructure.Persistence;
+using NexoraEnterprise.SharedInfrastructure.Middleware;
 using Serilog;
 
-namespace AuthService.API.Extensions;
+namespace NexoraEnterprise.AuthService.API.Extensions;
 
 public static class ApplicationBuilderExtensions
 {

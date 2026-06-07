@@ -1,4 +1,4 @@
-﻿namespace AuthService.Application.Common.Settings;
+﻿namespace NexoraEnterprise.AuthService.Application.Common.Settings;
 
 public class AzureBlobSettings
 {

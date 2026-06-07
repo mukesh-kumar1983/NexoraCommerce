@@ -1,10 +1,11 @@
 ﻿using AuthService.Application.Common.Interfaces;
-using AuthService.Application.Features.Authentication.DTOs;
-using AuthService.Application.Features.Commands;
 using MediatR;
-using SharedKernel.Common.Models;
+using NexoraEnterprise.AuthService.Application.Common.Interfaces;
+using NexoraEnterprise.AuthService.Application.Features.Authentication.DTOs;
+using NexoraEnterprise.AuthService.Application.Features.Commands;
+using NexoraEnterprise.SharedKernel.Common.Models;
 
-namespace AuthService.Application.Features.Authentication.Commands.Login;
+namespace NexoraEnterprise.AuthService.Application.Features.Authentication.Commands.Login;
 
 public class LoginCommandHandler
     : IRequestHandler<LoginCommand, ApiResponse<AuthResponseDto>>

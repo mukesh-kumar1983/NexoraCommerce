@@ -1,4 +1,4 @@
-﻿namespace SharedKernel.Common.Models;
+﻿namespace NexoraEnterprise.SharedKernel.Common.Models;
 
 /// <summary>
 /// Unified request model for Grid + Export

@@ -1,8 +1,8 @@
-﻿namespace AuthService.Application.Features.Users.Commands.ExportEmployees
+﻿namespace NexoraEnterprise.AuthService.Application.Features.Users.Commands.ExportEmployees
 {
     using MediatR;
-    using SharedKernel.Common.Enums;
-    using SharedKernel.Common.Exports;
+    using NexoraEnterprise.SharedKernel.Common.Enums;
+    using NexoraEnterprise.SharedKernel.Common.Exports;
 
     public class ExportEmployeesCommand : IRequest<ExportFileResult>
     {

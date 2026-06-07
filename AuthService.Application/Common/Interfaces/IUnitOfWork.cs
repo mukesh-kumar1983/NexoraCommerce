@@ -1,6 +1,4 @@
-﻿using System;
-using System.Threading;
-using System.Threading.Tasks;
+﻿namespace AuthService.Application.Common.Interfaces;
 
 public interface IUnitOfWork
 {

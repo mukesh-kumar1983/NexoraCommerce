@@ -1,6 +1,7 @@
-﻿using AuthService.Domain.Entities;
-using Microsoft.EntityFrameworkCore;
-using SharedKernel;
+﻿using Microsoft.EntityFrameworkCore;
+using NexoraEnterprise.AuthService.Domain;
+using NexoraEnterprise.AuthService.Domain.Entities;
+using NexoraEnterprise.AuthService.Infrastructure.Persistence;
 
 namespace AuthService.Infrastructure.Persistence;
 

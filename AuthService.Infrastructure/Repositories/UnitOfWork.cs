@@ -1,6 +1,8 @@
-﻿using AuthService.Infrastructure.Persistence;
+﻿using AuthService.Application.Common.Interfaces;
+using AuthService.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
+using NexoraEnterprise.AuthService.Infrastructure.Persistence;
 using System.Threading;
 using System.Threading.Tasks;
 

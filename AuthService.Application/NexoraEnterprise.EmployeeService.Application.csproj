@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <AssemblyName>NexoraEnterprise.EmployeeService.Application</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.2.0" />
+    <PackageReference Include="FluentValidation" Version="12.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.3.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    
+    <ProjectReference Include="..\AuthService.Domain\NexoraEnterprise.EmployeeService.Domain.csproj" />
+    <ProjectReference Include="..\EmailService.Domain\NexoraPrise.EmailService.Domain.csproj" />
+    <ProjectReference Include="..\EmailService.Infrastructure\Nexoraprise.EmailService.Infrastructure.csproj" />
+    <ProjectReference Include="..\SharedContracts\NexoraEnterprise.SharedContracts.csproj" />
+    
+  </ItemGroup>
+
+</Project>

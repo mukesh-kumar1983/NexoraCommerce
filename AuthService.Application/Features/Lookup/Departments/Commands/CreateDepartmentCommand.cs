@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace AuthService.Application.Features.Lookup.Departments.Commands;
+namespace NexoraEnterprise.AuthService.Application.Features.Lookup.Departments.Commands;
 
 public class CreateDepartmentCommand : IRequest<Guid>
 {

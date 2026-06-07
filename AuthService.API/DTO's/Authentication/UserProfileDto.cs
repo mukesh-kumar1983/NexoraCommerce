@@ -1,4 +1,4 @@
-﻿using AuthService.Domain.Entities;
+﻿using NexoraEnterprise.AuthService.Domain.Entities;
 
 namespace AuthService.API.DTO_s.Authentication
 {

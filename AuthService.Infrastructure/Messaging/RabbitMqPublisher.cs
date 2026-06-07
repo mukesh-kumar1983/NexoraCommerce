@@ -1,10 +1,11 @@
 ﻿using AuthService.Application.Common.Interfaces;
+using NexoraEnterprise.AuthService.Application.Common.Interfaces;
 using RabbitMQ.Client;
 using Serilog;
 using System.Text;
 using System.Text.Json;
 
-namespace AuthService.Infrastructure.Messaging;
+namespace NexoraEnterprise.AuthService.Infrastructure.Messaging;
 
 /// <summary>
 /// RabbitMQ publisher responsible for publishing integration events

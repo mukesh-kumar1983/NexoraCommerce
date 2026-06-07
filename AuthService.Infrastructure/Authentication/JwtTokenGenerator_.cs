@@ -1,15 +1,15 @@
 ﻿using AuthService.Application.Common.Interfaces;
-using Microsoft.IdentityModel.JsonWebTokens;
+using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using NexoraEnterprise.AuthService.Application.Common.Interfaces;
+using NexoraEnterprise.AuthService.Domain;
+using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
-using Microsoft.Extensions.Configuration;
-using System.IdentityModel.Tokens.Jwt;
-using AuthService.Domain.Entities;
 
 
-namespace AuthService.Infrastructure.Authentication;
+namespace NexoraEnterprise.AuthService.Infrastructure.Authentication;
 
 public class JwtTokenGenerator_ : IJwtTokenGenerator_
 {

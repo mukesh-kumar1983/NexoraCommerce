@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace AuthService.Application.Features.Users.Commands.UpdateUserProfile
+namespace NexoraEnterprise.AuthService.Application.Features.Users.Commands.UpdateUserProfile
 {
     public class UpdateUserProfileCommand : IRequest<bool>
     {

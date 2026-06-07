@@ -1,6 +1,4 @@
-﻿using System.Runtime.CompilerServices;
-
-namespace AuthService.Application.Features.Authentication.DTOs
+﻿namespace NexoraEnterprise.AuthService.Application.Features.Authentication.DTOs
 {
     public sealed class AuthResponseDto
     {

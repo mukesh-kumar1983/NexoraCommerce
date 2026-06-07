@@ -1,16 +1,16 @@
-﻿using System.Reflection;
-using FluentValidation;
-using MediatR;
-using Microsoft.Extensions.DependencyInjection;
+﻿using FluentValidation;
+using System.Reflection;
 
-namespace AuthService.API.Extensions;
+namespace NexoraEnterprise.AuthService.API.Extensions;
 
 public static class ApplicationServiceExtensions
 {
     public static IServiceCollection AddApplicationServices(
         this IServiceCollection services)
     {
-        var assembly = Assembly.Load("NexoraEnterprise.AuthService.Application");
+        //var assembly = Assembly.Load("NexoraEnterprise.AuthService.Application");
+
+        var assembly = Assembly.Load("NexoraEnterprise.EmployeeService.Application");
 
         services.AddMediatR(cfg =>
             cfg.RegisterServicesFromAssembly(assembly));

@@ -1,17 +1,15 @@
-﻿using AuthService.Application.Common.Interfaces;
-using AuthService.Application.Features.Users.Commands.CreateEmployeeCommand;
-using AuthService.Application.Features.Users.Commands.DeleteEmployee;
-using AuthService.Application.Features.Users.Commands.ExportEmployees;
-using AuthService.Application.Features.Users.Commands.UpdateEmployeeCommand;
-using AuthService.Application.Features.Users.Commands.UpdateUserProfile;
-using AuthService.Application.Features.Users.Commands.UploadProfileImage;
-using AuthService.Application.Features.Users.Queries.GetUsers;
-using MediatR;
+﻿using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using NexoraEnterprise.AuthService.Application;
+using NexoraEnterprise.AuthService.Application.Common.Interfaces;
+using NexoraEnterprise.AuthService.Application.Features.Users.Commands;
+using NexoraEnterprise.AuthService.Application.Features.Users.Commands.DeleteEmployee;
+using NexoraEnterprise.AuthService.Application.Features.Users.Commands.ExportEmployees;
+using NexoraEnterprise.AuthService.Application.Features.Users.Queries;
 using System.Security.Claims;
 
-namespace AuthService.API.Controllers
+namespace NexoraEnterprise. AuthService.API.Controllers
 {
     [Authorize(Roles="Admin")  ]
     [Route("api/users")]

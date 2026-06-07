@@ -1,9 +1,11 @@
-﻿using AuthService.Application.Common.Interfaces;
-using AuthService.Application.Common.Querying;
-using AuthService.Application.Features.Users.DTOs;
-using MediatR;
+﻿using MediatR;
 using Microsoft.EntityFrameworkCore;
-using SharedKernel.Common;
+using NexoraEnterprise.AuthService.Application.Common.Interfaces;
+using NexoraEnterprise.AuthService.Application.Common.Querying;
+using NexoraEnterprise.AuthService.Application.Features.Users.DTOs;
+using SharedKernel.Common.Models;
+
+namespace NexoraEnterprise.AuthService.Application.Features.Users.Queries.GetUsers.GetEmployees;
 
 public class GetEmployeesPagedQueryHandler
     : IRequestHandler<GetEmployeesPagedQuery, PagedResult<EmployeeDto>>

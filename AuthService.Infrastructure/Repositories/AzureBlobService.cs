@@ -1,10 +1,10 @@
-﻿using AuthService.Application.Common.Interfaces;
-using AuthService.Application.Common.Settings;
-using Azure.Storage.Blobs;
+﻿using Azure.Storage.Blobs;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Options;
+using NexoraEnterprise.AuthService.Application.Common.Interfaces;
+using NexoraEnterprise.AuthService.Application.Common.Settings;
 
-namespace AuthService.Infrastructure.Services;
+namespace NexoraEnterprise.AuthService.Infrastructure.Services;
 
 public class AzureBlobService : IAzureBlobService
 {

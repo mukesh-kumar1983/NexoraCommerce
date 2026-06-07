@@ -1,11 +1,6 @@
-﻿using SharedKernel.Common.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using NexoraEnterprise.SharedKernel.Common.Models;
 
-namespace AuthService.Domain.Entities
+namespace NexoraEnterprise.AuthService.Domain.Entities
 {
     public class JobTitle : BaseEntity
     {

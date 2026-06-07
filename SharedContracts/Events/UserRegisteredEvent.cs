@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SharedContracts.Events;
+namespace NexoraEnterprise.SharedContracts.Events;
 
 /// <summary>
 /// Event published when a new user successfully registers in the system.

@@ -1,13 +1,9 @@
 ﻿using AuthService.Application.Common.Interfaces;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using NexoraEnterprise.AuthService.Application.Common.Interfaces;
 
-namespace AuthService.Application.Features.Users.Commands.UpdateEmployeeCommand
+namespace NexoraEnterprise.AuthService.Application.Features.Users.Commands.UpdateEmployeeCommand
 {
     public class UpdateEmployeeCommandHandler : IRequestHandler<UpdateEmployeeCommand, bool>
     {

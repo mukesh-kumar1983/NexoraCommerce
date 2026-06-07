@@ -1,8 +1,9 @@
 ﻿using AuthService.Application.Common.Interfaces;
-using AuthService.Domain.Entities;
 using MediatR;
+using NexoraEnterprise.AuthService.Application.Common.Interfaces;
+using NexoraEnterprise.AuthService.Domain.Entities;
 
-namespace AuthService.Application.Features.Lookup.Departments.Commands;
+namespace NexoraEnterprise.AuthService.Application.Features.Lookup.Departments.Commands;
 
 public class CreateDepartmentHandler : IRequestHandler<CreateDepartmentCommand, Guid>
 {

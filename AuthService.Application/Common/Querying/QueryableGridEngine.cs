@@ -1,6 +1,6 @@
 ﻿using System.Linq.Expressions;
 
-namespace AuthService.Application.Common.Querying;
+namespace NexoraEnterprise.AuthService.Application.Common.Querying;
 
 public static class QueryableGridEngine
 {

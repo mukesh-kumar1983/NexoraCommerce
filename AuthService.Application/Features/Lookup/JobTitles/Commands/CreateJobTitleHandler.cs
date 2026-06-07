@@ -1,7 +1,7 @@
-﻿using AuthService.Application.Common.Interfaces;
-using AuthService.Application.Features.Lookup.JobTitles.Commands;
-using AuthService.Domain.Entities;
-using MediatR;
+﻿using MediatR;
+using NexoraEnterprise.AuthService.Application.Common.Interfaces;
+using NexoraEnterprise.AuthService.Application.Features.Lookup.JobTitles.Commands;
+using NexoraEnterprise.AuthService.Domain.Entities;
 
 public class CreateJobTitleHandler : IRequestHandler<CreateJobTitleCommand, Guid>
 {

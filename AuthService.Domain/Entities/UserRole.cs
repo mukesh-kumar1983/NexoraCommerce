@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace AuthService.Domain.Entities;
+namespace NexoraEnterprise.AuthService.Domain.Entities;
 public class UserRole
 {
     [Key]

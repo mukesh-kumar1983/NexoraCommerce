@@ -1,10 +1,10 @@
-﻿using AuthService.Application.Features.Lookup.Departments.Commands;
-using AuthService.Application.Features.Lookup.Departments.Queries;
-using AuthService.Application.Features.Lookup.JobTitles.Commands;
-using AuthService.Application.Features.Lookup.JobTitles.Queries;
-using MediatR;
+﻿using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using NexoraEnterprise.AuthService.Application.Features.Lookup.Departments.Commands;
+using NexoraEnterprise.AuthService.Application.Features.Lookup.Departments.Queries;
+using NexoraEnterprise.AuthService.Application.Features.Lookup.JobTitles.Commands;
+using NexoraEnterprise.AuthService.Application.Features.Lookup.JobTitles.Queries;
 
 namespace AuthService.API.Controllers
 {

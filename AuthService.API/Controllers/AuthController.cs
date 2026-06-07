@@ -1,9 +1,8 @@
 ﻿using AuthService.API.DTOs.Authentication;
-using AuthService.Application.Features.Commands;
-using AuthService.Domain.Entities;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using SharedKernel.Common.Models;
+using NexoraEnterprise.AuthService.Application.Features.Commands;
+using NexoraEnterprise.SharedKernel.Common.Models;
 
 [ApiController]
 [Route("api/[controller]")]

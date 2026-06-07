@@ -1,4 +1,4 @@
-﻿namespace SharedKernel.Common.Models;
+﻿namespace NexoraEnterprise.SharedKernel.Common.Models;
 
 public class ApiResponse<T>
 {

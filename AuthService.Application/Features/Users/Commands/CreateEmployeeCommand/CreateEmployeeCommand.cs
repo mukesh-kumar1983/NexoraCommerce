@@ -1,11 +1,6 @@
 ﻿using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace AuthService.Application.Features.Users.Commands.CreateEmployeeCommand
+namespace NexoraEnterprise.AuthService.Application.Features.Users.Commands.CreateEmployeeCommand
 {
     public class CreateEmployeeCommand : IRequest<int>
     {

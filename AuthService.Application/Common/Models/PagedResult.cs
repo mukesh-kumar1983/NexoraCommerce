@@ -1,4 +1,4 @@
-﻿namespace AuthService.Application.Common.Models;
+﻿namespace NexoraEnterprise.AuthService.Application.Common.Models;
 
 public class PagedResult<T>
 {

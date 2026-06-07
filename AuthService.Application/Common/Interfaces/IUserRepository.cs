@@ -1,4 +1,4 @@
-﻿using AuthService.Domain.Entities;
+﻿using NexoraEnterprise.AuthService.Domain;
 
 namespace AuthService.Application.Common.Interfaces;
 

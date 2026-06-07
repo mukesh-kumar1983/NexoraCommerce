@@ -1,10 +1,11 @@
 ﻿using AuthService.Application.Common.Interfaces;
-using AuthService.Infrastruc.Features.Repositories;
-
-using AuthService.Infrastructure.Messaging;
-using AuthService.Infrastructure.Persistence;
 using AuthService.Infrastructure.Repositories;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using NexoraEnterprise.AuthService.Application.Common.Interfaces;
+using NexoraEnterprise.AuthService.Infrastruc.Features.Repositories;
+using NexoraEnterprise.AuthService.Infrastructure.Messaging;
+using NexoraEnterprise.AuthService.Infrastructure.Persistence;
 
 namespace AuthService.API.Extensions;
 

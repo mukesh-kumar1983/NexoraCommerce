@@ -1,9 +1,9 @@
-﻿using AuthService.Application.Common.Interfaces;
-using AuthService.Application.Features.Lookup.Departments.DTOs;
+﻿using NexoraEnterprise.AuthService.Application.Common.Interfaces;
+using NexoraEnterprise.AuthService.Application.Features.Lookup.Departments.DTOs;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace AuthService.Application.Features.Lookup.Departments.Queries;
+namespace NexoraEnterprise.AuthService.Application.Features.Lookup.Departments.Queries;
 
 public class GetDepartmentsHandler : IRequestHandler<GetDepartmentsQuery, List<DepartmentDto>>
 {

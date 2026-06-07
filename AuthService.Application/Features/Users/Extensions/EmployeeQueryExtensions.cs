@@ -1,4 +1,4 @@
-﻿using AuthService.Application.Features.Users.DTOs;
+﻿using NexoraEnterprise.AuthService.Application.Features.Users.DTOs;
 
 public static class EmployeeQueryExtensions
 {

@@ -1,4 +1,4 @@
-﻿namespace AuthService.Application.Features.Users.DTOs
+﻿namespace NexoraEnterprise.AuthService.Application.Features.Users.DTOs
 {
     public class EmployeeDto
     {

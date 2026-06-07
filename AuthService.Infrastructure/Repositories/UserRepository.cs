@@ -1,7 +1,7 @@
 ﻿using AuthService.Application.Common.Interfaces;
-using AuthService.Domain.Entities;
-using AuthService.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
+using NexoraEnterprise.AuthService.Domain;
+using NexoraEnterprise.AuthService.Infrastructure.Persistence;
 
 namespace AuthService.Infrastructure.Repositories;
 

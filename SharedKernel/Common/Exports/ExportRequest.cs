@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SharedKernel.Common.Exports
+namespace NexoraEnterprise.SharedKernel.Common.Exports
 {
     public class ExportRequest
     {

@@ -1,6 +1,6 @@
-﻿using AuthService.Domain.Entities;
+﻿using NexoraEnterprise.AuthService.Domain;
 
-namespace AuthService.Application.Common.Interfaces;
+namespace NexoraEnterprise.AuthService.Application.Common.Interfaces;
 
 public interface IJwtTokenGenerator_
 {

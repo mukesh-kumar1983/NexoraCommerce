@@ -11,9 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AuthService.Application\NexoraEnterprise.AuthService.Application.csproj" />
-    <ProjectReference Include="..\AuthService.Domain\NexoraEnterprise.AuthService.Domain.csproj" />
-    <ProjectReference Include="..\AuthService.Infrastructure\NexoraEnterprise.AuthService.Infrastructure.csproj" />
+    <!-- ONLY SHARED FOUNDATION LAYERS -->
+    <ProjectReference Include="..\SharedKernel\NexoraEnterprise.SharedKernel.csproj" />
+    
   </ItemGroup>
 
 </Project>

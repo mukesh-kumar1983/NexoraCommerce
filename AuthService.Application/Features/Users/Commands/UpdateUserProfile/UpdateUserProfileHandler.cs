@@ -1,9 +1,10 @@
 ﻿using AuthService.Application.Common.Interfaces;
-using AuthService.Application.Features.Users.Commands.UpdateUserProfile;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using NexoraEnterprise.AuthService.Application.Common.Interfaces;
 
+namespace NexoraEnterprise.AuthService.Application.Features.Users.Commands.UpdateUserProfile;
 
 public class UpdateUserProfileCommandHandler : IRequestHandler<UpdateUserProfileCommand, bool>
 {

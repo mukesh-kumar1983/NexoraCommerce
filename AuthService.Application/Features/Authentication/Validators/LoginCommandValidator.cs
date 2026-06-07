@@ -1,7 +1,7 @@
-﻿using AuthService.Application.Features.Commands;
-using FluentValidation;
+﻿using FluentValidation;
+using NexoraEnterprise.AuthService.Application.Features.Commands;
 
-namespace AuthService.Application.Features.Authentication.Validators;
+namespace NexoraEnterprise.AuthService.Application.Features.Authentication.Validators;
 
 public class LoginCommandValidator : AbstractValidator<LoginCommand>
 {

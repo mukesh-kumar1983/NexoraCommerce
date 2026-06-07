@@ -1,6 +1,7 @@
-﻿using AuthService.Domain.Entities;
-using SharedKernel.Common.Models;
+﻿using NexoraEnterprise.AuthService.Domain.Entities;
+using NexoraEnterprise.SharedKernel.Common.Models;
 
+namespace NexoraEnterprise.AuthService.Domain;
 public class AppUser : BaseEntity
 {
     public string Email { get; set; } = default!;

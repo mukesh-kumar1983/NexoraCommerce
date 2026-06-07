@@ -1,8 +1,11 @@
-﻿using AuthService.Application.Common.Interfaces;
-using AuthService.Domain.Entities;
-using MediatR;
+﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using NexoraEnterprise.AuthService.Application.Common.Interfaces;
+using NexoraEnterprise.AuthService.Domain;
+
+namespace NexoraEnterprise.AuthService.Application;
+
 public class UpdateMyProfileCommandHandler : IRequestHandler<UpdateMyProfileCommand, bool>
 {
     private readonly IAuthDbContext _context;

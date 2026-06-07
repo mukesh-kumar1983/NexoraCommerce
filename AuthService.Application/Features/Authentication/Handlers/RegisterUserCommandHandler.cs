@@ -1,11 +1,13 @@
 ﻿using AuthService.Application.Common.Interfaces;
-using AuthService.Application.Features.Commands;
-using AuthService.Domain.Entities;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using SharedContracts.Events;
+using NexoraEnterprise.AuthService.Application.Common.Interfaces;
+using NexoraEnterprise.AuthService.Application.Features.Commands;
+using NexoraEnterprise.AuthService.Domain;
+using NexoraEnterprise.AuthService.Domain.Entities;
+using NexoraEnterprise.SharedContracts.Events;
 
-namespace AuthService.Application.Features.Handlers;
+namespace NexoraEnterprise.AuthService.Application.Features.Handlers;
 
 /// <summary>
 /// Handles the user registration use case.

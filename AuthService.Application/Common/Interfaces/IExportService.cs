@@ -1,8 +1,7 @@
-﻿using SharedKernel.Common.Enums;
-using SharedKernel.Common.Exports;
-using SharedKernel.Common;
+﻿using NexoraEnterprise.SharedKernel.Common.Enums;
+using NexoraEnterprise.SharedKernel.Common.Exports;
 
-namespace AuthService.Application.Common.Interfaces;
+namespace NexoraEnterprise.AuthService.Application.Common.Interfaces;
 
 public interface IExportService
 {

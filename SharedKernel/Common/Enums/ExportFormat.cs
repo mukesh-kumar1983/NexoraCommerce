@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SharedKernel.Common.Enums
+namespace NexoraEnterprise.SharedKernel.Common.Enums
 {
     public enum ExportFormat
     {

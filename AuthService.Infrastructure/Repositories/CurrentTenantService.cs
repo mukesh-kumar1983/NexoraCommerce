@@ -1,5 +1,6 @@
 ﻿using AuthService.Application.Common.Interfaces;
 using Microsoft.AspNetCore.Http;
+using NexoraEnterprise.AuthService.Application.Common.Interfaces;
 
 public class CurrentTenantService : ICurrentTenantService
 {

@@ -1,6 +1,6 @@
-﻿using AuthService.Application.Common.Interfaces;
-using AuthService.Application.Features.Users.Commands.UploadProfileImage;
-using MediatR;
+﻿using MediatR;
+using NexoraEnterprise.AuthService.Application.Common.Interfaces;
+using NexoraEnterprise.AuthService.Application.Features.Users.Commands.UploadProfileImage;
 
 public class UploadFileCommandHandler : IRequestHandler<UploadFileCommand, string>
 {

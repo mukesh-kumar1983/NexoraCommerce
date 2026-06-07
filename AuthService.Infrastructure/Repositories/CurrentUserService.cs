@@ -1,6 +1,6 @@
-﻿using System.Security.Claims;
-using AuthService.Application.Common.Interfaces;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
+using NexoraEnterprise.AuthService.Application.Common.Interfaces;
+using System.Security.Claims;
 
 namespace AuthService.Infrastructure.Repositories;
 

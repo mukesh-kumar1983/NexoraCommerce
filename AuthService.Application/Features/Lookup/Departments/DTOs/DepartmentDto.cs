@@ -1,4 +1,4 @@
-﻿namespace AuthService.Application.Features.Lookup.Departments.DTOs;
+﻿namespace NexoraEnterprise.AuthService.Application.Features.Lookup.Departments.DTOs;
 
 public class DepartmentDto
 {

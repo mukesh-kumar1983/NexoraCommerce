@@ -1,11 +1,6 @@
 ﻿using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace AuthService.Application.Features.Users.Commands.UpdateEmployeeCommand
+namespace NexoraEnterprise.AuthService.Application.Features.Users.Commands.UpdateEmployeeCommand
 {
     public class UpdateEmployeeCommand : IRequest<bool>
     {

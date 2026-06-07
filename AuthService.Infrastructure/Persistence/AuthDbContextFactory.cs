@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
+using NexoraEnterprise.AuthService.Infrastructure.Persistence;
 
 namespace AuthService.Infrastructure.Persistence;
 

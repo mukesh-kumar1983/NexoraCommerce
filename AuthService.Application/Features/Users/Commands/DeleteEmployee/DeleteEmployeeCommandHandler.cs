@@ -1,8 +1,9 @@
 ﻿using AuthService.Application.Common.Interfaces;
 
 using MediatR;
+using NexoraEnterprise.AuthService.Application.Common.Interfaces;
 
-namespace AuthService.Application.Features.Users.Commands.DeleteEmployee;
+namespace NexoraEnterprise.AuthService.Application.Features.Users.Commands.DeleteEmployee;
 
 public class DeleteEmployeeCommandHandler
     : IRequestHandler<DeleteEmployeeCommand, bool>

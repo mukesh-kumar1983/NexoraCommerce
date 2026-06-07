@@ -1,6 +1,6 @@
-﻿using AuthService.Application.Features.Users.DTOs;
+﻿using NexoraEnterprise.AuthService.Application.Features.Users.DTOs;
 using MediatR;
-using SharedKernel.Common;
+using NexoraEnterprise.SharedKernel.Common.Models;
 using SharedKernel.Common.Models;
 
 public class GetEmployeesPagedQuery

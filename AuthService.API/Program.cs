@@ -1,11 +1,10 @@
 using AuthService.API.Extensions;
 using AuthService.API.Extentions;
-using AuthService.Application.Common.Interfaces;
-using AuthService.Application.Common.Settings;
-using AuthService.Infrastructure.Persistence;
 using AuthService.Infrastructure.Repositories;
-using AuthService.Infrastructure.Services;
-using Serilog;
+using NexoraEnterprise.AuthService.API.Extensions;
+using NexoraEnterprise.AuthService.Application.Common.Interfaces;
+using NexoraEnterprise.AuthService.Application.Common.Settings;
+using NexoraEnterprise.AuthService.Infrastructure.Services;
 using QuestPDF.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);

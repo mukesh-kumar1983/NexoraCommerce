@@ -1,8 +1,9 @@
-﻿using AuthService.Application.Common.Interfaces;
-using AuthService.Application.Features.Lookup.JobTitles.DTOs;
-using AuthService.Application.Features.Lookup.JobTitles.Queries;
-using MediatR;
+﻿using MediatR;
 using Microsoft.EntityFrameworkCore;
+using NexoraEnterprise.AuthService.Application.Common.Interfaces;
+using NexoraEnterprise.AuthService.Application.Features.Lookup.JobTitles.DTOs;
+
+namespace NexoraEnterprise.AuthService.Application.Features.Lookup.JobTitles.Queries;
 
 public class GetJobTitlesHandler : IRequestHandler<GetJobTitlesQuery, List<JobTitleDto>>
 {

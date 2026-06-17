@@ -15,10 +15,10 @@ namespace AuthService.Infrastructure.Repositories
 {
     public class UserService : IUserService
     {
-        private readonly AuthDbContext _context;
+        private readonly AuthDbContext2 _context;
         private readonly IHttpContextAccessor _httpContextAccessor;
 
-        public UserService(AuthDbContext context, IHttpContextAccessor httpContextAccessor)
+        public UserService(AuthDbContext2 context, IHttpContextAccessor httpContextAccessor)
         {
             _context = context;
             _httpContextAccessor = httpContextAccessor;

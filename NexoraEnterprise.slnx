@@ -14,6 +14,12 @@
     <Project Path="SharedKernel/NexoraEnterprise.SharedKernel.csproj" Id="1cde2a26-4a47-49be-a362-494bb0f34a4f" />
   </Folder>
   <Folder Name="/Services/" />
+  <Folder Name="/Services/AuthService/">
+    <Project Path="API/NexoraEnterprise.AuthService.API.csproj" Id="0b453717-4dbf-4296-b209-db9585690257" />
+    <Project Path="Application/NexoraEnterprise.AuthService.Application.csproj" Id="bbfd7337-0a4c-4155-bfe1-0b0d56a7dc4d" />
+    <Project Path="Domain/Nexoraprise.AuthService.Domain.csproj" Id="a76fd5ca-454a-477d-af89-05aedc59a9e8" />
+    <Project Path="Infrastructure/NexoraEnterprise.Infrastructure.csproj" Id="cdd1b2d5-1737-4685-83bc-6fdbf2b4a64c" />
+  </Folder>
   <Folder Name="/Services/EmailService/">
     <Project Path="EmailService.API/NexoraEnterprise.EmailService.API.csproj" Id="9844199c-53bc-4ee5-a119-8f73b0b3304c" />
     <Project Path="EmailService.Application/NexorapriseEmailService.Application.csproj" Id="620e59cf-2c30-4447-98c7-b1d2647ad10e" />
@@ -21,7 +27,7 @@
     <Project Path="EmailService.Infrastructure/Nexoraprise.EmailService.Infrastructure.csproj" Id="5f1239ac-cb3c-4d0f-8b72-db6ffe78640a" />
     <Project Path="EmailService.Worker/NexoraEnterprise.EmailService.Worker.csproj" Id="dd29da54-5113-4f3c-90a7-e43c36401e19" />
   </Folder>
-  <Folder Name="/Services/NexoraEnterprise.AuthService/">
+  <Folder Name="/Services/NexoraEnterprise.EmployeeService/">
     <Project Path="AuthService.API/NexoraEnterprise.EmployeeService.API.csproj" Id="57251532-e78a-4c81-a813-44bb2fe52bff" />
     <Project Path="AuthService.Application/NexoraEnterprise.EmployeeService.Application.csproj" Id="2da90790-bba3-4086-b6b1-88cd75b2c051" />
     <Project Path="AuthService.Domain/NexoraEnterprise.EmployeeService.Domain.csproj" Id="468cea34-013e-42a7-a3a3-0d476b889209" />

@@ -1,5 +1,6 @@
 ﻿using AuthService.Application.Common.Interfaces;
 using AuthService.Infrastructure.Repositories;
+using Infrastructure.Persistence;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using NexoraEnterprise.AuthService.Application.Common.Interfaces;
@@ -15,12 +16,12 @@ public static class InfrastructureServiceExtensions
         this IServiceCollection services,
         IConfiguration configuration)
     {
-        services.AddDbContext<AuthDbContext>(options =>
+        services.AddDbContext<AuthDbContext2>(options =>
             options.UseSqlServer(
                 configuration.GetConnectionString("DefaultConnection")));
 
         services.AddScoped<IAuthDbContext>(sp =>
-            sp.GetRequiredService<AuthDbContext>());
+            sp.GetRequiredService<AuthDbContext2>());
 
         // Repositories
         services.AddScoped<IPasswordHasher, PasswordHasher>();

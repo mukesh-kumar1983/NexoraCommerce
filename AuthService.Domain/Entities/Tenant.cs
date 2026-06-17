@@ -1,4 +1,5 @@
-﻿using NexoraEnterprise.SharedKernel.Common.Models;
+﻿using Domain.Common;
+using NexoraEnterprise.SharedKernel.Common.Models;
 using System.ComponentModel.DataAnnotations;
 
 namespace NexoraEnterprise.AuthService.Domain.Entities;

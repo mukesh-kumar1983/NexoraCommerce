@@ -1,10 +1,11 @@
-﻿using NexoraEnterprise.AuthService.Domain.Entities;
+﻿using Domain.Common;
+using NexoraEnterprise.AuthService.Domain.Entities;
 using NexoraEnterprise.SharedKernel.Common.Models;
 using System.Text.Json.Serialization;
 
 namespace NexoraEnterprise.AuthService.Domain;
 
-public class UserProfile : BaseEntity
+public class UserProfile : BaseEntity, ITenantEntity
 {
     public Guid Id { get; set; }   // MUST be explicit FK + PK
 
@@ -25,7 +26,7 @@ public class UserProfile : BaseEntity
     public Guid? JobTitleId { get; set; }
     public JobTitle? JobTitle { get; set; }
 
-    public Guid? TenantId { get; set; }
+    public Guid TenantId { get; set; }
 
     public Tenant? Tenant { get; set; }
 

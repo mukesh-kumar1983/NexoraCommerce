@@ -1,4 +1,5 @@
 ﻿using AuthService.Infrastructure.Persistence;
+using Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using NexoraEnterprise.AuthService.Infrastructure.Persistence;
 using NexoraEnterprise.SharedInfrastructure.Middleware;
@@ -47,10 +48,10 @@ public static class ApplicationBuilderExtensions
     {
         using var scope = app.Services.CreateScope();
 
-        var context = scope.ServiceProvider.GetRequiredService<AuthDbContext>();
+        var context = scope.ServiceProvider.GetRequiredService<AuthDbContext2>();
 
         await context.Database.MigrateAsync();
 
-        await AuthDbSeeder.SeedAsync(context);
+        //await AuthDbSeeder.SeedAsync(context);
     }
 }

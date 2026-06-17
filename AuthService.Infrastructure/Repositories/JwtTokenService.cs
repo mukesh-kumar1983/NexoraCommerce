@@ -1,54 +1,68 @@
-﻿using Microsoft.Extensions.Configuration;
-using Microsoft.IdentityModel.Tokens;
-using NexoraEnterprise.AuthService.Application.Common.Interfaces;
-using NexoraEnterprise.AuthService.Domain;
-using System.IdentityModel.Tokens.Jwt;
+﻿using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using Application.Common.Interfaces;
+using Domain.Entities;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
 
-namespace AuthService.Infrastructure.Repositories;
+namespace Infrastructure.Identity;
 
 public class JwtTokenService : IJwtTokenService
 {
-    private readonly IConfiguration _configuration;
+    private readonly IConfiguration _config;
+    private readonly UserManager<AppUser> _userManager;
 
-    public JwtTokenService(IConfiguration configuration)
+    public JwtTokenService(
+        IConfiguration config,
+        UserManager<AppUser> userManager)
     {
-        _configuration = configuration;
+        _config = config;
+        _userManager = userManager;
     }
 
-    public string GenerateToken(AppUser user, UserProfile profile, List<string> roles)
+    public async Task<(string Token, DateTime ExpiresAt, List<string> Roles)> GenerateTokenAsync(AppUser user)
     {
-        var jwtSettings = _configuration.GetSection("Jwt");
+        // ====================================================
+        // 1. LOAD ROLES SAFELY (PRODUCTION SAFE WAY)
+        // ====================================================
+        var roles = (await _userManager.GetRolesAsync(user)).ToList();
 
-        var key = new SymmetricSecurityKey(
-            Encoding.UTF8.GetBytes(jwtSettings["Key"]!));
+        // ====================================================
+        // 2. BUILD CLAIMS
+        // ====================================================
 
-        var credentials = new SigningCredentials(
-            key,
-            SecurityAlgorithms.HmacSha256);
+        var isSuperAdmin = await _userManager.IsInRoleAsync(user, "SuperAdmin");
 
         var claims = new List<Claim>
         {
-            new(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
-            new(JwtRegisteredClaimNames.Email, user.Email ?? string.Empty),
-            new(ClaimTypes.Name, profile.FullName ?? string.Empty),
-            new(ClaimTypes.NameIdentifier, user.Id.ToString()),
-            new Claim("tenant_id", user.TenantId.ToString())
+            new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
+            new Claim(JwtRegisteredClaimNames.Email, user.Email ?? ""),
+            new Claim("tenantId", user.TenantId.ToString()),
+            new Claim("isSuperAdmin", isSuperAdmin.ToString())
         };
 
-        // Add roles
-        claims.AddRange(
-        (roles ?? new List<string>())
-            .Select(role => new Claim(ClaimTypes.Role, role)));
+        claims.AddRange(roles.Select(r => new Claim(ClaimTypes.Role, r)));
+
+        // ====================================================
+        // 3. TOKEN SIGNING
+        // ====================================================
+        var key = new SymmetricSecurityKey(
+            Encoding.UTF8.GetBytes(_config["Jwt:Key"]!));
+
+        var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+        var expiresAt = DateTime.UtcNow.AddHours(2);
 
         var token = new JwtSecurityToken(
-            issuer: jwtSettings["Issuer"],
-            audience: jwtSettings["Audience"],
+            issuer: _config["Jwt:Issuer"],
+            audience: _config["Jwt:Audience"],
             claims: claims,
-            expires: DateTime.UtcNow.AddHours(2),
-            signingCredentials: credentials);
+            expires: expiresAt,
+            signingCredentials: creds
+        );
 
-        return new JwtSecurityTokenHandler().WriteToken(token);
+        return (new JwtSecurityTokenHandler().WriteToken(token), expiresAt, roles);
     }
 }

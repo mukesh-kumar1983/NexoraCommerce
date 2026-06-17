@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace NexoraEnterprise.SharedKernel.Common.Models
 {
@@ -24,6 +19,8 @@ namespace NexoraEnterprise.SharedKernel.Common.Models
         public bool IsDeleted { get; set; } = false;
 
         public DateTime? DeletedAt { get; set; }
+
+        public string? DeletedBy { get; set; }
     }
     
 }

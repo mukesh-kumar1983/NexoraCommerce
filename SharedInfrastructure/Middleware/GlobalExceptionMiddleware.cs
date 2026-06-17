@@ -1,43 +1,90 @@
 ﻿using System.Text.Json;
+using FluentValidation;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
-using System.Threading.Tasks;
 
-namespace NexoraEnterprise.SharedInfrastructure.Middleware
-{  
-    public class GlobalExceptionMiddleware
+namespace NexoraEnterprise.SharedInfrastructure.Middleware;
+
+public class GlobalExceptionMiddleware
+{
+    private readonly RequestDelegate _next;
+    private readonly ILogger<GlobalExceptionMiddleware> _logger;
+
+    public GlobalExceptionMiddleware(
+        RequestDelegate next,
+        ILogger<GlobalExceptionMiddleware> logger)
     {
-        private readonly RequestDelegate _next;
-        private readonly ILogger<GlobalExceptionMiddleware> _logger;
+        _next = next;
+        _logger = logger;
+    }
 
-        public GlobalExceptionMiddleware(RequestDelegate next, ILogger<GlobalExceptionMiddleware> logger)
+    public async Task Invoke(HttpContext context)
+    {
+        try
         {
-            _next = next;
-            _logger = logger;
+            await _next(context);
         }
-
-        public async Task Invoke(HttpContext context)
+        catch (FluentValidation.ValidationException ex)
         {
-            try
-            {
-                await _next(context);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "STACK TRACE : " + ex.StackTrace);
-
-                context.Response.ContentType = "application/json";
-                context.Response.StatusCode = 500;
-
-                var response = new
-                {
-                    success = false,
-                    message = $"Unhandled Exception with {ex.Source }",
-                    traceId = context.TraceIdentifier
-                };
-
-                await context.Response.WriteAsync(JsonSerializer.Serialize(response));
-            }
+            await HandleValidationException(context, ex);
         }
+        catch (UnauthorizedAccessException ex)
+        {
+            await HandleException(context, ex, StatusCodes.Status401Unauthorized);
+        }
+        catch (KeyNotFoundException ex)
+        {
+            await HandleException(context, ex, StatusCodes.Status404NotFound);
+        }
+        catch (Exception ex)
+        {
+            await HandleException(context, ex, StatusCodes.Status500InternalServerError);
+        }
+    }
+
+    private async Task HandleValidationException(
+        HttpContext context,
+        FluentValidation.ValidationException ex)
+    {
+        context.Response.ContentType = "application/json";
+        context.Response.StatusCode = StatusCodes.Status400BadRequest;
+
+        // ✅ SAFE: works across FluentValidation versions
+        var errors = ex.Errors
+            .GroupBy(x => x.PropertyName)
+            .ToDictionary(
+                g => g.Key,
+                g => g.Select(x => x.ErrorMessage).ToArray()
+            );
+
+        var response = new
+        {
+            success = false,
+            message = "Validation failed",
+            errors,
+            traceId = context.TraceIdentifier
+        };
+
+        await context.Response.WriteAsync(JsonSerializer.Serialize(response));
+    }
+
+    private async Task HandleException(
+        HttpContext context,
+        Exception ex,
+        int statusCode)
+    {
+        _logger.LogError(ex, "Unhandled exception: {Message}", ex.Message);
+
+        context.Response.ContentType = "application/json";
+        context.Response.StatusCode = statusCode;
+
+        var response = new
+        {
+            success = false,
+            message = ex.Message,
+            traceId = context.TraceIdentifier
+        };
+
+        await context.Response.WriteAsync(JsonSerializer.Serialize(response));
     }
 }

@@ -35,6 +35,7 @@
   <ItemGroup>
     <ProjectReference Include="..\AuthService.Application\NexoraEnterprise.EmployeeService.Application.csproj" />
     <ProjectReference Include="..\AuthService.Domain\NexoraEnterprise.EmployeeService.Domain.csproj" />
+    <ProjectReference Include="..\Infrastructure\NexoraEnterprise.Infrastructure.csproj" />
     
   </ItemGroup>
 

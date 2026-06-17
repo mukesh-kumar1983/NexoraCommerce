@@ -1,13 +1,14 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 using NexoraEnterprise.AuthService.Application.Common.Interfaces;
 using NexoraEnterprise.AuthService.Domain;
 using NexoraEnterprise.AuthService.Domain.Entities;
 
 namespace NexoraEnterprise.AuthService.Infrastructure.Persistence;
 
-public class AuthDbContext : DbContext, IAuthDbContext
+public class AuthDbContext2 : DbContext, IAuthDbContext
 {
-    public AuthDbContext(DbContextOptions<AuthDbContext> options)
+    public AuthDbContext2(DbContextOptions<AuthDbContext2> options)
         : base(options)
     {
     }

@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 public class UnitOfWork : IUnitOfWork
 {
-    private readonly AuthDbContext _context;
+    private readonly AuthDbContext2 _context;
     private IDbContextTransaction? _transaction;
 
-    public UnitOfWork(AuthDbContext context)
+    public UnitOfWork(AuthDbContext2 context)
     {
         _context = context;
     }

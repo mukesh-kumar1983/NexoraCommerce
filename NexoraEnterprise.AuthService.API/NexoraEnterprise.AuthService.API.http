@@ -1,0 +1,6 @@
+@NexoraEnterprise.AuthService.API_HostAddress = http://localhost:5287
+
+GET {{NexoraEnterprise.AuthService.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

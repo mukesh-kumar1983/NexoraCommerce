@@ -1,7 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Domain.Common;
+using System.ComponentModel.DataAnnotations;
 
 namespace NexoraEnterprise.AuthService.Domain.Entities;
-public class UserRole
+public class UserRole : ITenantEntity
 {
     [Key]
     public Guid UserId { get; set; }

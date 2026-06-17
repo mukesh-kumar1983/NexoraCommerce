@@ -71,7 +71,7 @@ app.UseAuthorization();
 #endregion
 
 #region Database Migration & Seeding
-await app.MigrateAndSeedDatabaseAsync();
+//await app.MigrateAndSeedDatabaseAsync();
 #endregion
 
 app.Run();

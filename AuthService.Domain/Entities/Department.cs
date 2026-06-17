@@ -1,8 +1,9 @@
-﻿using NexoraEnterprise.SharedKernel.Common.Models;
+﻿using Domain.Common;
+using NexoraEnterprise.SharedKernel.Common.Models;
 
 namespace NexoraEnterprise.AuthService.Domain.Entities
 {
-    public class Department : BaseEntity
+    public class Department : BaseEntity, ITenantEntity
     {
         public string Title { get; set; }
 

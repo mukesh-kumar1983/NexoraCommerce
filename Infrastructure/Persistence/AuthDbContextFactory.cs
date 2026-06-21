@@ -26,12 +26,11 @@ public class AuthDbContextFactory : IDesignTimeDbContextFactory<AuthDbContext>
 // ----------------------------------------------------
 public class FakeTenantService : ICurrentTenantService
 {
-    public Guid? TenantId => null;
-    public string? Subdomain => null;
+    public Guid TenantId => Guid.Empty;
+    public string? TenantCode => null;
     public bool IsSuperAdmin => true;
 
-    public void SetTenant(Guid? tenantId, string? subdomain, bool isSuperAdmin)
-    {
-        // no-op
-    }
+    public bool IsAvailable => true;
+
+    
 }

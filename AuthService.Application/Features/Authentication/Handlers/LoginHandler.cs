@@ -33,27 +33,27 @@ public class LoginCommandHandler
         if (user == null)
         {
             return ApiResponse<AuthResponseDto>
-                .FailureResponse(new[] { "Invalid credentials" });
+                .FailureResponse("INVALID_CREDENTIALS", new[] { "Invalid credentials" }, "Invalid Credebtials");
         }
 
         var userProfile = await _userRepository.GetProfileByIdAsync(user.Id);
 
-        if (!user.IsActive)
+        if(userProfile.IsActive)
         {
             return ApiResponse<AuthResponseDto>
-                    .FailureResponse(new[] { "This user is currently inactive, please contact your admin" });
+                    .FailureResponse( "IN_ACTIVE", new[] { "This user is currently inactive, please contact your admin" }, "This user is currently inactive, please contact your admin");
         }
 
-        if (user.IsDeleted)
+        if (userProfile.IsDeleted)
         {
             return ApiResponse<AuthResponseDto>
-                    .FailureResponse(new[] { "This user is currently marked as deleted, please contact your admin" });
+                    .FailureResponse("DELETED", new[] { "This user is currently marked as deleted, please contact your admin", "This user is currently marked as deleted, please contact your admin" });
         }
 
         if (user.IsLocked)
         {
             return ApiResponse<AuthResponseDto>
-                    .FailureResponse(new[] { "This user is currently marked as locked, please contact your admin" });
+                    .FailureResponse("LOCKED", new[] { "This user is currently marked as locked, please contact your admin", "This user is currently marked as locked, please contact your admin" });
         }
 
         // 2. Verify password (temporary logic - replace later with hashing)
@@ -64,7 +64,7 @@ public class LoginCommandHandler
         if (!passwordValid)
         {
             return ApiResponse<AuthResponseDto>
-                .FailureResponse(new[] { "Invalid Password" });
+                .FailureResponse("INVALID_PASSWORD", new[] { "Invalid Password" }, "Invalid Password");
         }
 
         // 3. Get roles from DB (or navigation property)

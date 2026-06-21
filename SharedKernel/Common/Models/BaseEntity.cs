@@ -2,12 +2,12 @@
 
 namespace NexoraEnterprise.SharedKernel.Common.Models
 {
-    public abstract class BaseEntity
+    public interface  IBaseEntity
     {
         [Key]
         public Guid Id { get; set; }
 
-        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public DateTime CreatedAt { get; set; }
         public DateTime? ModifiedAt { get; set; }
 
        
@@ -15,8 +15,8 @@ namespace NexoraEnterprise.SharedKernel.Common.Models
         public string? CreatedBy { get; set; }
         public string? ModifiedBy { get; set; }
 
-        public bool IsActive { get; set; } = true;
-        public bool IsDeleted { get; set; } = false;
+        public bool IsActive { get; set; } 
+        public bool IsDeleted { get; set; }
 
         public DateTime? DeletedAt { get; set; }
 

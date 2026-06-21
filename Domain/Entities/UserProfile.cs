@@ -1,35 +1,29 @@
-﻿using Domain.Common;
-using Domain.Entities;
-using NexoraEnterprise.SharedKernel.Common.Models;
+﻿using NexoraEnterprise.SharedKernel.Common.Models;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
+namespace Domain.Entities;
 
-
-public class UserProfile : BaseEntity, ITenantEntity
+/// <summary>
+/// Business profile of system user (HR layer).
+/// Separate from authentication (AppUser).
+/// </summary>
+public class UserProfile : BaseEntity
 {
-    // ----------------------------------------------------
-    // Identity Relationship (PK = FK)
-    // ----------------------------------------------------
-
-    [Key]
-    public Guid Id { get; set; }
+    // Identity (1:1 with AppUser)
+    public Guid UserId { get; set; }
 
     [JsonIgnore]
-    public AppUser User { get; set; } = null!;
+    public AppUser User { get; set; } = null;
 
-    // ----------------------------------------------------
-    // Basic Information
-    // ----------------------------------------------------
-
+    // Basic Info
     [MaxLength(100)]
     public string? FirstName { get; set; }
 
     [MaxLength(100)]
     public string? LastName { get; set; }
 
-    public string FullName =>
-        $"{FirstName} {LastName}".Trim();
+    public string FullName => $"{FirstName} {LastName}".Trim();
 
     [MaxLength(20)]
     public string? PhoneNumber { get; set; }
@@ -48,10 +42,7 @@ public class UserProfile : BaseEntity, ITenantEntity
 
     public DateTime? DateOfBirth { get; set; }
 
-    // ----------------------------------------------------
-    // Employee Information
-    // ----------------------------------------------------
-
+    // Employment Info
     [MaxLength(50)]
     public string? EmployeeNumber { get; set; }
 
@@ -63,53 +54,27 @@ public class UserProfile : BaseEntity, ITenantEntity
 
     public bool IsActiveEmployee { get; set; } = true;
 
-    // ----------------------------------------------------
-    // Organization Structure
-    // ----------------------------------------------------
+    [MaxLength(50)]
+    public string? EmploymentType { get; set; }
 
+    [MaxLength(50)]
+    public string? EmploymentStatus { get; set; }
+
+    // Org Structure
     public Guid? DepartmentId { get; set; }
     public Department? Department { get; set; }
 
     public Guid? JobTitleId { get; set; }
     public JobTitle? JobTitle { get; set; }
 
-    // Future Organization Chart
     public Guid? ManagerId { get; set; }
-
-    // Self-reference
     public UserProfile? Manager { get; set; }
 
-    // ----------------------------------------------------
-    // Tenant Information
-    // ----------------------------------------------------
-
+    // Tenant
     public Guid TenantId { get; set; }
-
     public Tenant? Tenant { get; set; }
 
-    // ----------------------------------------------------
     // Profile Image
-    // ----------------------------------------------------
-
     [MaxLength(1000)]
     public string? ProfileImageUrl { get; set; }
-
-    // ----------------------------------------------------
-    // Employment Metadata
-    // ----------------------------------------------------
-
-    [MaxLength(50)]
-    public string? EmploymentType { get; set; }
-    // Permanent
-    // Contract
-    // Consultant
-    // Intern
-
-    [MaxLength(50)]
-    public string? EmploymentStatus { get; set; }
-    // Active
-    // On Leave
-    // Suspended
-    // Resigned
-    // Terminated
 }

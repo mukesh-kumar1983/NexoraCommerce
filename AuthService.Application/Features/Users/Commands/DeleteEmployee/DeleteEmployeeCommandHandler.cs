@@ -9,10 +9,12 @@ public class DeleteEmployeeCommandHandler
     : IRequestHandler<DeleteEmployeeCommand, bool>
 {
     private readonly IAuthDbContext _context;
+    private ICurrentUserService _currentUserService;
 
-    public DeleteEmployeeCommandHandler(IAuthDbContext context)
+    public DeleteEmployeeCommandHandler(IAuthDbContext context, ICurrentUserService currentUserService)
     {
         _context = context;
+        _currentUserService = currentUserService;
     }
 
     public async Task<bool> Handle(
@@ -24,7 +26,9 @@ public class DeleteEmployeeCommandHandler
         if (employee == null)
             return false;
 
-        employee.IsDeleted = true;
+        employee.UserProfile.IsDeleted = true;
+        employee.UserProfile.DeletedAt= DateTime.UtcNow;
+        employee.UserProfile.DeletedBy = _currentUserService.Email; 
 
         await _context.SaveChangesAsync(cancellationToken);
 

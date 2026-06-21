@@ -6,7 +6,7 @@ using Domain.Entities;
 
 namespace AuthService.Application.Features.Users.Commands.CreateUser;
 
-public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, Guid>
+public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, ApiResponse<Guid>>
 {
     private readonly UserManager<AppUser> _userManager;
     private readonly IAuthDbContext _dbContext;
@@ -22,12 +22,19 @@ public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, Guid>
         _currentTenant = currentTenant;
     }
 
-    public async Task<Guid> Handle(CreateUserCommand request, CancellationToken cancellationToken)
+    public async Task<ApiResponse<Guid>> Handle(CreateUserCommand request, CancellationToken cancellationToken)
     {
-        if (!_currentTenant.TenantId.HasValue)
-            throw new Exception("Tenant is missing.");
+        if (_currentTenant.TenantId == Guid.Empty &&
+    !_currentTenant.IsSuperAdmin)
+        {
+            return ApiResponse<Guid>.FailureResponse(
+                "TenantMissing",
+                new List<string> { "Tenant is missing." },
+                "Tenant is missing."
+            );
+        }
 
-        var tenantId = _currentTenant.TenantId.Value;
+        var tenantId = _currentTenant.TenantId;
 
         // ----------------------------------------------------
         // 1. CHECK DUPLICATE USER
@@ -36,7 +43,11 @@ public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, Guid>
             .AnyAsync(x => x.Email == request.Email && x.TenantId == tenantId, cancellationToken);
 
         if (existingUser)
-            throw new Exception("User already exists for this tenant.");
+            return ApiResponse<Guid>.FailureResponse(
+                "UserAlreadyExists",
+                new List<string> { "User already exists for this tenant." },
+                "User already exists for this tenant."
+            );
 
         // ----------------------------------------------------
         // 2. CREATE IDENTITY USER
@@ -84,6 +95,6 @@ public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, Guid>
         // ----------------------------------------------------
         await _dbContext.SaveChangesAsync(cancellationToken);
 
-        return user.Id;
+        return ApiResponse<Guid>.SuccessResponse(user.Id, "User created successfully");
     }
 }

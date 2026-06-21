@@ -2,7 +2,7 @@
 
 namespace AuthService.Application.Features.Users.Commands.CreateUser;
 
-public class CreateUserCommand : IRequest<Guid>
+public class CreateUserCommand : IRequest<ApiResponse<Guid>>
 {
     // Identity
     public string Email { get; set; } = default!;

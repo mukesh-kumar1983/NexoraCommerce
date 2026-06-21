@@ -10,7 +10,7 @@ public class Tenant : BaseEntity
     [Required]
     public string Name { get; set; } = default!;
 
-    public string Subdomain { get; set; } = default!;
+    public string TenantCode { get; set; } = default!;
 
     
 }

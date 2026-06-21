@@ -1,44 +1,35 @@
-﻿namespace NexoraEnterprise.SharedKernel.Common.Models;
-
-public class ApiResponse<T>
+﻿public class ApiResponse
 {
     public bool Success { get; set; }
-
     public string Message { get; set; } = string.Empty;
 
-    public T? Data { get; set; }
+    /// <summary>
+    /// Machine-readable error code (Stripe-style).
+    /// </summary>
+    public string? ErrorCode { get; set; }
 
     public IEnumerable<string>? Errors { get; set; }
 
-    #region Success
-
-    public static ApiResponse<T> SuccessResponse(
-        T data,
-        string message = "Request successful")
+    public static ApiResponse SuccessResponse(string message = "Request successful")
     {
-        return new ApiResponse<T>
+        return new ApiResponse
         {
             Success = true,
-            Message = message,
-            Data = data
+            Message = message
         };
     }
 
-    #endregion
-
-    #region Failure
-
-    public static ApiResponse<T> FailureResponse(
+    public static ApiResponse FailureResponse(
+        string errorCode,
         IEnumerable<string> errors,
         string message = "Request failed")
     {
-        return new ApiResponse<T>
+        return new ApiResponse
         {
             Success = false,
+            ErrorCode = errorCode,
             Message = message,
             Errors = errors
         };
     }
-
-    #endregion
 }

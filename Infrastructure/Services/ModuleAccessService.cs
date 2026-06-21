@@ -21,10 +21,15 @@ public class ModuleAccessService : IModuleAccessService
     // ----------------------------------------------------
     public async Task<bool> IsEnabledAsync(string moduleCode)
     {
-        if (_currentTenant.TenantId == null)
+        // 1. SuperAdmin bypasses everything
+        if (_currentTenant.IsSuperAdmin)
+            return true;
+
+        // 2. Tenant must exist for normal users
+        if (_currentTenant.TenantId == Guid.Empty)
             return false;
 
-        var tenantId = _currentTenant.TenantId.Value;
+        var tenantId = _currentTenant.TenantId;
 
         return await _dbContext.TenantModules
             .AnyAsync(tm =>

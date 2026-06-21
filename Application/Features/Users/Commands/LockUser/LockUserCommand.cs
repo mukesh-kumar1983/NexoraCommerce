@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MediatR;
 
-namespace Application.Features.Users.Commands.LockUser
+namespace Application.Features.Users.Commands.LockUser;
+
+public class LockUserCommand : IRequest<ApiResponse>
 {
-    internal class LockUserCommand
-    {
-    }
+    public Guid UserId { get; set; }
+    public int LockMinutes { get; set; } = 60; // default 1 hour
 }

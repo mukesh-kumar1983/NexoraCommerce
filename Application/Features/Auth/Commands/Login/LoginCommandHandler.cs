@@ -1,44 +1,72 @@
-﻿using MediatR;
-using Application.Common.Interfaces;
-using Application.Features.Auth.DTOs;
+﻿using Application.Common.Interfaces;
 using Domain.Entities;
+using MediatR;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using NexoraEnterprise.SharedKernel.Common.Errors;
 
 namespace Application.Features.Auth.Commands.Login;
 
-public class LoginCommandHandler : IRequestHandler<LoginCommand, AuthResponse>
+/// <summary>
+/// Handles user login for SaaS authentication system.
+/// Flow: Tenant → User → Password → Roles → JWT Token
+/// </summary>
+public class LoginCommandHandler : IRequestHandler<LoginCommand, LoginResponse>
 {
-    private readonly IIdentityService _identityService;
     private readonly IJwtTokenService _jwtTokenService;
+    private readonly ITenantResolverService _tenantResolverService;
+    private readonly UserManager<AppUser> _userManager;
 
     public LoginCommandHandler(
-        IIdentityService identityService,
-        IJwtTokenService jwtTokenService)
+        IJwtTokenService jwtTokenService,
+        ITenantResolverService tenantResolverService,
+        UserManager<AppUser> userManager)
     {
-        _identityService = identityService;
         _jwtTokenService = jwtTokenService;
+        _tenantResolverService = tenantResolverService;
+        _userManager = userManager;
     }
 
-    public async Task<AuthResponse> Handle(LoginCommand request, CancellationToken cancellationToken)
+    /// <summary>
+    /// Executes login request with strict tenant isolation.
+    /// </summary>
+    public async Task<LoginResponse> Handle(LoginCommand request, CancellationToken cancellationToken)
     {
-        var user = await _identityService.FindByEmailAsync(request.Email);
+        // 1. Resolve tenant FIRST (SaaS boundary enforcement)
+        var tenant = await _tenantResolverService.ResolveAsync(request.TenantCode);
+
+        if (tenant == null || !tenant.IsActive)
+            throw new ApplicationException(ErrorCodes.Tenant_NotFound);
+
+        // 2. Find user inside tenant scope (critical isolation rule)
+        var user = await _userManager.Users
+            .AsNoTracking()
+            .FirstOrDefaultAsync(x =>
+                x.Email == request.Email &&
+                x.TenantId == tenant.Id,
+                cancellationToken);
 
         if (user == null)
-            throw new Exception("Invalid credentials");
+            throw new ApplicationException(ErrorCodes.Auth_UserNotFound);
 
-        var passwordValid = await _identityService.CheckPasswordAsync(user, request.Password);
+        // 3. Validate password
+        var passwordValid = await _userManager.CheckPasswordAsync(user, request.Password);
 
         if (!passwordValid)
-            throw new Exception("Invalid credentials");
+            throw new ApplicationException(ErrorCodes.Auth_InvalidCredentials);
 
-        var tokenResult = await _jwtTokenService.GenerateTokenAsync(user);
+        // 4. Get roles
+        var roles = await _userManager.GetRolesAsync(user);
 
-        return new AuthResponse
+        // 5. Generate JWT (tenant-bound token)
+        var token = _jwtTokenService.GenerateToken(
+            user,
+            tenant.Id.ToString(),
+            roles);
+
+        return new LoginResponse
         {
-            AccessToken = tokenResult.Token,
-            ExpiresAt = tokenResult.ExpiresAt,
-            UserId = user.Id,
-            TenantId = user.TenantId,
-            Roles = tokenResult.Roles
+            Token = token
         };
     }
 }

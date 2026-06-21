@@ -1,11 +1,14 @@
-﻿using Domain.Entities;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 
-namespace NexoraEnterprise.AuthService.Domain.Entities;
+namespace Domain.Entities;
 
+/// <summary>
+/// Tenant-aware role (supports SaaS isolation)
+/// </summary>
 public class Role : IdentityRole<Guid>
 {
     public Guid TenantId { get; set; }
 
-    public ICollection<UserRole> UserRoles { get; set; } = new List<UserRole>();
+    public ICollection<UserRole> UserRoles { get; set; }
+        = new List<UserRole>();
 }

@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Application.Features.Users.DTOs;
+using MediatR;
 
-namespace Application.Features.Users.Queries.GetUserById
+namespace Application.Features.Users.Queries.GetUserById;
+
+public class GetUserByIdQuery : IRequest<ApiResponse<UserDto?>>
 {
-    internal class GetUserByIdQuery
-    {
-    }
+    public Guid UserId { get; set; }
 }

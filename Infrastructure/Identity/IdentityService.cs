@@ -55,4 +55,9 @@ public class IdentityService : IIdentityService
     {
         return await _userManager.CheckPasswordAsync(user, password);
     }
+
+    public async Task<IList<string>> GetRolesAsync(AppUser user)
+    {
+        return await _userManager.GetRolesAsync(user);
+    }
 }

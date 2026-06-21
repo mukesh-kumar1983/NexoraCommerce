@@ -1,17 +1,15 @@
 ﻿using Application.Common.Interfaces;
 using Domain.Common;
 using Domain.Entities;
-using Infrastructure.Identity;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using NexoraEnterprise.AuthService.Domain.Entities;
 using NexoraEnterprise.SharedKernel.Common.Models;
 
 namespace Infrastructure.Persistence;
 
 public class AuthDbContext
-    : IdentityDbContext<AppUser, IdentityRole<Guid>, Guid>, IAuthDbContext
+    : IdentityDbContext<AppUser, Role, Guid>,
+      IAuthDbContext
 {
     private readonly ICurrentTenantService _currentTenant;
 
@@ -35,6 +33,9 @@ public class AuthDbContext
     public DbSet<UserProfile> UserProfiles => Set<UserProfile>();
     public DbSet<UserRole> UserRoles => Set<UserRole>();
 
+    public DbSet<Department> Departments => Set<Department>();
+    public DbSet<JobTitle> JobTitles => Set<JobTitle>();
+
     // ===================== MODEL CONFIGURATION =====================
 
     protected override void OnModelCreating(ModelBuilder builder)
@@ -54,6 +55,32 @@ public class AuthDbContext
                 .HasMaxLength(100);
 
             entity.HasIndex(x => x.Subdomain)
+                .IsUnique();
+        });
+
+        builder.Entity<Department>(entity =>
+        {
+            entity.HasKey(x => x.Id);
+
+            entity.Property(x => x.Title)
+                .IsRequired()
+                .HasMaxLength(100);
+
+            
+
+            entity.HasIndex(x => new { x.TenantId, x.Title })
+                .IsUnique();
+        });
+
+        builder.Entity<JobTitle>(entity =>
+        {
+            entity.HasKey(x => x.Id);
+
+            entity.Property(x => x.Title)
+                .IsRequired()
+                .HasMaxLength(100);
+
+            entity.HasIndex(x => new { x.TenantId, x.Title })
                 .IsUnique();
         });
 
@@ -122,15 +149,25 @@ public class AuthDbContext
         // ---------------- UserProfile (1-1 Identity) ----------------
         builder.Entity<UserProfile>(entity =>
         {
+            entity.ToTable("UserProfiles");
+
+            // Primary Key
             entity.HasKey(x => x.Id);
 
+            // 1–1 relationship (Shared Primary Key)
             entity.HasOne(x => x.User)
                 .WithOne(x => x.UserProfile)
-                .HasForeignKey<UserProfile>(x => x.Id);
+                .HasForeignKey<UserProfile>(x => x.Id)
+                .OnDelete(DeleteBehavior.Cascade);
 
+            // Indexes (performance for SaaS queries)
             entity.HasIndex(x => x.TenantId);
             entity.HasIndex(x => x.DepartmentId);
             entity.HasIndex(x => x.JobTitleId);
+                
+            // Optional but recommended if multi-tenant is strict
+            entity.Property(x => x.TenantId)
+                .IsRequired();
         });
 
         // ---------------- UserRole (RBAC) ----------------
@@ -240,10 +277,15 @@ public class AuthDbContext
             if (entry.Entity is ITenantEntity tenantEntity &&
                 entry.State == EntityState.Added)
             {
-                if (!_currentTenant.TenantId.HasValue)
-                    throw new InvalidOperationException("Tenant is missing for request.");
+                // SuperAdmin may create records outside tenant scope
+                if (_currentTenant.TenantId == Guid.Empty &&
+                    !_currentTenant.IsSuperAdmin)
+                {
+                    throw new InvalidOperationException(
+                        "Tenant is missing for request.");
+                }
 
-                tenantEntity.TenantId = _currentTenant.TenantId.Value;
+                tenantEntity.TenantId = _currentTenant.TenantId;
             }
         }
 

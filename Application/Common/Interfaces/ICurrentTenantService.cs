@@ -1,10 +1,13 @@
 ﻿namespace Application.Common.Interfaces;
 
+/// <summary>
+/// Provides current request tenant context globally.
+/// </summary>
 public interface ICurrentTenantService
 {
-    Guid? TenantId { get; }
-    string? Subdomain { get; }
-    bool IsSuperAdmin { get; }
+    Guid TenantId { get; }
+    string? TenantCode { get; }
+    bool IsAvailable { get; }
 
-    void SetTenant(Guid? tenantId, string? subdomain, bool isSuperAdmin);
+    bool IsSuperAdmin { get; }
 }

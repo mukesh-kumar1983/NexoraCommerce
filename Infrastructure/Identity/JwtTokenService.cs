@@ -1,47 +1,58 @@
 ﻿using Application.Common.Interfaces;
 using Domain.Entities;
-using Microsoft.Extensions.Options;
+using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-namespace Infrastructure.Identity;
+namespace Infrastructure.Services;
 
+/// <summary>
+/// Production-grade JWT generator with SaaS tenant support.
+/// </summary>
 public class JwtTokenService : IJwtTokenService
 {
-    private readonly JwtSettings _settings;
+    private readonly IConfiguration _configuration;
 
-    public JwtTokenService(IOptions<JwtSettings> settings)
+    public JwtTokenService(IConfiguration configuration)
     {
-        _settings = settings.Value;
+        _configuration = configuration;
     }
 
-    public Task<string> GenerateTokenAsync(AppUser user, IList<string> roles)
+    public string GenerateToken(AppUser user, string tenantId, IList<string> roles)
     {
+        var jwtSettings = _configuration.GetSection("Jwt");
+
+        var key = new SymmetricSecurityKey(
+            Encoding.UTF8.GetBytes(jwtSettings["Key"]!)
+        );
+
         var claims = new List<Claim>
         {
             new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
             new Claim(JwtRegisteredClaimNames.Email, user.Email ?? ""),
-            new Claim("tenantId", user.TenantId.ToString())
+            new Claim("userId", user.Id.ToString()),
+
+            // 🔥 SaaS CORE CLAIM
+            new Claim("tenantId", tenantId)
         };
 
-        foreach (var role in roles)
-        {
-            claims.Add(new Claim(ClaimTypes.Role, role));
-        }
+        // Add roles
+        claims.AddRange(roles.Select(role =>
+            new Claim(ClaimTypes.Role, role)));
 
-        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_settings.Key));
-        var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+        var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
         var token = new JwtSecurityToken(
-            issuer: _settings.Issuer,
-            audience: _settings.Audience,
+            issuer: jwtSettings["Issuer"],
+            audience: jwtSettings["Audience"],
             claims: claims,
-            expires: DateTime.UtcNow.AddMinutes(_settings.ExpiryMinutes),
-            signingCredentials: creds
+            expires: DateTime.UtcNow.AddMinutes(
+                Convert.ToDouble(jwtSettings["ExpiryMinutes"])),
+            signingCredentials: credentials
         );
 
-        return Task.FromResult(new JwtSecurityTokenHandler().WriteToken(token));
+        return new JwtSecurityTokenHandler().WriteToken(token);
     }
 }

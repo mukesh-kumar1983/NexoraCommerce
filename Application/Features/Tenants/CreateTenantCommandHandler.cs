@@ -5,7 +5,7 @@ using MediatR;
 namespace Application.Features.Tenants;
 
 public class CreateTenantCommandHandler
-    : IRequestHandler<CreateTenantCommand, Guid>
+    : IRequestHandler<CreateTenantCommand, ApiResponse<Guid>>
 {
     private readonly ITenantRepository _tenantRepository;
     private readonly IIdentityService _identityService;
@@ -21,7 +21,7 @@ public class CreateTenantCommandHandler
         _unitOfWork = unitOfWork;
     }
 
-    public async Task<Guid> Handle(
+    public async Task<ApiResponse<Guid>> Handle(
         CreateTenantCommand request,
         CancellationToken cancellationToken)
     {
@@ -32,7 +32,11 @@ public class CreateTenantCommandHandler
             .ExistsBySubdomainAsync(request.Subdomain);
 
         if (exists)
-            throw new Exception("Subdomain already exists");
+            return ApiResponse<Guid>.FailureResponse(
+                "SubdomainAlreadyExists",
+                new List<string> { $"The subdomain '{request.Subdomain}' is already in use." },
+                $"The subdomain '{request.Subdomain}' is already in use."
+            );
 
         // ----------------------------------------------------
         // 2. Create Tenant
@@ -64,6 +68,7 @@ public class CreateTenantCommandHandler
         // ----------------------------------------------------
         await _unitOfWork.SaveChangesAsync(cancellationToken);
 
-        return tenant.Id;
+        return ApiResponse<Guid>.SuccessResponse(tenant.Id, 
+            "Tenant created successfully");
     }
 }

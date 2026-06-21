@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Application.Features.Users.Commands.UpdateUser
 {
-    internal class UpdateUserCommand
-    {
-    }
+    //internal class UpdateUserCommand
+    //{
+    //}
 }
